@@ -1,0 +1,963 @@
+{
+ "about": "Labelled samples for the curriculum packs' subject areas, beyond the five in samples.json. Subjects are topic names from FolioKit's Topics.json. All text is original.",
+ "samples": [
+  {
+   "subject": "Biology",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Heredity notes.docx",
+   "format": "docx",
+   "body": "Sexual reproduction combines gametes from two parents, while asexual reproduction produces clones.\nMeiosis halves the chromosome number and crossing over shuffles alleles between homologous chromosomes.\nUse a Punnett square to predict genotype and phenotype ratios for a cross between two heterozygous parents.\nA recessive allele only shows in the phenotype when the organism is homozygous.\nPedigrees show how sex-linked traits such as colour blindness pass down a family.",
+   "title": "Module 5: Heredity"
+  },
+  {
+   "subject": "Biology",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Cell transport worksheet.pdf",
+   "format": "pdf",
+   "body": "1. Label the phospholipid bilayer, channel proteins and carrier proteins on the diagram of the cell membrane.\n2. Explain why osmosis moves water into a red blood cell placed in distilled water.\n3. Compare active transport with facilitated diffusion, naming which one uses ATP from cellular respiration.\n4. Predict what happens to plant cells in a concentrated salt solution, using the word plasmolysis.",
+   "title": "Movement across the cell membrane"
+  },
+  {
+   "subject": "Biology",
+   "type": "Practicals",
+   "tags": [
+    "clear"
+   ],
+   "file": "Prac - enzyme activity.docx",
+   "format": "docx",
+   "body": "Aim: to measure how temperature affects the activity of the enzyme catalase found in potato tissue.\nMethod: add potato discs to hydrogen peroxide in water baths at 10, 20, 30, 40 and 50 degrees and count the oxygen bubbles released in two minutes.\nResults show activity rising to an optimum near 37 degrees, then falling as the enzyme's active site is denatured.\nDiscuss how the shape of the active site explains the lock-and-key model.",
+   "title": "Effect of temperature on catalase"
+  },
+  {
+   "subject": "Biology",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper",
+    "exam-code"
+   ],
+   "file": "AQA-84611H-QP-JUN22.pdf",
+   "format": "pdf",
+   "body": "Time allowed: 1 hour 45 minutes\nInstructions: Use black ink or black ball-point pen. Answer all questions in the spaces provided.\nTopics: cell biology, organisation, infection and response, and bioenergetics.\n01.1 Name the organelle where photosynthesis takes place.\n01.2 Describe how a vaccine prepares the immune system to produce antibodies against a pathogen.",
+   "title": "GCSE BIOLOGY Higher Tier Paper 1",
+   "exam": "GCSE",
+   "year": 2022
+  },
+  {
+   "subject": "Biology",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper",
+    "exam-code"
+   ],
+   "file": "0610_s23_qp_42.pdf",
+   "format": "pdf",
+   "body": "Paper 4 Theory (Extended) May/June 2023. 1 hour 15 minutes.\nYou must answer on the question paper. Answer all questions.\n1 (a) State the function of xylem and phloem in a flowering plant.\n(b) Explain how natural selection can lead to antibiotic resistance in a population of bacteria.",
+   "title": "Cambridge IGCSE BIOLOGY 0610/42",
+   "exam": "IGCSE",
+   "year": 2023
+  },
+  {
+   "subject": "Biology",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper"
+   ],
+   "file": "2023 VCE Biology exam.pdf",
+   "format": "pdf",
+   "body": "Written examination. Reading time: 15 minutes. Writing time: 2 hours 30 minutes.\nSection A – Multiple-choice questions. Section B – Short-answer questions.\nQuestion 3: The diagram shows a signal transduction pathway in a cell. Describe the role of the receptor protein.\nQuestion 7: Explain how the immune system distinguishes self from non-self antigens.",
+   "title": "Victorian Certificate of Education 2023 BIOLOGY",
+   "exam": "VCE",
+   "year": 2023
+  },
+  {
+   "subject": "Earth and Environmental Science",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Plate tectonics summary.pdf",
+   "format": "pdf",
+   "body": "The lithosphere is broken into tectonic plates that move over the mantle.\nAt subduction zones an oceanic plate sinks beneath another plate, forming volcanic arcs and deep earthquakes.\nMid-ocean ridges form where plates diverge and new crust is made.\nThe rock cycle links igneous, sedimentary and metamorphic rocks through weathering, erosion, melting and pressure.",
+   "title": "Plate tectonics"
+  },
+  {
+   "subject": "Earth and Environmental Science",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Climate science task.docx",
+   "format": "docx",
+   "body": "Use the ice core data to explain how atmospheric carbon dioxide has changed over the last 800,000 years.\nDescribe the greenhouse effect and the role of the carbon cycle in climate change.\nEvaluate one strategy for reducing reliance on fossil fuels, such as renewable energy.\nDue date: end of week 6. Include a graph of global temperature anomalies.",
+   "title": "Climate science research task"
+  },
+  {
+   "subject": "Science",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Investigating Science - scientific method.pdf",
+   "format": "pdf",
+   "body": "A hypothesis is a testable prediction about the relationship between an independent variable and a dependent variable.\nControlled variables are kept the same so the investigation is a fair test.\nAccuracy describes how close a measurement is to the true value; precision describes how close repeated results are to each other.\nReliability improves with repeated trials, and validity depends on measuring what you set out to measure.\nRandom error and systematic error affect results in different ways.",
+   "title": "The scientific method"
+  },
+  {
+   "subject": "Science",
+   "type": "Practicals",
+   "tags": [
+    "clear"
+   ],
+   "file": "Depth study log.docx",
+   "format": "docx",
+   "body": "Week 2: refined the inquiry question and wrote the risk assessment.\nWeek 3: collected primary data from five trials and recorded uncertainty for each measurement.\nWeek 4: drew a line of best fit and identified one outlier caused by a timing error.\nNext step: compare primary data with secondary data from the peer-reviewed article and write the scientific report.",
+   "title": "Depth study logbook"
+  },
+  {
+   "subject": "Psychology",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Memory models notes.docx",
+   "format": "docx",
+   "body": "The multi-store model describes sensory memory, short-term memory and long-term memory as separate stores.\nShort-term memory holds about seven items for around 18 seconds unless information is rehearsed.\nThe working memory model adds a central executive, the phonological loop and the visuospatial sketchpad.\nThe hippocampus is involved in consolidating new long-term memories, while the amygdala adds emotional significance.",
+   "title": "Models of memory"
+  },
+  {
+   "subject": "Psychology",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Research ethics worksheet.pdf",
+   "format": "pdf",
+   "body": "1. Explain why participants must give informed consent and have the right to withdraw.\n2. Milgram's obedience study used deception. Evaluate whether the debriefing was enough to protect participants.\n3. Zimbardo's prison study raised questions about harm. Identify two ethical guidelines it broke.\n4. Distinguish between a correlation and an experiment that shows cause and effect.",
+   "title": "Ethics in psychological research"
+  },
+  {
+   "subject": "Psychology",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "AP Psych unit 2 review.pdf",
+   "format": "pdf",
+   "body": "Neurons communicate across the synapse using neurotransmitters such as dopamine and serotonin.\nThe cerebral cortex is divided into lobes, and neuroplasticity lets the brain reorganise after injury.\nSleep moves through NREM stages and REM sleep in roughly 90-minute cycles.\nKnow the difference between sensation and perception for the unit test.",
+   "title": "Biological bases of behaviour review"
+  },
+  {
+   "subject": "Geography",
+   "type": "Essays",
+   "tags": [
+    "clear"
+   ],
+   "file": "Urban places essay.docx",
+   "format": "docx",
+   "body": "Mumbai is a megacity whose rapid urbanisation has been driven by rural to urban migration.\nInformal settlements such as Dharavi show the challenges of providing infrastructure, water and sanitation.\nUrban sprawl and gentrification are reshaping land use on the city's edges and in older suburbs.\nThis essay evaluates how planning strategies affect liveability and sustainable development.",
+   "title": "Urban dynamics in a megacity"
+  },
+  {
+   "subject": "Geography",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Topographic map skills.pdf",
+   "format": "pdf",
+   "body": "1. Give the six-figure grid reference for the trig station.\n2. Calculate the distance along the road using the scale of 1:25 000.\n3. Use the contour lines to describe the slope between the river and the ridge.\n4. State the latitude and longitude of the town shown in the map's margin.",
+   "title": "Topographic map skills"
+  },
+  {
+   "subject": "Geography",
+   "type": "Practicals",
+   "tags": [
+    "clear"
+   ],
+   "file": "Coastal fieldwork.docx",
+   "format": "docx",
+   "body": "Fieldwork site: the northern end of the beach, between the headland and the river mouth.\nWe measured beach profiles at three sites and recorded sediment size to investigate longshore drift.\nObservations: a wave-cut platform, a sea arch and dunes stabilised by vegetation.\nExplain how coastal erosion and deposition have shaped the landforms you recorded.",
+   "title": "Coastal landforms fieldwork"
+  },
+  {
+   "subject": "Economics",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Market failure notes.pdf",
+   "format": "pdf",
+   "body": "Market failure occurs when the free market allocates resources inefficiently.\nNegative externalities such as pollution mean the social cost is greater than the private cost.\nPublic goods are non-excludable and non-rivalrous, so the market under-provides them.\nGovernments respond with taxation, subsidies, regulation and tradable permits.",
+   "title": "Market failure"
+  },
+  {
+   "subject": "Economics",
+   "type": "Essays",
+   "tags": [
+    "clear"
+   ],
+   "file": "Macro essay - inflation.docx",
+   "format": "docx",
+   "body": "Inflation has risen above the Reserve Bank's target band of 2 to 3 per cent.\nThis essay analyses how monetary policy, through changes to the cash rate and interest rates, reduces aggregate demand.\nIt also considers the trade-off with unemployment and economic growth, and the role of fiscal policy in the budget.\nConclusion: a coordinated policy mix is most effective in the current business cycle.",
+   "title": "Managing inflation"
+  },
+  {
+   "subject": "Economics",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper",
+    "exam-code"
+   ],
+   "file": "9708_w22_qp_22.pdf",
+   "format": "pdf",
+   "body": "Paper 2 Data Response and Essay October/November 2022. 2 hours.\nSection A: answer the question. Section B: answer one question.\n1 (a) Using the data, calculate the change in the price elasticity of demand for coffee.\n2 Discuss whether a government should use tariffs to protect domestic producers, with reference to comparative advantage.",
+   "title": "Cambridge International AS & A Level ECONOMICS 9708/22",
+   "exam": "A Level",
+   "year": 2022
+  },
+  {
+   "subject": "Economics",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper"
+   ],
+   "file": "2024-hsc-economics.pdf",
+   "format": "pdf",
+   "body": "General Instructions\n• Reading time – 5 minutes\n• Working time – 3 hours\nSection I – 20 marks. Attempt Questions 1–20.\nQuestion 21: Analyse the impact of a depreciation of the Australian dollar on the current account of the balance of payments.",
+   "title": "2024 HIGHER SCHOOL CERTIFICATE EXAMINATION Economics",
+   "exam": "HSC",
+   "year": 2024
+  },
+  {
+   "subject": "Business",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Marketing mix assignment.docx",
+   "format": "docx",
+   "body": "Task: develop a marketing plan for a small business launching a new reusable drink bottle.\nIdentify the target market using market research, and complete a SWOT analysis.\nExplain each element of the marketing mix: product, price, promotion and place, including a pricing strategy.\nMarking criteria are listed in the rubric. Due date: Friday week 8.",
+   "title": "Marketing plan assignment"
+  },
+  {
+   "subject": "Business",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Operations notes.pdf",
+   "format": "pdf",
+   "body": "Operations management transforms inputs into outputs through the transformation process.\nKey influences include globalisation, technology, quality expectations and corporate social responsibility.\nStrategies: outsourcing, supply chain management, inventory control and quality management.\nStakeholders such as shareholders, employees and customers judge performance differently.",
+   "title": "Operations"
+  },
+  {
+   "subject": "Business",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Break-even worksheet.pdf",
+   "format": "pdf",
+   "body": "1. A cafe has fixed costs of $4,000 per month and makes $3 profit on each coffee. Calculate the break-even point.\n2. Complete the cash flow forecast for a sole trader over three months.\n3. Explain why revenue and profit are not the same.\n4. Suggest two ways the business could improve cash flow.",
+   "title": "Finance: break-even and cash flow"
+  },
+  {
+   "subject": "Accounting",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Trial balance exercise.pdf",
+   "format": "pdf",
+   "body": "Record the following transactions in the general ledger using double entry: each debit must have an equal credit.\nPrepare a trial balance at 30 June and check that total debits equal total credits.\nClassify each account as assets, liabilities, owner's equity, revenue or expenses.\nIdentify an error that the trial balance would not reveal.",
+   "title": "Ledger and trial balance"
+  },
+  {
+   "subject": "Accounting",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Depreciation notes.docx",
+   "format": "docx",
+   "body": "Depreciation spreads the cost of a non-current asset over its useful life.\nStraight-line depreciation charges the same amount each year; reducing balance charges more in early years.\nAccrual accounting records revenue when earned and expenses when incurred, not when cash moves.\nThe balance sheet shows accumulated depreciation against the asset's original cost.",
+   "title": "Depreciation and accrual accounting"
+  },
+  {
+   "subject": "Legal Studies",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Crime topic notes.docx",
+   "format": "docx",
+   "body": "Police powers include arrest, search and seizure, and questioning, balanced against the rights of suspects.\nBail may be granted or refused under the Bail Act, considering the risk of reoffending.\nThe prosecution must prove guilt beyond reasonable doubt in the court hierarchy, from the Local Court to the High Court.\nSentencing aims include deterrence, rehabilitation and community protection.",
+   "title": "Crime: the criminal investigation process"
+  },
+  {
+   "subject": "Legal Studies",
+   "type": "Essays",
+   "tags": [
+    "clear"
+   ],
+   "file": "Human rights essay.docx",
+   "format": "docx",
+   "body": "The Universal Declaration of Human Rights set out rights that are now protected in international law.\nThis essay evaluates the effectiveness of the United Nations, courts and non-government organisations in enforcing human rights.\nIt examines the rule of law and the role of legislation in protecting rights domestically.\nLaw reform has been slow where state sovereignty limits international enforcement.",
+   "title": "Promoting and enforcing human rights"
+  },
+  {
+   "subject": "Legal Studies",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Consumer law worksheet.pdf",
+   "format": "pdf",
+   "body": "1. Explain the elements of a valid contract under contract law.\n2. Under consumer law, what are a buyer's rights when goods are faulty?\n3. Describe the role of the ACCC and the Fair Trading tribunal in resolving disputes.\n4. Assess how effectively the law protects consumers who shop online.",
+   "title": "Consumers: contracts and guarantees"
+  },
+  {
+   "subject": "Politics",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Global politics - sovereignty.pdf",
+   "format": "pdf",
+   "body": "State sovereignty means a state has supreme authority within its borders.\nLegitimacy can come from elections, constitutions or international recognition.\nInternational relations are shaped by the United Nations, NATO and other intergovernmental organisations.\nDiplomacy and foreign policy are the main tools states use to pursue their interests.",
+   "title": "Power, sovereignty and international relations"
+  },
+  {
+   "subject": "Politics",
+   "type": "Practice",
+   "tags": [
+    "clear"
+   ],
+   "file": "AP Gov FRQ practice.pdf",
+   "format": "pdf",
+   "body": "Concept application: explain how checks and balances limit the power of the president.\nQuantitative analysis: use the graph to describe changes in voter turnout in midterm elections.\nSCOTUS comparison: compare the decisions in two required Supreme Court cases about civil liberties.\nArgument essay: take a position on whether federalism protects or weakens democracy, citing the Bill of Rights.",
+   "title": "AP US Government and Politics FRQ practice"
+  },
+  {
+   "subject": "Society and Culture",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "PIP methodology.docx",
+   "format": "docx",
+   "body": "My personal interest project explores how social media shapes youth culture and identity.\nMethods: a questionnaire of 60 students (quantitative), a focus group and two interviews (qualitative).\nI will compare findings cross-culturally with a student group overseas.\nEthical considerations: informed consent, anonymity and the right to withdraw.",
+   "title": "Personal Interest Project: methodology"
+  },
+  {
+   "subject": "Society and Culture",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Socialisation notes.pdf",
+   "format": "pdf",
+   "body": "Socialisation is the lifelong process of learning the norms and values of a society.\nAgents of socialisation include family, peers, school and the media.\nIdentity is shaped by gender, ethnicity and social class, and by continuity and change over time.\nPower and authority influence which norms become dominant.",
+   "title": "Socialisation and identity"
+  },
+  {
+   "subject": "Studies of Religion",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Buddhism - principal beliefs.docx",
+   "format": "docx",
+   "body": "The Buddha taught the Four Noble Truths: suffering, its cause, its end and the path to its end.\nThe Noble Eightfold Path guides ethics, mental discipline and wisdom.\nKarma and rebirth continue until enlightenment ends the cycle of samsara.\nBuddhist ethics include the Five Precepts followed by adherents.",
+   "title": "Buddhism: principal beliefs"
+  },
+  {
+   "subject": "Studies of Religion",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Islam - significant practices.pdf",
+   "format": "pdf",
+   "body": "Hajj is the pilgrimage to Mecca that every able Muslim should make once in their life.\nPilgrims perform rituals such as circling the Kaaba and standing at Arafat in prayer.\nThe practice expresses beliefs found in the Quran about submission to God and the unity of the ummah.\nDaily prayer, fasting during Ramadan and worship at the mosque are other pillars.",
+   "title": "Islam: a significant practice"
+  },
+  {
+   "subject": "Philosophy",
+   "type": "Essays",
+   "tags": [
+    "clear"
+   ],
+   "file": "TOK essay plan.docx",
+   "format": "docx",
+   "body": "Prescribed title: Is the way we organise knowledge more important than the knowledge itself?\nKnowledge question: to what extent do the methods of an area of knowledge shape what counts as knowledge?\nAreas of knowledge: the natural sciences and history. The knower's perspective matters in both.\nClaim and counterclaim, with real-life examples, then a conclusion about justified true belief.",
+   "title": "TOK essay plan"
+  },
+  {
+   "subject": "Philosophy",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Ethics notes.pdf",
+   "format": "pdf",
+   "body": "Utilitarianism judges actions by their consequences: the greatest good for the greatest number.\nKant's deontology says some duties hold whatever the consequences, using the categorical imperative.\nVirtue ethics, from Aristotle, asks what a person of good character would do.\nA thought experiment such as the trolley problem tests each theory.",
+   "title": "Normative ethics"
+  },
+  {
+   "subject": "Health and Physical Education",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Energy systems notes.pdf",
+   "format": "pdf",
+   "body": "The ATP-PC system supplies energy for about 10 seconds of maximal effort.\nAnaerobic glycolysis produces lactate and fuels efforts of up to two minutes.\nThe aerobic system uses oxygen and dominates longer activities; VO2 max measures aerobic capacity.\nTraining adaptations depend on the energy system that the sport relies on.",
+   "title": "Energy systems"
+  },
+  {
+   "subject": "Health and Physical Education",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Training program assignment.docx",
+   "format": "docx",
+   "body": "Design a six-week training program for a netball player.\nApply the principles of training, including progressive overload, specificity and periodisation.\nInclude a warm-up and cool-down, target heart rate zones and fitness testing before and after.\nEvaluate how the program improves skill acquisition and performance.",
+   "title": "Training program for improved performance"
+  },
+  {
+   "subject": "Health and Physical Education",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Ottawa Charter notes.docx",
+   "format": "docx",
+   "body": "The Ottawa Charter's five action areas guide health promotion: building healthy public policy, creating supportive environments, strengthening community action, developing personal skills and reorienting health services.\nThe determinants of health include individual, sociocultural, socioeconomic and environmental factors.\nRisk factors and health behaviours explain differences in the burden of disease.",
+   "title": "Health promotion and the Ottawa Charter"
+  },
+  {
+   "subject": "Computing",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Python loops worksheet.pdf",
+   "format": "pdf",
+   "body": "1. Write a for loop that prints the numbers 1 to 10.\n2. Rewrite it as a while loop and explain when each is better.\n3. Store five test scores in an array (a Python list) and calculate the average.\n4. Write pseudocode for a program that finds the largest number, then trace it in a desk check.\n5. Find and fix the bug: the loop never ends.",
+   "title": "Loops in Python"
+  },
+  {
+   "subject": "Computing",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Database design notes.docx",
+   "format": "docx",
+   "body": "A relational database stores data in tables with a primary key for each record.\nForeign keys link tables, and normalisation removes repeated data.\nSQL queries: SELECT name FROM students WHERE year = 12 ORDER BY name;\nData structures such as arrays and records are used when the program loads the data.",
+   "title": "Database design and SQL"
+  },
+  {
+   "subject": "Computing",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Software project brief.pdf",
+   "format": "pdf",
+   "body": "Build a web application that lets students book study rooms.\nUse an agile approach with two sprints, and keep the source code in Git.\nThe user interface must meet accessibility guidelines, and the API must handle errors.\nSubmit unit testing results, a data flow diagram and a reflection on the software development life cycle.",
+   "title": "Software engineering project"
+  },
+  {
+   "subject": "Design and Technology",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "MDP ideation.docx",
+   "format": "docx",
+   "body": "Design brief: a modular desk organiser for small bedrooms, made from recycled materials.\nInitial sketching explored four concepts; concept C was developed into a cardboard prototype.\nCAD models were produced and parts will be made by laser cutting and 3D printing.\nEvaluation criteria: ergonomics, sustainability, cost and ease of manufacturing.",
+   "title": "Major Design Project: ideation"
+  },
+  {
+   "subject": "Design and Technology",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Materials notes.pdf",
+   "format": "pdf",
+   "body": "Timber: hardwoods and softwoods, grain direction and joinery methods.\nMetals: ferrous and non-ferrous, and how alloys change properties.\nPlastics: thermoplastics can be reshaped with heat; thermosets cannot.\nTextiles and fabric choices depend on the product's function and the user.",
+   "title": "Properties of materials"
+  },
+  {
+   "subject": "Engineering",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Truss analysis worksheet.pdf",
+   "format": "pdf",
+   "body": "The truss supports a load of 12 kN at its centre. Calculate the reactions at each support.\nUse the method of joints to find the force in each member and state whether it is in tension or compression.\nCalculate the stress in member AB if its cross-sectional area is 400 square millimetres.\nComment on the factor of safety for the beam.",
+   "title": "Statics: truss analysis"
+  },
+  {
+   "subject": "Engineering",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Aeronautical engineering report.docx",
+   "format": "docx",
+   "body": "This engineering report compares aluminium alloys and composites for small aircraft wings.\nTensile strength, fatigue and corrosion resistance are considered, with reference to materials science testing.\nOrthogonal drawings of the wing spar are attached.\nThe report concludes with the environmental impact of each material.",
+   "title": "Engineering report: aircraft wing materials"
+  },
+  {
+   "subject": "Visual Arts",
+   "type": "Essays",
+   "tags": [
+    "clear"
+   ],
+   "file": "Artist study - Frida Kahlo.docx",
+   "format": "docx",
+   "body": "Frida Kahlo's paintings use her own image to explore identity, pain and Mexican culture.\nThrough the subjective frame, her artworks express personal experience; the cultural frame links them to Mexican folk traditions.\nHer practice combined realism with symbolic imagery and bright colour.\nCompare her self-portraits with a contemporary artist exhibited at a major gallery.",
+   "title": "Artist study: Frida Kahlo"
+  },
+  {
+   "subject": "Visual Arts",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Body of work statement.pdf",
+   "format": "pdf",
+   "body": "My body of work is a series of mixed media works on canvas about memory and place.\nIt combines printmaking, photography and drawing in layered compositions.\nThe conceptual framework helped me consider the relationship between artist, artwork, world and audience.\nExhibition plan: five panels hung in sequence, with a visual diary on display.",
+   "title": "Body of Work: artist statement"
+  },
+  {
+   "subject": "Visual Arts",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Impressionism notes.pdf",
+   "format": "pdf",
+   "body": "Impressionism began in Paris in the 1870s with painters such as Monet, Renoir and Morisot.\nArtists painted outdoors to capture changing light, using visible brushstrokes and bright colour.\nThe movement broke with the Salon and led towards Modernism and later Cubism.\nCompare Monet's water lilies with a Renaissance landscape in your art criticism.",
+   "title": "Art history: Impressionism"
+  },
+  {
+   "subject": "Music",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Music theory - intervals and chords.pdf",
+   "format": "pdf",
+   "body": "1. Name each interval in the treble clef: major third, perfect fifth or minor seventh.\n2. Write the key signature for D major and A minor.\n3. Build a C major scale and label the tonic, subdominant and dominant chords.\n4. Rewrite the rhythm using crotchets, quavers and semiquavers in 4/4 time signature.",
+   "title": "Music theory: intervals and chords"
+  },
+  {
+   "subject": "Music",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Composition portfolio notes.docx",
+   "format": "docx",
+   "body": "Composition 1 is a piano piece in ternary form with a lyrical melody over broken chords.\nThe harmony moves to the relative minor in the middle section before a perfect cadence.\nTempo and dynamics build towards the climax in bar 32.\nNext draft: add a second instrument and revise the score's notation.",
+   "title": "Composition portfolio"
+  },
+  {
+   "subject": "Music",
+   "type": "Practice",
+   "tags": [
+    "clear"
+   ],
+   "file": "Aural skills practice.pdf",
+   "format": "pdf",
+   "body": "Listen to excerpt 1 and identify the instruments of the orchestra you hear.\nDescribe the timbre and the dynamics, and notate the rhythm of the opening melody.\nExcerpt 2 is from a Baroque concerto by Bach: identify the cadence at the end of the phrase.\nExcerpt 3: name the tonality and the time signature.",
+   "title": "Aural skills practice"
+  },
+  {
+   "subject": "Drama",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Brecht and epic theatre.docx",
+   "format": "docx",
+   "body": "Brecht wanted the audience to think critically rather than become emotionally lost in the play.\nHis techniques include the alienation effect, direct address, placards and visible staging.\nStanislavski's realism, by contrast, aims for truthful acting and complete belief in the scene.\nCompare how each approach would stage the same monologue.",
+   "title": "Brecht and epic theatre"
+  },
+  {
+   "subject": "Drama",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Group devised performance logbook.docx",
+   "format": "docx",
+   "body": "Rehearsal 4: we blocked the opening scene and rewrote the script so the conflict starts earlier.\nOur playbuilding stimulus is a newspaper headline about a missing child.\nI am responsible for the lighting design and one monologue.\nReflection: the dramatic tension drops in scene three, so we will add a freeze frame.",
+   "title": "Group devised performance: logbook"
+  },
+  {
+   "subject": "Dance",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Choreography notes.pdf",
+   "format": "pdf",
+   "body": "A motif is a short movement that the choreographer develops through repetition and variation.\nPhrases can be performed in unison or in canon to change the dynamic.\nThe elements of dance are space, time, dynamics and relationships.\nMy major study composition uses a spatial pathway that spirals inward.",
+   "title": "Composition: choreographic devices"
+  },
+  {
+   "subject": "Dance",
+   "type": "Essays",
+   "tags": [
+    "clear"
+   ],
+   "file": "Dance analysis essay.docx",
+   "format": "docx",
+   "body": "This essay analyses a contemporary dance work by a major Australian choreographer.\nThe dancers' technique blends ballet lines with floor work and release.\nThe choreography uses canon and unison to show the tension between the individual and the group.\nSafe dance practice in rehearsal included correct alignment and warm-up.",
+   "title": "Analysing a contemporary dance work"
+  },
+  {
+   "subject": "Media and Film",
+   "type": "Worksheets",
+   "tags": [
+    "clear"
+   ],
+   "file": "Film analysis worksheet.pdf",
+   "format": "pdf",
+   "body": "1. Identify three camera angles in the opening sequence and the effect of each.\n2. Describe the mise-en-scène in the kitchen scene: setting, costume and lighting.\n3. How does the editing, especially the montage, build tension?\n4. How does the sound design position the audience?",
+   "title": "Film analysis: the language of film"
+  },
+  {
+   "subject": "Media and Film",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Short film storyboard.docx",
+   "format": "docx",
+   "body": "Pre-production: treatment, screenplay and a storyboard of 24 shots.\nProduction: two shooting days, with a shot list for each location.\nPost-production: editing, colour grading and sound design.\nThe film follows genre conventions of a thriller while challenging one representation.",
+   "title": "Short film production"
+  },
+  {
+   "subject": "Food and Nutrition",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Food safety notes.pdf",
+   "format": "pdf",
+   "body": "Food spoilage is caused by microorganisms, enzymes and chemical changes.\nFood safety depends on keeping high-risk foods out of the temperature danger zone of 5 to 60 degrees.\nGood food hygiene includes hand washing, clean surfaces and separating raw and cooked food.\nFood preservation methods include refrigeration, freezing, drying and canning.",
+   "title": "Food safety and hygiene"
+  },
+  {
+   "subject": "Food and Nutrition",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Food product development task.docx",
+   "format": "docx",
+   "body": "Develop a healthy snack bar for teenagers, following the stages of food product development.\nConduct sensory evaluation with a taste panel of ten students.\nCompare the nutrients in your recipe with the dietary guidelines for carbohydrate, protein and fat.\nConsider food allergies and label the product correctly.",
+   "title": "Food product development"
+  },
+  {
+   "subject": "Agriculture",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Farm product study.docx",
+   "format": "docx",
+   "body": "This farm product study examines a beef cattle enterprise on the North Coast.\nIt covers pasture management, breeding programs and livestock health.\nThe report analyses yield, market prices and the agribusiness supply chain.\nRecommendations focus on sustainable farming and reducing the impact of drought.",
+   "title": "Farm product study: beef cattle"
+  },
+  {
+   "subject": "Agriculture",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Crop production notes.pdf",
+   "format": "pdf",
+   "body": "Crop yield depends on soil fertility, irrigation, fertiliser and pest control.\nWeeds compete for water and nutrients; herbicides and crop rotation reduce weed pressure.\nHarvest timing affects grain quality and price.\nHorticulture applies the same principles to fruit and vegetable production.",
+   "title": "Plant production"
+  },
+  {
+   "subject": "Aboriginal Studies",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "Self-determination notes.docx",
+   "format": "docx",
+   "body": "Self-determination means Aboriginal and Torres Strait Islander peoples deciding their own futures.\nThe land rights movement and the Mabo decision led to native title.\nThe Uluru Statement from the Heart calls for a First Nations Voice, treaty and truth-telling.\nReconciliation and Closing the Gap are national commitments with mixed progress.",
+   "title": "Self-determination and land rights"
+  },
+  {
+   "subject": "Aboriginal Studies",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Major project proposal.docx",
+   "format": "docx",
+   "body": "My major project investigates a local language revival program on Country.\nI will follow cultural protocols, seeking permission from Elders and the local land council.\nCommunity consultation will guide which Indigenous knowledge I can share.\nThe project will be presented to the community before it is submitted.",
+   "title": "Major project: community consultation"
+  },
+  {
+   "subject": "French",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "Devoir - le passé composé.docx",
+   "format": "docx",
+   "body": "Complétez les phrases avec le verbe au passé composé.\n1. Hier, nous (aller) au cinéma avec nos amis.\n2. Elle (finir) ses devoirs avant le dîner.\n3. Est-ce que tu (voir) le nouveau film ?\nAttention à l'accord du participe passé avec être. Révisez le vocabulaire du chapitre 4.",
+   "title": "Le passé composé"
+  },
+  {
+   "subject": "French",
+   "type": "Essays",
+   "tags": [
+    "language"
+   ],
+   "file": "Expression écrite - mes vacances.docx",
+   "format": "docx",
+   "body": "Pendant les vacances d'été, je suis allé chez mes grands-parents à la campagne.\nNous nous sommes levés tôt chaque matin pour nous promener près de la rivière.\nLe soir, nous jouions aux cartes et mon grand-père racontait des histoires de son enfance.\nJ'aimerais y retourner l'année prochaine parce que c'était très reposant.",
+   "title": "Expression écrite"
+  },
+  {
+   "subject": "Spanish",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "Tarea - el pretérito.pdf",
+   "format": "pdf",
+   "body": "Completa las frases con el verbo en pretérito.\n1. Ayer yo (comer) en un restaurante con mi familia.\n2. Ellos (viajar) a México el verano pasado.\n3. ¿Tú (hablar) con la profesora?\nRecuerda la diferencia entre el pretérito y el imperfecto. Vocabulario de la unidad 3.",
+   "title": "El pretérito"
+  },
+  {
+   "subject": "Spanish",
+   "type": "Practice",
+   "tags": [
+    "language"
+   ],
+   "file": "Comprensión lectora - la ciudad.docx",
+   "format": "docx",
+   "body": "Lee el texto y contesta las preguntas en español.\nMi ciudad es pequeña pero tiene un mercado muy bonito donde se venden frutas y verduras frescas.\nLos fines de semana mucha gente pasea por la plaza y toma café en las terrazas.\n1. ¿Qué se vende en el mercado? 2. ¿Qué hace la gente los fines de semana?",
+   "title": "Comprensión lectora"
+  },
+  {
+   "subject": "German",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "Hausaufgabe - Perfekt.docx",
+   "format": "docx",
+   "body": "Schreib die Sätze im Perfekt.\n1. Ich spiele am Wochenende Fußball.\n2. Wir fahren mit dem Zug nach Berlin.\n3. Meine Schwester liest ein spannendes Buch.\nAchtung: Verben der Bewegung bilden das Perfekt mit sein. Lerne den Wortschatz für Kapitel 5.",
+   "title": "Das Perfekt"
+  },
+  {
+   "subject": "German",
+   "type": "Notes",
+   "tags": [
+    "language"
+   ],
+   "file": "Wortschatz - Schule.pdf",
+   "format": "pdf",
+   "body": "das Klassenzimmer – the classroom\ndie Hausaufgaben – homework\nder Stundenplan – the timetable\ndas Lieblingsfach – the favourite subject\nIch finde Mathe schwierig, aber Kunst macht mir Spaß.\nWelche Fächer hast du am Montag? Am Montag habe ich Deutsch und Geschichte.",
+   "title": "Wortschatz: die Schule"
+  },
+  {
+   "subject": "Chinese",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "汉字练习.pdf",
+   "format": "pdf",
+   "body": "请写出下面生词的汉字和拼音。\n1. 学校 xuéxiào 2. 老师 lǎoshī 3. 朋友 péngyou\n用量词填空：一（ ）书，两（ ）狗。\n读课文第三课，回答问题：小明每天几点去学校？",
+   "title": "汉字练习"
+  },
+  {
+   "subject": "Chinese",
+   "type": "Essays",
+   "tags": [
+    "language"
+   ],
+   "file": "中文作文 - 我的周末.docx",
+   "format": "docx",
+   "body": "我的周末很忙。星期六上午我去打篮球，下午和朋友一起去图书馆学习。\n星期天我帮妈妈做饭，晚上写作文和复习生词。\n我觉得周末很有意思，因为我可以做很多我喜欢的事情。\n这篇作文要用五个新的语法点。",
+   "title": "我的周末"
+  },
+  {
+   "subject": "Japanese",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "ひらがな練習.pdf",
+   "format": "pdf",
+   "body": "ひらがなで書いてください。\n1. watashi wa gakusei desu 2. kinou eiga o mimashita\nカタカナで書いてください：コーヒー、テレビ、パン\n漢字の読み方：学校、先生、日本語\nて-form を使って文を作りましょう。",
+   "title": "ひらがなとカタカナの練習"
+  },
+  {
+   "subject": "Japanese",
+   "type": "Notes",
+   "tags": [
+    "language"
+   ],
+   "file": "Japanese vocab unit 4.docx",
+   "format": "docx",
+   "body": "おきます – to get up\nたべます – to eat\nべんきょうします – to study\nねます – to go to bed\nGrammar: use the particle に for times (7じに おきます) and で for places.\nPractise the masu-form and the te-form for the JLPT N5 practice test.",
+   "title": "Unit 4 vocabulary: daily routine"
+  },
+  {
+   "subject": "Italian",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "Compito - passato prossimo.docx",
+   "format": "docx",
+   "body": "Completa con il passato prossimo.\n1. Ieri noi (mangiare) la pizza a Roma.\n2. Lei (andare) al mare con la famiglia.\n3. Voi (vedere) il nuovo film?\nRicorda: i verbi di movimento usano essere. Studia il vocabolario dell'unità 6 e le preposizioni articolate.",
+   "title": "Il passato prossimo"
+  },
+  {
+   "subject": "Indonesian",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "Tugas - kosakata sekolah.docx",
+   "format": "docx",
+   "body": "Isilah titik-titik dengan kata yang tepat.\n1. Saya belajar di ... setiap hari.\n2. Guru kami mengajar bahasa Indonesia dan matematika.\n3. Kami makan siang di kantin.\nTata bahasa: gunakan awalan ber- dan me- dengan kata kerja. Tulis lima kalimat tentang sekolahmu.",
+   "title": "Kosakata: sekolah"
+  },
+  {
+   "subject": "Korean",
+   "type": "Worksheets",
+   "tags": [
+    "language"
+   ],
+   "file": "한글 연습.pdf",
+   "format": "pdf",
+   "body": "다음 단어를 한글로 쓰세요.\n1. 학교 2. 선생님 3. 친구\n빈칸에 알맞은 조사를 쓰세요: 저( ) 학생이에요.\n존댓말로 문장을 바꾸세요: 밥 먹어? → 진지 드세요?\n읽기 연습: 오늘은 날씨가 좋아서 공원에 갔어요.",
+   "title": "한글 연습"
+  },
+  {
+   "subject": "Latin",
+   "type": "Practice",
+   "tags": [
+    "language"
+   ],
+   "file": "Latin unseen - Aeneid.pdf",
+   "format": "pdf",
+   "body": "Translate the passage from Virgil's Aeneid, Book 2, into English.\nArma virumque cano, Troiae qui primus ab oris Italiam fato profugus Laviniaque venit litora.\nIdentify the case of each underlined noun (nominative, accusative, genitive, dative or ablative) and explain the ablative absolute in line 4.\nScan the first two lines.",
+   "title": "Latin unseen translation: Virgil"
+  },
+  {
+   "subject": "Extended Essay",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "EE reflections.docx",
+   "format": "docx",
+   "body": "First reflection: my research question asks how the price of coffee affects demand in my town, but my supervisor suggested narrowing it.\nInterim reflection: I have 2,800 of the 4,000 words and need more primary data.\nFinal reflection: completed the RPPF and prepared for the viva voce.\nCheck referencing and the bibliography against the assessment criteria.",
+   "title": "Extended Essay: reflections on planning and progress"
+  },
+  {
+   "subject": "CAS",
+   "type": "Notes",
+   "tags": [
+    "clear"
+   ],
+   "file": "CAS reflection - beach clean-up.docx",
+   "format": "docx",
+   "body": "CAS experience: organising a monthly beach clean-up with the environment club.\nThis service activity showed the learning outcomes of initiative, collaboration and global engagement.\nReflection: the first clean-up was disorganised, so I made a roster for the second.\nEvidence and photos uploaded to ManageBac for my CAS coordinator.",
+   "title": "CAS reflection: beach clean-up"
+  },
+  {
+   "subject": "Research Project",
+   "type": "Assignments",
+   "tags": [
+    "clear"
+   ],
+   "file": "Research Project outcome plan.docx",
+   "format": "docx",
+   "body": "Research question: how do part-time jobs affect Year 12 students' sleep?\nI will use a survey and two interviews, and keep a research plan and a folio of evidence.\nCapabilities to develop: personal and social capability, and critical and creative thinking.\nThe research outcome will be a 1,500-word report with a synthesis of my findings and an evaluation of my research processes.",
+   "title": "Research Project: research outcome"
+  },
+  {
+   "subject": "Mathematics",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper",
+    "exam-code"
+   ],
+   "file": "1ma1-1h-que-20220520.pdf",
+   "format": "pdf",
+   "body": "Paper 1 (Non-Calculator) Higher Tier. Time: 1 hour 30 minutes.\nYou must have: ruler graduated in centimetres and millimetres, protractor, pair of compasses, pen, HB pencil, eraser.\n1 Work out 3 2/5 × 1 1/4.\n2 Solve the simultaneous equations 3x + 2y = 12 and x − y = 1.",
+   "title": "Pearson Edexcel GCSE (9–1) Mathematics",
+   "exam": "GCSE",
+   "year": 2022
+  },
+  {
+   "subject": "Physics",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper",
+    "exam-code"
+   ],
+   "file": "0625_w22_qp_42.pdf",
+   "format": "pdf",
+   "body": "Paper 4 Theory (Extended) October/November 2022. 1 hour 15 minutes.\nYou must answer on the question paper. You will need: a calculator.\n1 A car accelerates from rest. Use the speed–time graph to calculate its acceleration and the distance travelled.\n2 Explain how the motor effect produces a turning force on a coil in a magnetic field.",
+   "title": "Cambridge IGCSE PHYSICS 0625/42",
+   "exam": "IGCSE",
+   "year": 2022
+  },
+  {
+   "subject": "Chemistry",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper"
+   ],
+   "file": "ap23-frq-chemistry.pdf",
+   "format": "pdf",
+   "body": "Section II. Time: 1 hour and 45 minutes. 7 questions.\n1. A student titrates a weak acid with sodium hydroxide. Determine the pH at the equivalence point.\n2. Calculate the enthalpy change for the combustion of methane using bond enthalpies.\n3. Explain, in terms of intermolecular forces, why ethanol has a higher boiling point than propane.",
+   "title": "AP Chemistry 2023 Free-Response Questions",
+   "exam": "AP",
+   "year": 2023
+  },
+  {
+   "subject": "Chemistry",
+   "type": "Past Papers",
+   "tags": [
+    "past-paper"
+   ],
+   "file": "Chemistry_paper_2__HL_TZ2.pdf",
+   "format": "pdf",
+   "body": "International Baccalaureate Diploma Programme. 2 hours 15 minutes.\nAnswer all questions. A copy of the chemistry data booklet is required.\n1. (a) Deduce the Lewis structure of the nitrate ion and predict its shape using VSEPR theory.\n(b) Explain the trend in first ionisation energy across period 3.",
+   "title": "Chemistry Higher level Paper 2",
+   "exam": "IB",
+   "year": 2024
+  }
+ ]
+}

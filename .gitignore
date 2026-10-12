@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Test files: downloaded papers, generated samples and eval reports stay local
+TestSet/real/
+TestSet/generated/
+TestSet/generated-packs/
+TestSet/reports/
+
+# Local Claude Code settings
+.claude/

@@ -1,0 +1,702 @@
+{
+ "id": "ib-diploma",
+ "name": "IB Diploma",
+ "fullName": "International Baccalaureate Diploma Programme",
+ "region": "International",
+ "regionCodes": [],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "IB",
+   "aliases": [
+    "International Baccalaureate",
+    "IBO",
+    "IB Diploma",
+    "Diploma Programme",
+    "IBDP"
+   ]
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "TZ1",
+    "TZ2",
+    "TZ0",
+    "time zone",
+    "specimen paper"
+   ]
+  },
+  {
+   "name": "Markschemes",
+   "aliases": [
+    "markscheme",
+    "mark scheme",
+    "grade boundaries",
+    "subject report"
+   ]
+  },
+  {
+   "name": "Internal Assessments",
+   "aliases": [
+    "IA",
+    "internal assessment",
+    "exploration",
+    "individual investigation",
+    "scientific investigation",
+    "historical investigation",
+    "individual oral",
+    "written assignment",
+    "portfolio",
+    "commentary"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes",
+    "class notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Practice",
+   "aliases": [
+    "practice",
+    "practice set",
+    "practice questions",
+    "revision questions"
+   ]
+  },
+  {
+   "name": "Sources",
+   "aliases": [
+    "source",
+    "sources",
+    "primary source",
+    "secondary source",
+    "source analysis"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "academicYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 480,
+  "end": 900
+ },
+ "subjects": [
+  {
+   "id": "english-a-lang-lit",
+   "name": "English A: Language and Literature",
+   "topic": "english",
+   "group": "Group 1: Language and Literature",
+   "aliases": [
+    "English A Lang Lit",
+    "English Lang Lit",
+    "Language and Literature",
+    "English A: Language and Literature HL",
+    "English A: Language and Literature SL"
+   ],
+   "keywords": [
+    "guided textual analysis",
+    "comparative essay",
+    "individual oral",
+    "HL essay",
+    "global issue",
+    "learner portfolio"
+   ]
+  },
+  {
+   "id": "english-a-literature",
+   "name": "English A: Literature",
+   "topic": "english",
+   "group": "Group 1: Language and Literature",
+   "aliases": [
+    "English A Literature",
+    "English A Lit",
+    "English A: Literature HL",
+    "English A: Literature SL"
+   ],
+   "keywords": [
+    "guided literary analysis",
+    "comparative essay",
+    "individual oral",
+    "HL essay",
+    "global issue",
+    "learner portfolio"
+   ]
+  },
+  {
+   "id": "english-b",
+   "name": "English B",
+   "topic": "english",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "English B HL",
+    "English B SL"
+   ]
+  },
+  {
+   "id": "french-b",
+   "name": "French B",
+   "topic": "french",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "French B HL",
+    "French B SL"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "french-ab-initio",
+   "name": "French ab initio",
+   "topic": "french",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "French ab initio HL",
+    "French ab initio SL"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "spanish-b",
+   "name": "Spanish B",
+   "topic": "spanish",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Spanish B HL",
+    "Spanish B SL"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "spanish-ab-initio",
+   "name": "Spanish ab initio",
+   "topic": "spanish",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Spanish ab initio HL",
+    "Spanish ab initio SL"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "german-b",
+   "name": "German B",
+   "topic": "german",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "German B HL",
+    "German B SL"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "german-ab-initio",
+   "name": "German ab initio",
+   "topic": "german",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "German ab initio HL",
+    "German ab initio SL"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "mandarin-b",
+   "name": "Mandarin B",
+   "topic": "chinese",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Mandarin B HL",
+    "Mandarin B SL"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "mandarin-ab-initio",
+   "name": "Mandarin ab initio",
+   "topic": "chinese",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Mandarin ab initio HL",
+    "Mandarin ab initio SL"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "japanese-b",
+   "name": "Japanese B",
+   "topic": "japanese",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Japanese B HL",
+    "Japanese B SL"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "japanese-ab-initio",
+   "name": "Japanese ab initio",
+   "topic": "japanese",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Japanese ab initio HL",
+    "Japanese ab initio SL"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "italian-b",
+   "name": "Italian B",
+   "topic": "italian",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Italian B HL",
+    "Italian B SL"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "italian-ab-initio",
+   "name": "Italian ab initio",
+   "topic": "italian",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Italian ab initio HL",
+    "Italian ab initio SL"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "latin",
+   "name": "Latin",
+   "topic": "latin",
+   "group": "Group 2: Language Acquisition",
+   "aliases": [
+    "Latin HL",
+    "Latin SL"
+   ]
+  },
+  {
+   "id": "history",
+   "name": "History",
+   "topic": "history",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "History HL",
+    "History SL"
+   ],
+   "keywords": [
+    "prescribed subject",
+    "world history topics",
+    "authoritarian states",
+    "causes and effects of 20th-century wars",
+    "the Cold War",
+    "historical investigation"
+   ]
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "Geography HL",
+    "Geography SL"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "Economics HL",
+    "Economics SL"
+   ]
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "Psychology HL",
+    "Psychology SL"
+   ]
+  },
+  {
+   "id": "business-management",
+   "name": "Business Management",
+   "topic": "business",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "Business Management HL",
+    "Business Management SL"
+   ],
+   "folderNames": [
+    "Business"
+   ]
+  },
+  {
+   "id": "global-politics",
+   "name": "Global Politics",
+   "topic": "politics",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "Global Politics HL",
+    "Global Politics SL"
+   ]
+  },
+  {
+   "id": "philosophy",
+   "name": "Philosophy",
+   "topic": "philosophy",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "Philosophy HL",
+    "Philosophy SL"
+   ]
+  },
+  {
+   "id": "digital-society",
+   "name": "Digital Society",
+   "topic": "computing",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "ITGS",
+    "Digital Society HL",
+    "Digital Society SL"
+   ],
+   "keywords": [
+    "digital systems",
+    "impacts",
+    "inquiry",
+    "extended inquiry"
+   ]
+  },
+  {
+   "id": "anthropology",
+   "name": "Social and Cultural Anthropology",
+   "topic": "society-culture",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "Anthropology",
+    "Social and Cultural Anthropology HL",
+    "Social and Cultural Anthropology SL"
+   ]
+  },
+  {
+   "id": "world-religions",
+   "name": "World Religions",
+   "topic": "religion",
+   "group": "Group 3: Individuals and Societies",
+   "aliases": [
+    "World Religions HL",
+    "World Religions SL"
+   ]
+  },
+  {
+   "id": "ess",
+   "name": "Environmental Systems and Societies",
+   "topic": "earth-environment",
+   "group": "Group 3 and 4",
+   "aliases": [
+    "ESS",
+    "Environmental Systems and Societies HL",
+    "Environmental Systems and Societies SL"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Group 4: Sciences",
+   "aliases": [
+    "Biology HL",
+    "Biology SL"
+   ],
+   "keywords": [
+    "unity and diversity",
+    "form and function",
+    "interaction and interdependence",
+    "continuity and change"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Group 4: Sciences",
+   "aliases": [
+    "Chemistry HL",
+    "Chemistry SL"
+   ],
+   "keywords": [
+    "models of bonding and structure",
+    "how much, how fast and how far",
+    "mechanisms of chemical change"
+   ]
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Group 4: Sciences",
+   "aliases": [
+    "Physics HL",
+    "Physics SL"
+   ],
+   "keywords": [
+    "space, time and motion",
+    "the particulate nature of matter",
+    "wave behaviour",
+    "fields",
+    "nuclear and quantum physics"
+   ]
+  },
+  {
+   "id": "computer-science",
+   "name": "Computer Science",
+   "topic": "computing",
+   "group": "Group 4: Sciences",
+   "aliases": [
+    "Computer Science HL",
+    "Computer Science SL"
+   ]
+  },
+  {
+   "id": "design-technology",
+   "name": "Design Technology",
+   "topic": "design-technology",
+   "group": "Group 4: Sciences",
+   "aliases": [
+    "Design Technology HL",
+    "Design Technology SL"
+   ]
+  },
+  {
+   "id": "sehs",
+   "name": "Sports, Exercise and Health Science",
+   "topic": "health-pe",
+   "group": "Group 4: Sciences",
+   "aliases": [
+    "SEHS",
+    "Sports, Exercise and Health Science HL",
+    "Sports, Exercise and Health Science SL"
+   ]
+  },
+  {
+   "id": "math-aa",
+   "name": "Mathematics: Analysis and Approaches",
+   "topic": "mathematics",
+   "group": "Group 5: Mathematics",
+   "aliases": [
+    "Math AA",
+    "Maths AA",
+    "AA HL",
+    "AA SL",
+    "Analysis and Approaches",
+    "Mathematics: Analysis and Approaches HL",
+    "Mathematics: Analysis and Approaches SL"
+   ],
+   "keywords": [
+    "exploration",
+    "GDC"
+   ]
+  },
+  {
+   "id": "math-ai",
+   "name": "Mathematics: Applications and Interpretation",
+   "topic": "mathematics",
+   "group": "Group 5: Mathematics",
+   "aliases": [
+    "Math AI",
+    "Maths AI",
+    "AI HL",
+    "AI SL",
+    "Applications and Interpretation",
+    "Mathematics: Applications and Interpretation HL",
+    "Mathematics: Applications and Interpretation SL"
+   ],
+   "keywords": [
+    "exploration",
+    "GDC",
+    "modelling"
+   ]
+  },
+  {
+   "id": "visual-arts",
+   "name": "Visual Arts",
+   "topic": "visual-arts",
+   "group": "Group 6: The Arts",
+   "aliases": [
+    "Visual Arts HL",
+    "Visual Arts SL"
+   ],
+   "folderNames": [
+    "Art"
+   ],
+   "keywords": [
+    "comparative study",
+    "process portfolio",
+    "exhibition"
+   ]
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "Group 6: The Arts",
+   "aliases": [
+    "Music HL",
+    "Music SL"
+   ]
+  },
+  {
+   "id": "theatre",
+   "name": "Theatre",
+   "topic": "drama",
+   "group": "Group 6: The Arts",
+   "aliases": [
+    "Theatre HL",
+    "Theatre SL"
+   ]
+  },
+  {
+   "id": "film",
+   "name": "Film",
+   "topic": "media",
+   "group": "Group 6: The Arts",
+   "aliases": [
+    "Film HL",
+    "Film SL"
+   ]
+  },
+  {
+   "id": "dance",
+   "name": "Dance",
+   "topic": "dance",
+   "group": "Group 6: The Arts",
+   "aliases": [
+    "Dance HL",
+    "Dance SL"
+   ]
+  },
+  {
+   "id": "tok",
+   "name": "Theory of Knowledge",
+   "topic": "philosophy",
+   "group": "Core",
+   "aliases": [
+    "TOK",
+    "ToK"
+   ]
+  },
+  {
+   "id": "extended-essay",
+   "name": "Extended Essay",
+   "topic": "extended-essay",
+   "group": "Core",
+   "aliases": [
+    "EE"
+   ]
+  },
+  {
+   "id": "cas",
+   "name": "CAS",
+   "topic": "cas",
+   "group": "Core",
+   "aliases": [
+    "Creativity, Activity, Service"
+   ]
+  }
+ ],
+ "suggested": [
+  "english-a-lang-lit",
+  "math-aa",
+  "physics",
+  "chemistry",
+  "history",
+  "tok",
+  "extended-essay",
+  "cas"
+ ],
+ "popular": [
+  "english-a-literature",
+  "biology",
+  "economics",
+  "psychology",
+  "business-management",
+  "math-ai",
+  "spanish-b",
+  "french-b",
+  "visual-arts",
+  "geography"
+ ]
+}

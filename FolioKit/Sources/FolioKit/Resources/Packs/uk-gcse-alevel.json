@@ -1,0 +1,927 @@
+{
+ "id": "uk-gcse-alevel",
+ "name": "GCSE and A level",
+ "fullName": "GCSEs and A levels in England, Wales and Northern Ireland",
+ "region": "United Kingdom",
+ "regionCodes": [
+  "GB"
+ ],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "GCSE",
+   "aliases": [
+    "General Certificate of Secondary Education"
+   ]
+  },
+  {
+   "name": "A Level",
+   "aliases": [
+    "A-Level",
+    "GCE A Level",
+    "AS Level",
+    "AS-Level"
+   ]
+  },
+  {
+   "name": "AQA",
+   "aliases": []
+  },
+  {
+   "name": "Edexcel",
+   "aliases": [
+    "Pearson Edexcel",
+    "Pearson"
+   ]
+  },
+  {
+   "name": "OCR",
+   "aliases": [
+    "Oxford Cambridge and RSA"
+   ]
+  },
+  {
+   "name": "Eduqas",
+   "aliases": [
+    "WJEC Eduqas",
+    "WJEC"
+   ]
+  },
+  {
+   "name": "CCEA",
+   "aliases": []
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "sample assessment materials",
+    "SAMs",
+    "insert"
+   ]
+  },
+  {
+   "name": "Mark Schemes",
+   "aliases": [
+    "mark scheme",
+    "examiner report",
+    "examiners' report",
+    "grade boundaries",
+    "principal examiner feedback"
+   ]
+  },
+  {
+   "name": "Revision",
+   "aliases": [
+    "revision",
+    "revision guide",
+    "revision notes",
+    "flashcards",
+    "knowledge organiser",
+    "revision cards"
+   ]
+  },
+  {
+   "name": "Homework",
+   "aliases": [
+    "homework"
+   ]
+  },
+  {
+   "name": "Coursework",
+   "aliases": [
+    "coursework",
+    "NEA",
+    "non-exam assessment",
+    "controlled assessment"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "class notes",
+    "study notes",
+    "lesson notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Practicals",
+   "aliases": [
+    "required practical",
+    "practical",
+    "experiment",
+    "PAG",
+    "practical activity group",
+    "CPAC",
+    "lab report"
+   ]
+  },
+  {
+   "name": "Sources",
+   "aliases": [
+    "source",
+    "sources",
+    "primary source",
+    "secondary source",
+    "source analysis"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "academicYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 525,
+  "end": 920
+ },
+ "subjects": [
+  {
+   "id": "english-language",
+   "name": "English Language",
+   "topic": "english",
+   "group": "English",
+   "codes": [
+    "8700",
+    "7702",
+    "1EN0",
+    "9EN0",
+    "J351",
+    "H470",
+    "C700"
+   ],
+   "keywords": [
+    "language paper 1",
+    "language paper 2",
+    "spoken language endorsement",
+    "transactional writing",
+    "descriptive writing",
+    "language analysis"
+   ]
+  },
+  {
+   "id": "english-literature",
+   "name": "English Literature",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "English Lit"
+   ],
+   "codes": [
+    "8702",
+    "7712",
+    "7717",
+    "1ET0",
+    "9ET0",
+    "J352",
+    "H472",
+    "C720"
+   ],
+   "keywords": [
+    "Macbeth",
+    "A Christmas Carol",
+    "An Inspector Calls",
+    "Jekyll and Hyde",
+    "power and conflict",
+    "love and relationships",
+    "unseen poetry"
+   ]
+  },
+  {
+   "id": "mathematics",
+   "name": "Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths"
+   ],
+   "codes": [
+    "8300",
+    "7357",
+    "1MA1",
+    "9MA0",
+    "J560",
+    "H240",
+    "H640",
+    "C300"
+   ],
+   "keywords": [
+    "foundation tier",
+    "higher tier",
+    "non-calculator",
+    "pure mathematics",
+    "mechanics",
+    "statistics"
+   ]
+  },
+  {
+   "id": "further-maths",
+   "name": "Further Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Further Maths",
+    "Level 2 Further Maths"
+   ],
+   "codes": [
+    "8365",
+    "7367",
+    "9FM0",
+    "Y540",
+    "Y420"
+   ],
+   "keywords": [
+    "complex numbers",
+    "de Moivre",
+    "proof",
+    "integration by parts",
+    "mechanics",
+    "simple harmonic motion",
+    "resisted motion",
+    "vectors in three dimensions",
+    "Argand diagram"
+   ]
+  },
+  {
+   "id": "statistics",
+   "name": "Statistics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "codes": [
+    "8382",
+    "1ST0",
+    "9ST0"
+   ],
+   "keywords": [
+    "hypothesis testing",
+    "sampling",
+    "box plot",
+    "histogram",
+    "Spearman's rank"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Sciences",
+   "codes": [
+    "8461*",
+    "7402*",
+    "1BI0",
+    "9BN0",
+    "9BI0",
+    "J247",
+    "J257",
+    "H420",
+    "H422",
+    "C400"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Sciences",
+   "codes": [
+    "8462*",
+    "7405*",
+    "1CH0",
+    "9CH0",
+    "J248",
+    "J258",
+    "H432",
+    "H433",
+    "C410"
+   ]
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Sciences",
+   "codes": [
+    "8463*",
+    "7408*",
+    "1PH0",
+    "9PH0",
+    "J249",
+    "J259",
+    "H556",
+    "H557",
+    "C420"
+   ]
+  },
+  {
+   "id": "combined-science",
+   "name": "Combined Science",
+   "topic": "general-science",
+   "group": "Sciences",
+   "aliases": [
+    "Double Science",
+    "Combined Science Trilogy"
+   ],
+   "folderNames": [
+    "Trilogy",
+    "Synergy"
+   ],
+   "codes": [
+    "8464*",
+    "8465*",
+    "1SC0",
+    "J250",
+    "J260"
+   ],
+   "keywords": [
+    "biology paper",
+    "chemistry paper",
+    "physics paper",
+    "required practical"
+   ]
+  },
+  {
+   "id": "environmental-science",
+   "name": "Environmental Science",
+   "topic": "earth-environment",
+   "group": "Sciences",
+   "codes": [
+    "7447"
+   ]
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Sciences",
+   "codes": [
+    "8182",
+    "7182",
+    "1PS0",
+    "9PS0",
+    "J203",
+    "H567"
+   ]
+  },
+  {
+   "id": "history",
+   "name": "History",
+   "topic": "history",
+   "group": "Humanities",
+   "codes": [
+    "8145",
+    "7042",
+    "1HI0",
+    "9HI0",
+    "J410",
+    "J411",
+    "H505",
+    "C100"
+   ],
+   "keywords": [
+    "thematic study",
+    "period study",
+    "depth study",
+    "wider world depth study",
+    "British depth study",
+    "historic environment",
+    "NEA"
+   ]
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Humanities",
+   "codes": [
+    "8035",
+    "7037",
+    "1GA0",
+    "1GB0",
+    "9GE0",
+    "J383",
+    "J384",
+    "H481",
+    "C111",
+    "C112"
+   ],
+   "keywords": [
+    "living with the physical environment",
+    "challenges in the human environment",
+    "geographical applications",
+    "pre-release"
+   ]
+  },
+  {
+   "id": "religious-studies",
+   "name": "Religious Studies",
+   "topic": "religion",
+   "group": "Humanities",
+   "aliases": [
+    "RS",
+    "RE"
+   ],
+   "codes": [
+    "8062",
+    "8063",
+    "7062",
+    "1RA0",
+    "1RB0",
+    "9RS0",
+    "J625",
+    "H573",
+    "C120"
+   ]
+  },
+  {
+   "id": "sociology",
+   "name": "Sociology",
+   "topic": "society-culture",
+   "group": "Humanities",
+   "codes": [
+    "8192",
+    "7192",
+    "H580",
+    "C200"
+   ]
+  },
+  {
+   "id": "politics",
+   "name": "Politics",
+   "topic": "politics",
+   "group": "Humanities",
+   "aliases": [
+    "Government and Politics"
+   ],
+   "codes": [
+    "7152",
+    "9PL0"
+   ]
+  },
+  {
+   "id": "law",
+   "name": "Law",
+   "topic": "legal",
+   "group": "Humanities",
+   "codes": [
+    "7162",
+    "H418"
+   ]
+  },
+  {
+   "id": "philosophy",
+   "name": "Philosophy",
+   "topic": "philosophy",
+   "group": "Humanities",
+   "codes": [
+    "7172"
+   ]
+  },
+  {
+   "id": "citizenship",
+   "name": "Citizenship Studies",
+   "topic": "politics",
+   "group": "Humanities",
+   "aliases": [],
+   "folderNames": [
+    "Citizenship"
+   ],
+   "codes": [
+    "8100",
+    "1CS0"
+   ]
+  },
+  {
+   "id": "classical-civilisation",
+   "name": "Classical Civilisation",
+   "topic": "history",
+   "group": "Humanities",
+   "aliases": [
+    "Classical Civ"
+   ],
+   "folderNames": [
+    "Classics"
+   ],
+   "codes": [
+    "J199",
+    "H408"
+   ],
+   "keywords": [
+    "Homer",
+    "Iliad",
+    "Odyssey",
+    "Greek theatre",
+    "Roman"
+   ]
+  },
+  {
+   "id": "ancient-history",
+   "name": "Ancient History",
+   "topic": "history",
+   "group": "Humanities",
+   "codes": [
+    "J198",
+    "H407"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Business",
+   "codes": [
+    "8136",
+    "7136",
+    "9EC0",
+    "9EB0",
+    "J205",
+    "H460"
+   ]
+  },
+  {
+   "id": "business",
+   "name": "Business",
+   "topic": "business",
+   "group": "Business",
+   "aliases": [
+    "Business Studies"
+   ],
+   "codes": [
+    "8132",
+    "7132",
+    "1BS0",
+    "9BS0",
+    "J204",
+    "H431"
+   ]
+  },
+  {
+   "id": "accounting",
+   "name": "Accounting",
+   "topic": "accounting",
+   "group": "Business",
+   "codes": [
+    "7127"
+   ]
+  },
+  {
+   "id": "computer-science",
+   "name": "Computer Science",
+   "topic": "computing",
+   "group": "Technology",
+   "aliases": [],
+   "folderNames": [
+    "Computing"
+   ],
+   "codes": [
+    "8525",
+    "7517",
+    "1CP2",
+    "9CP0",
+    "J277",
+    "H446",
+    "C500"
+   ]
+  },
+  {
+   "id": "design-technology",
+   "name": "Design and Technology",
+   "topic": "design-technology",
+   "group": "Technology",
+   "aliases": [
+    "D&T",
+    "Product Design"
+   ],
+   "codes": [
+    "8552",
+    "7552",
+    "1DT0",
+    "9DT0",
+    "J310",
+    "H404",
+    "H405",
+    "H406",
+    "C600"
+   ]
+  },
+  {
+   "id": "food-nutrition",
+   "name": "Food Preparation and Nutrition",
+   "topic": "food-nutrition",
+   "group": "Technology",
+   "aliases": [
+    "Food Tech",
+    "Food and Nutrition"
+   ],
+   "codes": [
+    "8585",
+    "J309",
+    "C560"
+   ]
+  },
+  {
+   "id": "art-design",
+   "name": "Art and Design",
+   "topic": "visual-arts",
+   "group": "Arts",
+   "aliases": [
+    "Fine Art",
+    "Graphic Communication",
+    "Textile Design"
+   ],
+   "folderNames": [
+    "Art",
+    "Photography"
+   ],
+   "codes": [
+    "8201",
+    "8202",
+    "8203",
+    "8204",
+    "8205",
+    "8206",
+    "7201",
+    "7202",
+    "7203",
+    "7204",
+    "7205",
+    "7206",
+    "1AD0",
+    "1FA0",
+    "9AD0",
+    "9FA0"
+   ]
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "Arts",
+   "codes": [
+    "8271",
+    "7272",
+    "1MU0",
+    "9MU0",
+    "J536",
+    "H543",
+    "C660"
+   ]
+  },
+  {
+   "id": "drama",
+   "name": "Drama",
+   "topic": "drama",
+   "group": "Arts",
+   "aliases": [
+    "Drama and Theatre",
+    "Theatre Studies"
+   ],
+   "codes": [
+    "8261",
+    "7262",
+    "1DR0",
+    "9DR0",
+    "J316",
+    "H459",
+    "C690"
+   ]
+  },
+  {
+   "id": "dance",
+   "name": "Dance",
+   "topic": "dance",
+   "group": "Arts",
+   "codes": [
+    "8236",
+    "7237"
+   ]
+  },
+  {
+   "id": "media-studies",
+   "name": "Media Studies",
+   "topic": "media",
+   "group": "Arts",
+   "aliases": [],
+   "folderNames": [
+    "Media"
+   ],
+   "codes": [
+    "8572",
+    "7572",
+    "J200",
+    "H409",
+    "C680"
+   ]
+  },
+  {
+   "id": "film-studies",
+   "name": "Film Studies",
+   "topic": "media",
+   "group": "Arts",
+   "aliases": [],
+   "folderNames": [
+    "Film"
+   ],
+   "codes": [
+    "C670",
+    "A670"
+   ]
+  },
+  {
+   "id": "physical-education",
+   "name": "Physical Education",
+   "topic": "health-pe",
+   "group": "Physical Education",
+   "aliases": [
+    "PE"
+   ],
+   "codes": [
+    "8582",
+    "7582",
+    "1PE0",
+    "9PE0",
+    "J587",
+    "H555"
+   ]
+  },
+  {
+   "id": "french",
+   "name": "French",
+   "topic": "french",
+   "group": "Languages",
+   "codes": [
+    "8652",
+    "8658",
+    "7652",
+    "1FR0",
+    "9FR0",
+    "J730",
+    "C800"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "german",
+   "name": "German",
+   "topic": "german",
+   "group": "Languages",
+   "codes": [
+    "8662",
+    "8668",
+    "7662",
+    "1GN0",
+    "9GN0",
+    "J731",
+    "C810"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "spanish",
+   "name": "Spanish",
+   "topic": "spanish",
+   "group": "Languages",
+   "codes": [
+    "8692",
+    "8698",
+    "7692",
+    "1SP0",
+    "9SP0",
+    "J732",
+    "C820"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "chinese",
+   "name": "Chinese",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [
+    "Mandarin",
+    "Chinese (Mandarin)"
+   ],
+   "codes": [
+    "8673",
+    "1CN0",
+    "9CN0"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "italian",
+   "name": "Italian",
+   "topic": "italian",
+   "group": "Languages",
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "japanese",
+   "name": "Japanese",
+   "topic": "japanese",
+   "group": "Languages",
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "latin",
+   "name": "Latin",
+   "topic": "latin",
+   "group": "Languages",
+   "codes": [
+    "J282",
+    "H443"
+   ]
+  },
+  {
+   "id": "epq",
+   "name": "Extended Project",
+   "topic": "research-project",
+   "group": "Extended Project",
+   "aliases": [
+    "EPQ",
+    "Extended Project Qualification"
+   ],
+   "codes": [
+    "7993"
+   ]
+  }
+ ],
+ "suggested": [
+  "mathematics",
+  "english-literature",
+  "physics",
+  "chemistry",
+  "history"
+ ],
+ "popular": [
+  "english-language",
+  "biology",
+  "combined-science",
+  "geography",
+  "religious-studies",
+  "computer-science",
+  "business",
+  "psychology",
+  "french",
+  "spanish",
+  "art-design"
+ ]
+}

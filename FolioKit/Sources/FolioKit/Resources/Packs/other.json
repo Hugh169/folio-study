@@ -1,0 +1,512 @@
+{
+ "id": "other",
+ "name": "Another school",
+ "fullName": "Common subjects, for any school",
+ "region": "",
+ "regionCodes": [],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "HSC",
+   "aliases": [
+    "Higher School Certificate",
+    "NESA"
+   ]
+  },
+  {
+   "name": "GCSE",
+   "aliases": [
+    "General Certificate of Secondary Education"
+   ]
+  },
+  {
+   "name": "A Level",
+   "aliases": [
+    "A-Level",
+    "GCE A Level",
+    "AS Level"
+   ]
+  },
+  {
+   "name": "IB",
+   "aliases": [
+    "International Baccalaureate",
+    "IB Diploma",
+    "IBDP"
+   ]
+  },
+  {
+   "name": "IGCSE",
+   "aliases": [
+    "Cambridge IGCSE"
+   ]
+  },
+  {
+   "name": "VCE",
+   "aliases": [
+    "Victorian Certificate of Education"
+   ]
+  },
+  {
+   "name": "AP",
+   "aliases": [
+    "Advanced Placement",
+    "AP Exam"
+   ]
+  },
+  {
+   "name": "Baccalauréat",
+   "aliases": [
+    "Baccalaureat",
+    "Bac général"
+   ]
+  },
+  {
+   "name": "AQA",
+   "aliases": []
+  },
+  {
+   "name": "Edexcel",
+   "aliases": [
+    "Pearson Edexcel"
+   ]
+  },
+  {
+   "name": "OCR",
+   "aliases": []
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "marking guidelines",
+    "mark scheme"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes",
+    "class notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Assignments",
+   "aliases": [
+    "assignment",
+    "assessment task",
+    "project",
+    "rubric",
+    "due date"
+   ]
+  },
+  {
+   "name": "Practicals",
+   "aliases": [
+    "practical",
+    "prac",
+    "experiment",
+    "lab report",
+    "investigation",
+    "hypothesis"
+   ]
+  },
+  {
+   "name": "Practice",
+   "aliases": [
+    "practice",
+    "practice set",
+    "practice questions",
+    "revision questions"
+   ]
+  },
+  {
+   "name": "Sources",
+   "aliases": [
+    "source",
+    "sources",
+    "primary source",
+    "secondary source",
+    "source analysis"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "academicYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 525,
+  "end": 915
+ },
+ "subjects": [
+  {
+   "id": "mathematics",
+   "name": "Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics"
+  },
+  {
+   "id": "english",
+   "name": "English",
+   "topic": "english",
+   "group": "English"
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Sciences"
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Sciences"
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Sciences"
+  },
+  {
+   "id": "science",
+   "name": "Science",
+   "topic": "general-science",
+   "group": "Sciences"
+  },
+  {
+   "id": "earth-and-environmental-science",
+   "name": "Earth and Environmental Science",
+   "topic": "earth-environment",
+   "group": "Sciences"
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Sciences"
+  },
+  {
+   "id": "history",
+   "name": "History",
+   "topic": "history",
+   "group": "Humanities"
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Humanities"
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Humanities"
+  },
+  {
+   "id": "business",
+   "name": "Business",
+   "topic": "business",
+   "group": "Humanities",
+   "aliases": [
+    "Business Studies"
+   ]
+  },
+  {
+   "id": "accounting",
+   "name": "Accounting",
+   "topic": "accounting",
+   "group": "Humanities"
+  },
+  {
+   "id": "legal-studies",
+   "name": "Legal Studies",
+   "topic": "legal",
+   "group": "Humanities",
+   "aliases": [],
+   "folderNames": [
+    "Law"
+   ]
+  },
+  {
+   "id": "politics",
+   "name": "Politics",
+   "topic": "politics",
+   "group": "Humanities",
+   "aliases": [],
+   "folderNames": [
+    "Government"
+   ]
+  },
+  {
+   "id": "sociology",
+   "name": "Sociology",
+   "topic": "society-culture",
+   "group": "Humanities",
+   "aliases": [
+    "Society and Culture"
+   ]
+  },
+  {
+   "id": "religious-studies",
+   "name": "Religious Studies",
+   "topic": "religion",
+   "group": "Humanities",
+   "aliases": [],
+   "folderNames": [
+    "Religion"
+   ]
+  },
+  {
+   "id": "philosophy",
+   "name": "Philosophy",
+   "topic": "philosophy",
+   "group": "Humanities"
+  },
+  {
+   "id": "health-and-physical-education",
+   "name": "Health and Physical Education",
+   "topic": "health-pe",
+   "group": "Health and PE",
+   "aliases": [
+    "PE",
+    "PDHPE",
+    "Physical Education"
+   ],
+   "folderNames": [
+    "Health"
+   ]
+  },
+  {
+   "id": "computer-science",
+   "name": "Computer Science",
+   "topic": "computing",
+   "group": "Technologies",
+   "aliases": [
+    "IT"
+   ],
+   "folderNames": [
+    "Computing"
+   ]
+  },
+  {
+   "id": "design-and-technology",
+   "name": "Design and Technology",
+   "topic": "design-technology",
+   "group": "Technologies"
+  },
+  {
+   "id": "engineering",
+   "name": "Engineering",
+   "topic": "engineering",
+   "group": "Technologies"
+  },
+  {
+   "id": "food-and-nutrition",
+   "name": "Food and Nutrition",
+   "topic": "food-nutrition",
+   "group": "Technologies",
+   "aliases": [
+    "Food Technology"
+   ]
+  },
+  {
+   "id": "agriculture",
+   "name": "Agriculture",
+   "topic": "agriculture",
+   "group": "Technologies"
+  },
+  {
+   "id": "visual-arts",
+   "name": "Visual Arts",
+   "topic": "visual-arts",
+   "group": "Arts",
+   "aliases": [],
+   "folderNames": [
+    "Art"
+   ]
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "Arts"
+  },
+  {
+   "id": "drama",
+   "name": "Drama",
+   "topic": "drama",
+   "group": "Arts",
+   "aliases": [],
+   "folderNames": [
+    "Theatre"
+   ]
+  },
+  {
+   "id": "dance",
+   "name": "Dance",
+   "topic": "dance",
+   "group": "Arts"
+  },
+  {
+   "id": "media",
+   "name": "Media",
+   "topic": "media",
+   "group": "Arts",
+   "aliases": [],
+   "folderNames": [
+    "Film"
+   ]
+  },
+  {
+   "id": "french",
+   "name": "French",
+   "topic": "french",
+   "group": "Languages",
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "spanish",
+   "name": "Spanish",
+   "topic": "spanish",
+   "group": "Languages",
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "german",
+   "name": "German",
+   "topic": "german",
+   "group": "Languages",
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "chinese",
+   "name": "Chinese",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [
+    "Mandarin"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "japanese",
+   "name": "Japanese",
+   "topic": "japanese",
+   "group": "Languages",
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "italian",
+   "name": "Italian",
+   "topic": "italian",
+   "group": "Languages",
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "indonesian",
+   "name": "Indonesian",
+   "topic": "indonesian",
+   "group": "Languages",
+   "languageOfStudy": "id"
+  },
+  {
+   "id": "korean",
+   "name": "Korean",
+   "topic": "korean",
+   "group": "Languages",
+   "languageOfStudy": "ko"
+  },
+  {
+   "id": "latin",
+   "name": "Latin",
+   "topic": "latin",
+   "group": "Languages"
+  }
+ ],
+ "suggested": [
+  "mathematics",
+  "english",
+  "physics",
+  "chemistry",
+  "history"
+ ],
+ "popular": [
+  "biology",
+  "geography",
+  "economics",
+  "legal-studies",
+  "visual-arts",
+  "music",
+  "health-and-physical-education",
+  "computer-science",
+  "business",
+  "french",
+  "spanish"
+ ]
+}

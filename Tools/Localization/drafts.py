@@ -1,0 +1,597 @@
+# Translation drafts for strings added since Folio 0.4, in French, Spanish,
+# German and Chinese (Simplified). update_catalogs.py adds them to the String
+# Catalogs marked "needs review": they're machine drafts until a native
+# speaker checks them.
+#
+# T(english, fr, es, de, zh) is a plain string; {} stands for each value in
+# order, or {1}, {2} when a language puts them in another order.
+# P(one, other, fr, es, de, zh) is a string with one number whose words
+# change with it; each language gives [one, other], or one string when it has
+# no plural forms.
+ENTRIES = {}
+
+
+def T(en, fr, es, de, zh):
+    assert en not in ENTRIES, f"duplicate: {en}"
+    ENTRIES[en] = {"kind": "plain", "fr": fr, "es": es, "de": de, "zh": zh}
+
+
+def P(en_one, en_other, fr, es, de, zh):
+    assert en_other not in ENTRIES, f"duplicate: {en_other}"
+    ENTRIES[en_other] = {"kind": "plural", "en": (en_one, en_other), "fr": fr, "es": es, "de": de, "zh": zh}
+
+
+# Phase 5: assessments, Today and subject pages.
+
+# Kinds, statuses and file roles
+T("Task", "Devoir", "Tarea", "Aufgabe", "作业")
+T("Exam", "Examen", "Examen", "Prüfung", "考试")
+T("Test", "Contrôle", "Prueba", "Test", "测验")
+T("Presentation", "Présentation", "Presentación", "Präsentation", "演讲")
+T("Practical", "TP", "Práctica", "Praktikum", "实验")
+T("Not started", "Pas commencé", "Sin empezar", "Nicht begonnen", "未开始")
+T("In progress", "En cours", "En curso", "In Arbeit", "进行中")
+T("Submitted", "Rendu", "Entregado", "Abgegeben", "已提交")
+T("Marked", "Noté", "Calificado", "Bewertet", "已评分")
+T("Task sheet", "Consigne", "Enunciado", "Aufgabenblatt", "任务说明")
+T("Marking criteria", "Critères de notation", "Criterios de evaluación", "Bewertungskriterien", "评分标准")
+T("Resource", "Ressource", "Recurso", "Material", "资料")
+T("Draft", "Brouillon", "Borrador", "Entwurf", "草稿")
+T("Submitted work", "Travail rendu", "Trabajo entregado", "Abgegebene Arbeit", "已提交的作业")
+T("Marked work", "Travail corrigé", "Trabajo corregido", "Korrigierte Arbeit", "已批改的作业")
+T("Start", "Commencer", "Empezar", "Beginnen", "开始")
+T("Final check", "Relecture finale", "Revisión final", "Letzte Kontrolle", "最后检查")
+
+# Assessment sheet
+T("New Assessment", "Nouvelle évaluation", "Nueva evaluación", "Neue Leistungsüberprüfung", "新建考核")
+T("Edit Assessment", "Modifier l’évaluation", "Editar evaluación", "Leistungsüberprüfung bearbeiten", "编辑考核")
+T("New Assessment…", "Nouvelle évaluation…", "Nueva evaluación…", "Neue Leistungsüberprüfung …", "新建考核…")
+T("Add Assessment", "Ajouter l’évaluation", "Añadir evaluación", "Leistungsüberprüfung hinzufügen", "添加考核")
+T("Title", "Titre", "Título", "Titel", "标题")
+T("e.g. Depth Study", "p. ex. Étude approfondie", "p. ej., Estudio en profundidad", "z. B. Vertiefungsstudie", "例如：深度研究")
+T("Starts", "Début", "Empieza", "Beginnt", "开始时间")
+T("Lasts {} minutes", "Dure {} minutes", "Dura {} minutos", "Dauert {} Minuten", "时长 {} 分钟")
+T("Room", "Salle", "Aula", "Raum", "教室")
+T("Optional", "Facultatif", "Opcional", "Optional", "可选")
+T("Weighting", "Coefficient", "Ponderación", "Gewichtung", "权重")
+T("e.g. 25", "p. ex. 25", "p. ej., 25", "z. B. 25", "例如：25")
+T("Hours of work", "Heures de travail", "Horas de trabajo", "Arbeitsstunden", "所需时长（小时）")
+T("About {}", "Environ {}", "Unas {}", "Etwa {}", "约 {}")
+T("Folio plans this much study before it's due. Leave it empty to use Folio's estimate.", "Folio planifie autant de révisions avant l’échéance. Laissez vide pour utiliser l’estimation de Folio.", "Folio planifica este tiempo de estudio antes de la fecha límite. Déjalo vacío para usar la estimación de Folio.", "So viel Lernzeit plant Folio vor dem Termin ein. Leer lassen, um Folios Schätzung zu verwenden.", "Folio 会在截止前安排这么多学习时间。留空则使用 Folio 的估计。")
+T("Result", "Résultat", "Resultado", "Ergebnis", "成绩")
+T("Mark", "Points", "Puntuación", "Punkte", "分数")
+T("out of", "sur", "de", "von", "/")
+T("Out of", "Sur", "Total", "Von", "满分")
+T("Grade", "Note", "Calificación", "Note", "等级")
+T("Optional, such as B+ or Band 5", "Facultatif, p. ex. B+ ou Band 5", "Opcional, p. ej., B+ o Band 5", "Optional, z. B. B+ oder Band 5", "可选，例如 B+ 或 Band 5")
+T("Feedback", "Commentaires", "Comentarios", "Rückmeldung", "评语")
+T("What to keep doing, and what to improve", "Ce qu’il faut continuer et ce qu’il faut améliorer", "Qué seguir haciendo y qué mejorar", "Was du beibehalten und was du verbessern solltest", "哪些要继续保持，哪些需要改进")
+T("Steps", "Étapes", "Pasos", "Schritte", "步骤")
+T("Add Step", "Ajouter une étape", "Añadir paso", "Schritt hinzufügen", "添加步骤")
+T("Suggest Steps", "Suggérer des étapes", "Sugerir pasos", "Schritte vorschlagen", "建议步骤")
+T("Study sessions before a step are named after it.", "Les séances avant une étape portent son nom.", "Las sesiones de estudio previas a un paso llevan su nombre.", "Lerneinheiten vor einem Schritt werden nach ihm benannt.", "某个步骤之前的学习时段会以该步骤命名。")
+T("Notes", "Notes", "Notas", "Notizen", "备注")
+T("Anything to remember", "Ce qu’il ne faut pas oublier", "Cualquier cosa que recordar", "Alles, was du dir merken willst", "需要记住的事")
+T("Also in Reminders", "Aussi dans Rappels", "También en Recordatorios", "Auch in Erinnerungen", "也在“提醒事项”中")
+T("Unlink", "Dissocier", "Desvincular", "Verknüpfung lösen", "取消关联")
+T("Unlink this file", "Dissocier ce fichier", "Desvincular este archivo", "Verknüpfung mit dieser Datei lösen", "取消关联此文件")
+
+# Exams sheet
+T("Add Exams", "Ajouter des examens", "Añadir exámenes", "Prüfungen hinzufügen", "添加考试")
+T("Add Exams…", "Ajouter des examens…", "Añadir exámenes…", "Prüfungen hinzufügen …", "添加考试…")
+P("Add {} Exam", "Add {} Exams", ["Ajouter {} examen", "Ajouter {} examens"], ["Añadir {} examen", "Añadir {} exámenes"], ["{} Prüfung hinzufügen", "{} Prüfungen hinzufügen"], "添加 {} 场考试")
+T("Add Another Exam", "Ajouter un autre examen", "Añadir otro examen", "Weitere Prüfung hinzufügen", "再添加一场考试")
+T("Remove Exam", "Supprimer l’examen", "Eliminar examen", "Prüfung entfernen", "移除考试")
+T("Folio plans revision in the weeks before each one, and nothing else while it's on.", "Folio planifie des révisions dans les semaines qui précèdent chacun, et rien d’autre pendant l’épreuve.", "Folio planifica el repaso en las semanas previas a cada uno y nada más mientras dura.", "Folio plant in den Wochen davor Wiederholung ein und während der Prüfung nichts anderes.", "Folio 会在每场考试前几周安排复习，考试期间不安排其他内容。")
+T("Called", "Nom", "Nombre", "Name", "名称")
+T("e.g. Trial exams", "p. ex. Examens blancs", "p. ej., Exámenes de prueba", "z. B. Probeprüfungen", "例如：模拟考试")
+T("Each exam is named after its subject and this, such as “Biology Trial exams”.", "Chaque examen prend le nom de sa matière suivi de ceci, p. ex. « Biologie Examens blancs ».", "Cada examen se llama como su asignatura más esto, p. ej., «Biología Exámenes de prueba».", "Jede Prüfung heißt wie ihr Fach und dies, z. B. „Biologie Probeprüfungen“.", "每场考试以科目名加上这个名称命名，例如“生物 模拟考试”。")
+T("Choose…", "Choisir…", "Elegir…", "Auswählen …", "选取…")
+T("{} exam", "Examen de {}", "Examen de {}", "{}-Prüfung", "{}考试")
+
+# Planner and assessments list
+T("Assessments", "Évaluations", "Evaluaciones", "Leistungen", "考核")
+T("{} coming up", "{} à venir", "{} próximas", "{} anstehend", "{} 项即将到来")
+T("Add an assessment", "Ajouter une évaluation", "Añadir una evaluación", "Eine Leistungsüberprüfung hinzufügen", "添加考核")
+T("Add an assessment for {}", "Ajouter une évaluation en {}", "Añadir una evaluación de {}", "Eine Leistungsüberprüfung für {} hinzufügen", "为{}添加考核")
+T("Works back from your assessments and exams, around your calendar. Sessions you made or changed stay put.", "Part de vos évaluations et examens, autour de votre calendrier. Les séances que vous avez créées ou modifiées restent en place.", "Parte de tus evaluaciones y exámenes, en torno a tu calendario. Las sesiones que has creado o cambiado se quedan donde están.", "Plant rückwärts von deinen Aufgaben und Prüfungen aus, um deinen Kalender herum. Einheiten, die du angelegt oder geändert hast, bleiben, wo sie sind.", "从你的考核和考试倒推安排，避开日历中的日程。你自己添加或修改过的时段不会被移动。")
+T("Works back from your assessments and exams, around school and your free time. Sessions you made or changed stay put.", "Part de vos évaluations et examens, autour des cours et de votre temps libre. Les séances que vous avez créées ou modifiées restent en place.", "Parte de tus evaluaciones y exámenes, en torno a las clases y tu tiempo libre. Las sesiones que has creado o cambiado se quedan donde están.", "Plant rückwärts von deinen Aufgaben und Prüfungen aus, um Schule und Freizeit herum. Einheiten, die du angelegt oder geändert hast, bleiben, wo sie sind.", "从你的考核和考试倒推安排，避开上课时间，利用空闲时间。你自己添加或修改过的时段不会被移动。")
+T("No assessments yet", "Aucune évaluation", "Aún no hay evaluaciones", "Noch keine Leistungsüberprüfungen", "还没有考核")
+T("Add your tasks and exams, or drop a task sheet on Folio and it will offer to add it.", "Ajoutez vos devoirs et examens, ou déposez une consigne sur Folio, qui proposera de l’ajouter.", "Añade tus tareas y exámenes, o suelta un enunciado en Folio y te ofrecerá añadirlo.", "Füge deine Aufgaben und Prüfungen hinzu oder zieh ein Aufgabenblatt auf Folio – es bietet dann an, sie hinzuzufügen.", "添加你的作业和考试，或把任务说明拖到 Folio 上，它会提议帮你添加。")
+T("Coming up", "À venir", "Próximas", "Anstehend", "即将到来")
+T("Overdue", "En retard", "Atrasada", "Überfällig", "已逾期")
+T("Mark as Submitted", "Marquer comme rendu", "Marcar como entregada", "Als abgegeben markieren", "标记为已提交")
+T("Tomorrow", "Demain", "Mañana", "Morgen", "明天")
+T("In {} days", "Dans {} jours", "En {} días", "In {} Tagen", "{} 天后")
+T("Due {}", "À rendre {}", "Entrega: {}", "Fällig {}", "截止 {}")
+
+# Calendar
+T("{} study session for {}, {}", "Séance de {} pour {}, {}", "Sesión de estudio de {} para {}, {}", "Lerneinheit {} für {}, {}", "{}学习时段：{}，{}")
+
+# Inbox
+T("Assessments found", "Évaluations trouvées", "Evaluaciones encontradas", "Gefundene Leistungsüberprüfungen", "找到的考核")
+T("Add", "Ajouter", "Añadir", "Hinzufügen", "添加")
+T("Link", "Associer", "Vincular", "Verknüpfen", "关联")
+T("Link File", "Associer le fichier", "Vincular archivo", "Datei verknüpfen", "关联文件")
+T("Add “{}” to {}?", "Ajouter « {} » à {} ?", "¿Añadir «{}» a {}?", "„{}“ zu {} hinzufügen?", "将“{}”添加到{}？")
+T("From “{}”", "De « {} »", "De «{}»", "Aus „{}“", "来自“{}”")
+T("Mark {}", "Points : {}", "Puntuación: {}", "Punkte: {}", "得分 {}")
+
+# Today
+T("Good morning", "Bonjour", "Buenos días", "Guten Morgen", "早上好")
+T("Good afternoon", "Bon après-midi", "Buenas tardes", "Guten Tag", "下午好")
+T("Good evening", "Bonsoir", "Buenas noches", "Guten Abend", "晚上好")
+T("Due soon", "Bientôt à rendre", "Próximas entregas", "Bald fällig", "即将截止")
+T("See All", "Tout afficher", "Ver todo", "Alle anzeigen", "查看全部")
+T("Add your tasks and exams in the Planner, or drop a task sheet on Folio and it will offer to add it.", "Ajoutez vos devoirs et examens dans le Planning, ou déposez une consigne sur Folio, qui proposera de l’ajouter.", "Añade tus tareas y exámenes en la Agenda, o suelta un enunciado en Folio y te ofrecerá añadirlo.", "Füge deine Aufgaben und Prüfungen im Planer hinzu oder zieh ein Aufgabenblatt auf Folio – es bietet dann an, sie hinzuzufügen.", "在“计划”中添加作业和考试，或把任务说明拖到 Folio 上，它会提议帮你添加。")
+T("Studying now", "Révision en cours", "Estudiando ahora", "Jetzt beim Lernen", "正在学习")
+T("Next up", "À suivre", "A continuación", "Als Nächstes", "接下来")
+T("Nothing planned yet", "Rien de planifié", "Aún no hay nada planificado", "Noch nichts geplant", "还没有安排")
+T("Folio can plan this week's study, working back from what's due.", "Folio peut planifier vos révisions de la semaine en partant de vos échéances.", "Folio puede planificar el estudio de esta semana a partir de lo que tienes que entregar.", "Folio kann die Lernzeit dieser Woche planen – rückwärts von deinen Terminen.", "Folio 可以从截止日期倒推，安排本周的学习。")
+T("{} · starting now", "{} · commence maintenant", "{} · empieza ahora", "{} · beginnt jetzt", "{} · 即将开始")
+T("{} · in {} minutes", "{} · dans {} minutes", "{} · en {} minutos", "{} · in {} Minuten", "{} · {} 分钟后")
+T("Classes today", "Cours aujourd’hui", "Clases de hoy", "Unterricht heute", "今日课程")
+T("Add your timetable in Settings › Planner to see your classes here.", "Ajoutez votre emploi du temps dans Réglages › Planning pour voir vos cours ici.", "Añade tu horario en Ajustes › Agenda para ver aquí tus clases.", "Füge deinen Stundenplan unter „Einstellungen“ › „Planer“ hinzu, um deinen Unterricht hier zu sehen.", "在“设置” › “计划”中添加课程表，即可在这里看到你的课程。")
+T("No classes today.", "Pas de cours aujourd’hui.", "Hoy no hay clases.", "Heute kein Unterricht.", "今天没有课。")
+T("Now", "Maintenant", "Ahora", "Jetzt", "进行中")
+P("{} assessment found in your files", "{} assessments found in your files", ["{} évaluation trouvée dans vos fichiers", "{} évaluations trouvées dans vos fichiers"], ["{} evaluación encontrada en tus archivos", "{} evaluaciones encontradas en tus archivos"], ["{} Leistungsüberprüfung in deinen Dateien gefunden", "{} Leistungsüberprüfungen in deinen Dateien gefunden"], "在你的文件中找到 {} 项考核")
+T("Open Inbox", "Ouvrir la boîte de réception", "Abrir la bandeja de entrada", "Eingang öffnen", "打开收件箱")
+
+# Subject pages
+T("Next class", "Prochain cours", "Próxima clase", "Nächste Stunde", "下一节课")
+T("Next due", "Prochaine échéance", "Próxima entrega", "Als Nächstes fällig", "下一个截止")
+T("Add your timetable in Settings › Planner.", "Ajoutez votre emploi du temps dans Réglages › Planning.", "Añade tu horario en Ajustes › Agenda.", "Füge deinen Stundenplan unter „Einstellungen“ › „Planer“ hinzu.", "请在“设置” › “计划”中添加课程表。")
+T("None in the next three weeks.", "Aucun dans les trois prochaines semaines.", "Ninguna en las próximas tres semanas.", "Keine in den nächsten drei Wochen.", "未来三周没有。")
+T("Nothing due.", "Rien à rendre.", "Nada pendiente.", "Nichts fällig.", "没有待交的。")
+T("No assessments yet. Add one with the + button, or drop a task sheet on Folio.", "Aucune évaluation. Ajoutez-en une avec le bouton +, ou déposez une consigne sur Folio.", "Aún no hay evaluaciones. Añade una con el botón + o suelta un enunciado en Folio.", "Noch keine Leistungsüberprüfungen. Füge eine mit der Taste + hinzu oder zieh ein Aufgabenblatt auf Folio.", "还没有考核。点按 + 按钮添加，或把任务说明拖到 Folio 上。")
+
+# Menu bar
+T("{} now", "{} en ce moment", "{} ahora", "{} jetzt", "正在上{}")
+T("{} at {}", "{} à {}", "{} a las {}", "{} um {}", "{2} 上{1}")
+T("Studying {} now", "Révision de {} en cours", "Estudiando {} ahora", "Jetzt {} lernen", "正在学习{}")
+T("Study {} at {}", "Réviser {} à {}", "Estudiar {} a las {}", "{} um {} lernen", "{2} 学习{1}")
+T("Opens Today", "Ouvre Aujourd’hui", "Abre Hoy", "Öffnet „Heute“", "打开“今天”")
+
+# Settings
+T("Teachers", "Enseignants", "Profesores", "Lehrkräfte", "老师")
+T("e.g. Ms Nguyen", "p. ex. Mme Nguyen", "p. ej., Sra. Nguyen", "z. B. Frau Nguyen", "例如：阮老师")
+T("Add assessments to Reminders", "Ajouter les évaluations à Rappels", "Añadir evaluaciones a Recordatorios", "Leistungsüberprüfungen zu Erinnerungen hinzufügen", "将考核添加到“提醒事项”")
+T("Assessments go in a Folio list in Apple Reminders, with alerts the day before and two hours before, so they reach your iPhone. Ticking one off there marks it submitted here.", "Les évaluations sont ajoutées à une liste Folio dans Rappels, avec des alertes la veille et deux heures avant, pour qu’elles arrivent sur votre iPhone. En cocher une là-bas la marque comme rendue ici.", "Las evaluaciones van a una lista Folio en Recordatorios, con avisos el día anterior y dos horas antes, para que lleguen a tu iPhone. Si marcas una allí, aquí se marca como entregada.", "Leistungsüberprüfungen landen in einer Folio-Liste in Erinnerungen, mit Hinweisen am Vortag und zwei Stunden vorher, damit sie auf deinem iPhone ankommen. Hakst du dort eine ab, wird sie hier als abgegeben markiert.", "考核会放进“提醒事项”中的 Folio 列表，并在前一天和提前两小时提醒，因此会同步到你的 iPhone。在那里勾选完成，这里也会标记为已提交。")
+T("Assessment sessions last {} minutes", "Les séances pour une évaluation durent {} minutes", "Las sesiones para evaluaciones duran {} minutos", "Lerneinheiten für Leistungsüberprüfungen dauern {} Minuten", "考核学习时段为 {} 分钟")
+T("Plan My Week puts sessions in these times, around your classes, events and exams. Work for each assessment is spread over the weeks before it's due.", "Planifier ma semaine place les séances dans ces créneaux, autour de vos cours, événements et examens. Le travail de chaque évaluation est réparti sur les semaines qui précèdent l’échéance.", "Planificar mi semana coloca las sesiones en estos horarios, alrededor de tus clases, eventos y exámenes. El trabajo de cada evaluación se reparte en las semanas anteriores a la entrega.", "„Meine Woche planen“ legt Lerneinheiten in diese Zeiten, um Unterricht, Termine und Prüfungen herum. Die Arbeit für jede Leistungsüberprüfung wird auf die Wochen vor dem Termin verteilt.", "“规划本周”会把学习时段安排在这些时间，避开课程、日程和考试。每项考核的准备工作会分散到截止前的几周里。")
+
+# Backup
+P("{} assessment", "{} assessments", ["{} évaluation", "{} évaluations"], ["{} evaluación", "{} evaluaciones"], ["{} Leistungsüberprüfung", "{} Leistungsüberprüfungen"], "{} 项考核")
+T("Step", "Étape", "Paso", "Schritt", "步骤")
+
+
+# Homework, a kind of assessment.
+
+T("Homework", "Travail à faire", "Deberes", "Hausaufgabe", "家庭作业")
+
+
+# Livelier Today and Inbox.
+
+P("{} class", "{} classes", ["{} cours", "{} cours"], ["{} clase", "{} clases"], ["{} Stunde", "{} Stunden"], "{} 节课")
+P("{} event", "{} events", ["{} événement", "{} événements"], ["{} evento", "{} eventos"], ["{} Termin", "{} Termine"], "{} 个日程")
+P("{} session", "{} sessions", ["{} séance", "{} séances"], ["{} sesión", "{} sesiones"], ["{} Einheit", "{} Einheiten"], "{} 个时段")
+P("{} more due", "{} more due", ["{} autre à rendre", "{} autres à rendre"], ["{} entrega más", "{} entregas más"], ["{} weitere fällig", "{} weitere fällig"], "还有 {} 项到期")
+P("{} waiting", "{} waiting", ["{} en attente", "{} en attente"], ["{} pendiente", "{} pendientes"], ["{} wartet", "{} warten"], "{} 项待处理")
+T("{} of {}", "{} sur {}", "{} de {}", "{} von {}", "{}/{}")
+T("Nothing planned", "Rien de prévu", "Nada previsto", "Nichts geplant", "无安排")
+T("Open this day in the Planner", "Ouvrir ce jour dans le Planning", "Abrir este día en la Agenda", "Diesen Tag im Planer öffnen", "在“计划”中打开这一天")
+T("Due in 7 days", "À rendre sous 7 jours", "Entregas en 7 días", "Fällig in 7 Tagen", "7 天内截止")
+T("Next: {}", "Prochain : {}", "Siguiente: {}", "Als Nächstes: {}", "下一个：{}")
+T("Nothing due", "Rien à rendre", "Nada pendiente", "Nichts fällig", "暂无截止事项")
+T("This week is open", "Semaine libre", "Semana libre", "Woche ist frei", "本周尚无安排")
+T("Sorted this week", "Triés cette semaine", "Clasificados esta semana", "Diese Woche einsortiert", "本周已整理")
+T("In the Inbox", "En réception", "En Entrada", "Im Eingang", "收件箱中")
+T("All caught up", "Tout est à jour", "Todo al día", "Alles erledigt", "全部处理完毕")
+T("Waiting for you", "Vous attend", "Te espera", "Wartet auf dich", "等你处理")
+T("Get set up", "Pour bien démarrer", "Primeros pasos", "Einrichten", "开始设置")
+T("Hide", "Masquer", "Ocultar", "Ausblenden", "隐藏")
+T("Hide this list. Everything here is also in Settings.", "Masquer cette liste. Tout se trouve aussi dans les Réglages.", "Ocultar esta lista. Todo está también en Ajustes.", "Diese Liste ausblenden. Alles hier findest du auch in den Einstellungen.", "隐藏此列表。这些内容在“设置”中也都有。")
+T("Add your timetable", "Ajouter votre emploi du temps", "Añadir tu horario", "Stundenplan hinzufügen", "添加课程表")
+T("See your classes here and keep school time free.", "Voyez vos cours ici et gardez le temps d’école libre.", "Verás aquí tus clases y el horario escolar quedará libre.", "Sieh hier deinen Unterricht und halte die Schulzeit frei.", "在这里查看课程，并空出上课时间。")
+T("Connect Apple Calendar", "Connecter Calendrier", "Conectar Calendario", "Kalender verbinden", "连接“日历”")
+T("Study is planned around your events.", "Les révisions sont planifiées autour de vos événements.", "El estudio se planifica en torno a tus eventos.", "Lernzeit wird um deine Termine herum geplant.", "学习会围绕你的日程安排。")
+T("Add an assessment or exam", "Ajouter une évaluation ou un examen", "Añadir una evaluación o un examen", "Leistungsüberprüfung oder Prüfung hinzufügen", "添加考核或考试")
+T("Folio plans study back from when it's due.", "Folio planifie les révisions en partant de l’échéance.", "Folio planifica el estudio partiendo de la fecha de entrega.", "Folio plant die Lernzeit vom Abgabetermin aus rückwärts.", "Folio 会从截止日期倒推安排学习。")
+T("Sort your downloads", "Classer vos téléchargements", "Clasificar tus descargas", "Downloads einsortieren", "整理你的下载")
+T("Schoolwork you download is filed as it arrives.", "Les travaux scolaires téléchargés sont classés dès leur arrivée.", "Lo que descargues para clase se archiva al llegar.", "Heruntergeladene Schulsachen werden beim Eintreffen einsortiert.", "下载的学习资料一到就会归档。")
+T("Add…", "Ajouter…", "Añadir…", "Hinzufügen …", "添加…")
+T("Turn On", "Activer", "Activar", "Einschalten", "打开")
+T("Folio can plan this week's study around school and your events, working back from what's due.",
+  "Folio peut planifier vos révisions de la semaine autour de l’école et de vos événements, en partant de ce qui est à rendre.",
+  "Folio puede planificar el estudio de esta semana en torno al colegio y tus eventos, partiendo de lo que tienes que entregar.",
+  "Folio kann deine Lernzeit diese Woche um Schule und Termine herum planen, ausgehend davon, was fällig ist.",
+  "Folio 可以围绕上学时间和你的日程规划本周学习，从截止事项倒推。")
+T("No tasks or exams yet", "Aucune évaluation ni aucun examen", "Aún no hay tareas ni exámenes", "Noch keine Aufgaben oder Prüfungen", "还没有任务或考试")
+T("Add them here, or drop a task sheet on Folio and it will offer to add it.",
+  "Ajoutez-les ici, ou déposez une consigne sur Folio et il proposera de l’ajouter.",
+  "Añádelas aquí o suelta un enunciado en Folio y te ofrecerá añadirlo.",
+  "Füge sie hier hinzu oder zieh ein Aufgabenblatt auf Folio, dann bietet es an, es hinzuzufügen.",
+  "在这里添加，或把任务说明拖到 Folio 上，它会提议添加。")
+T("Nothing due in the next two weeks", "Rien à rendre dans les deux prochaines semaines", "Nada que entregar en las próximas dos semanas", "In den nächsten zwei Wochen ist nichts fällig", "未来两周没有截止事项")
+T("A good time to get ahead on something.", "Un bon moment pour prendre de l’avance.", "Buen momento para adelantar trabajo.", "Eine gute Zeit, um etwas vorzuarbeiten.", "正好可以提前做些准备。")
+T("Add your timetable to see your classes here.", "Ajoutez votre emploi du temps pour voir vos cours ici.", "Añade tu horario para ver aquí tus clases.", "Füge deinen Stundenplan hinzu, um hier deinen Unterricht zu sehen.", "添加课程表，即可在这里查看你的课程。")
+T("No classes today. Enjoy the weekend.", "Pas de cours aujourd’hui. Bon week-end !", "Hoy no hay clases. ¡Disfruta del fin de semana!", "Heute kein Unterricht. Schönes Wochenende!", "今天没有课。周末愉快！")
+T("You're all caught up", "Vous êtes à jour", "Lo tienes todo al día", "Du bist auf dem neuesten Stand", "你已全部处理完毕")
+T("Files Folio isn't sure about, and tasks it finds in your files, wait here for you.",
+  "Les fichiers dont Folio n’est pas sûr et les évaluations qu’il trouve dans vos fichiers vous attendent ici.",
+  "Los archivos de los que Folio no está seguro y las tareas que encuentra en tus archivos te esperan aquí.",
+  "Dateien, bei denen Folio unsicher ist, und Aufgaben, die es in deinen Dateien findet, warten hier auf dich.",
+  "Folio 拿不准的文件，以及它在你的文件中找到的任务，都会在这里等你处理。")
+T("Nothing yet this week. Files you drop here, and downloads Folio watches, are filed by subject.",
+  "Rien pour l’instant cette semaine. Les fichiers déposés ici et les téléchargements surveillés par Folio sont classés par matière.",
+  "Nada todavía esta semana. Los archivos que sueltes aquí y las descargas que vigila Folio se archivan por asignatura.",
+  "Diese Woche noch nichts. Dateien, die du hier ablegst, und Downloads, die Folio überwacht, werden nach Fach einsortiert.",
+  "本周还没有。拖到这里的文件和 Folio 监视的下载内容会按科目归档。")
+T("Show Library", "Afficher la bibliothèque", "Mostrar biblioteca", "Bibliothek zeigen", "显示资料库")
+T("How Folio sorts", "Comment Folio classe", "Cómo clasifica Folio", "So sortiert Folio", "Folio 如何整理")
+T("Reads it", "Le lit", "Lo lee", "Liest sie", "读取内容")
+T("Text, scanned pages, slides and even recordings.", "Texte, pages scannées, diapositives et même enregistrements.", "Texto, páginas escaneadas, diapositivas e incluso grabaciones.", "Text, gescannte Seiten, Folien und sogar Aufnahmen.", "文字、扫描页、幻灯片，甚至录音。")
+T("Picks the subject", "Choisit la matière", "Elige la asignatura", "Wählt das Fach", "判断科目")
+T("From the words in it, your past choices and the on-device AI.", "D’après ses mots, vos choix passés et l’IA de l’appareil.", "Por sus palabras, tus elecciones anteriores y la IA del dispositivo.", "Anhand der Wörter darin, deiner früheren Entscheidungen und der KI auf dem Gerät.", "依据文件里的词语、你以往的选择和设备端 AI。")
+T("Files it", "Le classe", "Lo archiva", "Legt sie ab", "归档")
+T("Into the subject's folder. Undo puts it back.", "Dans le dossier de la matière. Annuler le remet à sa place.", "En la carpeta de la asignatura. Deshacer lo devuelve.", "In den Ordner des Fachs. Widerrufen legt sie zurück.", "放进对应科目的文件夹。撤销即可放回原处。")
+T("Where files come from", "D’où viennent les fichiers", "De dónde vienen los archivos", "Woher Dateien kommen", "文件来源")
+T("Watch Downloads", "Surveiller Téléchargements", "Vigilar Descargas", "Downloads überwachen", "监视“下载”")
+T("Watching", "Surveillé", "Vigilando", "Wird überwacht", "正在监视")
+T("Not watched", "Non surveillé", "Sin vigilar", "Nicht überwacht", "未监视")
+T("Other folders", "Autres dossiers", "Otras carpetas", "Andere Ordner", "其他文件夹")
+T("None yet", "Aucun pour l’instant", "Ninguna por ahora", "Noch keine", "暂无")
+T("Shortcuts", "Raccourcis", "Atajos", "Kurzbefehle", "快捷指令")
+T("Use “Sort Files” in Shortcuts", "Utilisez « Trier des fichiers » dans Raccourcis", "Usa «Clasificar archivos» en Atajos", "Nutze „Dateien einsortieren“ in Kurzbefehle", "在“快捷指令”中使用“整理文件”")
+
+# Phase 7: study tools.
+
+# Study screen and flashcards
+T("{} studied this week", "{} de révision cette semaine", "{} de estudio esta semana", "{} gelernt diese Woche", "本周学习了 {}")
+P("{} card", "{} cards", ["{} fiche", "{} fiches"], ["{} tarjeta", "{} tarjetas"], ["{} Karte", "{} Karten"], "{} 张卡片")
+P("{} card in all", "{} cards in all", ["{} fiche au total", "{} fiches au total"], ["{} tarjeta en total", "{} tarjetas en total"], ["{} Karte insgesamt", "{} Karten insgesamt"], "共 {} 张卡片")
+P("{} card to review", "{} cards to review", ["{} fiche à réviser", "{} fiches à réviser"], ["{} tarjeta por repasar", "{} tarjetas por repasar"], ["{} Karte zu wiederholen", "{} Karten zu wiederholen"], "{} 张卡片待复习")
+P("{} due", "{} due", ["{} à revoir", "{} à revoir"], ["{} pendiente", "{} pendientes"], ["{} fällig", "{} fällig"], "{} 张到期")
+P("{} flashcard", "{} flashcards", ["{} fiche", "{} fiches"], ["{} tarjeta", "{} tarjetas"], ["{} Karteikarte", "{} Karteikarten"], "{} 张抽认卡")
+P("{} learnt", "{} learnt", ["{} apprise", "{} apprises"], ["{} aprendida", "{} aprendidas"], ["{} gelernt", "{} gelernt"], "已掌握 {} 张")
+P("{} to review", "{} to review", ["{} à réviser", "{} à réviser"], ["{} por repasar", "{} por repasar"], ["{} zu wiederholen", "{} zu wiederholen"], "{} 张待复习")
+P("From {} subject. Cards you know come back less often.", "From {} subjects. Cards you know come back less often.",
+  ["De {} matière. Les fiches que vous connaissez reviennent moins souvent.", "De {} matières. Les fiches que vous connaissez reviennent moins souvent."],
+  ["De {} asignatura. Las tarjetas que ya sabes vuelven con menos frecuencia.", "De {} asignaturas. Las tarjetas que ya sabes vuelven con menos frecuencia."],
+  ["Aus {} Fach. Karten, die du kannst, kommen seltener wieder.", "Aus {} Fächern. Karten, die du kannst, kommen seltener wieder."],
+  "来自 {} 个科目。你掌握的卡片出现得更少。")
+T("Flashcards", "Fiches", "Tarjetas", "Karteikarten", "抽认卡")
+T("No flashcards yet", "Pas encore de fiches", "Aún no hay tarjetas", "Noch keine Karteikarten", "还没有抽认卡")
+T("No cards yet", "Pas encore de fiches", "Aún no hay tarjetas", "Noch keine Karten", "还没有卡片")
+T("Folio can write them from your own notes, on this Mac.", "Folio peut les rédiger à partir de vos propres notes, sur ce Mac.", "Folio puede escribirlas a partir de tus propios apuntes, en este Mac.", "Folio kann sie aus deinen eigenen Notizen schreiben, auf diesem Mac.", "Folio 可以在这台 Mac 上根据你自己的笔记来编写。")
+T("Pick a file of notes, slides or a recorded lesson.", "Choisissez un fichier de notes, des diapositives ou un cours enregistré.", "Elige un archivo de apuntes, unas diapositivas o una clase grabada.", "Wähle eine Datei mit Notizen, Folien oder eine aufgenommene Stunde.", "选择一份笔记、幻灯片或课堂录音。")
+T("The on-device AI writes questions, each answered in your file.", "L’IA sur l’appareil rédige des questions dont la réponse est dans votre fichier.", "La IA del dispositivo escribe preguntas cuya respuesta está en tu archivo.", "Die KI auf dem Gerät schreibt Fragen, deren Antwort in deiner Datei steht.", "设备端 AI 会编写问题，每道题的答案都在你的文件里。")
+T("Keep the ones you want, and review a few each day.", "Gardez celles que vous voulez et révisez-en quelques-unes chaque jour.", "Quédate con las que quieras y repasa unas cuantas cada día.", "Behalte die, die du willst, und wiederhole jeden Tag ein paar.", "保留你想要的卡片，每天复习几张。")
+T("All reviewed", "Tout est révisé", "Todo repasado", "Alles wiederholt", "全部复习完毕")
+T("Up first", "En premier", "Primero", "Als Erstes", "第一张")
+T("Start Review", "Commencer la révision", "Empezar a repasar", "Wiederholen starten", "开始复习")
+T("The next cards come back tomorrow.", "Les prochaines fiches reviennent demain.", "Las próximas tarjetas vuelven mañana.", "Die nächsten Karten kommen morgen wieder.", "下一批卡片明天出现。")
+T("The next cards come back {}.", "Les prochaines fiches reviennent le {}.", "Las próximas tarjetas vuelven el {}.", "Die nächsten Karten kommen am {} wieder.", "下一批卡片将于{}出现。")
+T("Study now", "Réviser maintenant", "Estudiar ahora", "Jetzt lernen", "现在学习")
+T("A timer that records what you actually did.", "Un minuteur qui enregistre ce que vous avez vraiment fait.", "Un temporizador que registra lo que de verdad hiciste.", "Ein Timer, der festhält, was du wirklich gemacht hast.", "记录你实际完成情况的计时器。")
+T("Length", "Durée", "Duración", "Dauer", "时长")
+T("25 min", "25 min", "25 min", "25 Min.", "25 分钟")
+T("45 min", "45 min", "45 min", "45 Min.", "45 分钟")
+T("60 min", "60 min", "60 min", "60 Min.", "60 分钟")
+T("Start Timer", "Lancer le minuteur", "Iniciar temporizador", "Timer starten", "开始计时")
+T("Show Timer", "Afficher le minuteur", "Mostrar temporizador", "Timer zeigen", "显示计时器")
+T("Studied this week", "Révisé cette semaine", "Estudiado esta semana", "Diese Woche gelernt", "本周学习")
+T("Hours studied", "Heures de révision", "Horas de estudio", "Gelernte Stunden", "学习时长（小时）")
+T("Of {} planned", "Sur {} prévues", "De {} previstas", "Von {} geplant", "计划 {}")
+T("Of {} planned. Finish sessions with the timer, or mark them done in the Planner.", "Sur {} prévues. Terminez les séances avec le minuteur, ou marquez-les comme faites dans le Planning.", "De {} previstas. Termina las sesiones con el temporizador o márcalas como hechas en la Agenda.", "Von {} geplant. Beende Einheiten mit dem Timer oder markiere sie im Planer als erledigt.", "计划 {}。用计时器结束时段，或在“计划”中标记为完成。")
+T("Plan your week, then finish sessions with the timer.", "Planifiez votre semaine, puis terminez les séances avec le minuteur.", "Planifica tu semana y luego termina las sesiones con el temporizador.", "Plane deine Woche und beende die Einheiten dann mit dem Timer.", "先规划你的一周，再用计时器完成各个时段。")
+T("Add a Card…", "Ajouter une fiche…", "Añadir una tarjeta…", "Karte hinzufügen …", "添加卡片…")
+T("Make Cards…", "Créer des fiches…", "Crear tarjetas…", "Karten erstellen …", "制作卡片…")
+T("Review", "Réviser", "Repasar", "Wiederholen", "复习")
+T("Cards to review", "Fiches à réviser", "Tarjetas por repasar", "Karten zu wiederholen", "待复习卡片")
+T("Make some in Study", "Créez-en dans Révisions", "Crea algunas en Estudio", "Erstelle welche unter „Lernen“", "在“学习”中制作")
+T("Make some from your notes.", "Créez-en à partir de vos notes.", "Crea algunas a partir de tus apuntes.", "Erstelle welche aus deinen Notizen.", "用你的笔记制作一些。")
+T("Recent study", "Révisions récentes", "Estudio reciente", "Zuletzt gelernt", "最近的学习")
+T("Sessions you finish with the timer appear here, with how they went.", "Les séances terminées avec le minuteur apparaissent ici, avec leur déroulement.", "Las sesiones que termines con el temporizador aparecen aquí, con cómo fueron.", "Einheiten, die du mit dem Timer beendest, erscheinen hier, mit ihrem Verlauf.", "用计时器完成的时段会显示在这里，并附上进展情况。")
+T("Done · {}", "Terminé · {}", "Hecho · {}", "Erledigt · {}", "完成 · {}")
+T("Partly · {}", "En partie · {}", "En parte · {}", "Teilweise · {}", "部分完成 · {}")
+T("Didn't start", "Pas commencé", "No empecé", "Nicht angefangen", "没开始")
+T("{}, done", "{}, terminée", "{}, hecha", "{}, erledigt", "{}，已完成")
+T("{}, partly done", "{}, en partie faite", "{}, hecha en parte", "{}, teilweise erledigt", "{}，部分完成")
+T("{}, skipped", "{}, sautée", "{}, omitida", "{}, ausgelassen", "{}，已跳过")
+
+# Reviewing cards
+T("Review · {}", "Révision · {}", "Repaso · {}", "Wiederholen · {}", "复习 · {}")
+T("Card actions", "Actions sur la fiche", "Acciones de la tarjeta", "Kartenaktionen", "卡片操作")
+T("Edit Card…", "Modifier la fiche…", "Editar tarjeta…", "Karte bearbeiten …", "编辑卡片…")
+T("Delete Card", "Supprimer la fiche", "Eliminar tarjeta", "Karte löschen", "删除卡片")
+T("From {}", "Tirée de {}", "De {}", "Aus {}", "来自 {}")
+T("Show Answer", "Afficher la réponse", "Mostrar respuesta", "Antwort zeigen", "显示答案")
+T("Didn't Know", "Pas su", "No la sabía", "Nicht gewusst", "不会")
+T("Knew It", "Je savais", "La sabía", "Gewusst", "会了")
+T("Back to the first box: it comes round again tomorrow (←)", "Retour à la première boîte : elle revient demain (←)", "Vuelve a la primera caja: aparecerá de nuevo mañana (←)", "Zurück ins erste Fach: Sie kommt morgen wieder (←)", "放回第一个盒子：明天再出现（←）")
+T("Up a box: it comes back later (→)", "Boîte suivante : elle reviendra plus tard (→)", "Sube de caja: aparecerá más adelante (→)", "Ein Fach weiter: Sie kommt später wieder (→)", "升入下一个盒子：之后再出现（→）")
+T("Done for now", "Terminé pour l’instant", "Listo por ahora", "Für jetzt fertig", "暂时完成")
+T("Nothing to review", "Rien à réviser", "Nada que repasar", "Nichts zu wiederholen", "没有要复习的")
+T("You knew {} of {} the first time. Cards you missed come back tomorrow.", "Vous en avez su {} sur {} du premier coup. Les fiches manquées reviennent demain.", "Sabías {} de {} a la primera. Las tarjetas que fallaste vuelven mañana.", "Du wusstest beim ersten Mal {} von {}. Verpasste Karten kommen morgen wieder.", "第一次就答对了 {} 张，共 {} 张。答错的卡片明天会再出现。")
+T("New Card", "Nouvelle fiche", "Nueva tarjeta", "Neue Karte", "新卡片")
+T("Edit Card", "Modifier la fiche", "Editar tarjeta", "Karte bearbeiten", "编辑卡片")
+T("Question", "Question", "Pregunta", "Frage", "问题")
+T("Answer", "Réponse", "Respuesta", "Antwort", "答案")
+T("Add Card", "Ajouter la fiche", "Añadir tarjeta", "Karte hinzufügen", "添加卡片")
+
+# Making cards
+T("Make Flashcards", "Créer des fiches", "Crear tarjetas", "Karteikarten erstellen", "制作抽认卡")
+T("Make Flashcards…", "Créer des fiches…", "Crear tarjetas…", "Karteikarten erstellen …", "制作抽认卡…")
+T("Filter files", "Filtrer les fichiers", "Filtrar archivos", "Dateien filtern", "筛选文件")
+T("Cards work best from notes, slides and recordings of lessons. Folio never uses task sheets.", "Les fiches sont meilleures à partir de notes, de diapositives et d’enregistrements de cours. Folio n’utilise jamais les consignes d’évaluation.", "Las tarjetas salen mejor de apuntes, diapositivas y grabaciones de clase. Folio nunca usa enunciados de evaluaciones.", "Karten gelingen am besten aus Notizen, Folien und Aufnahmen vom Unterricht. Folio verwendet nie Aufgabenblätter.", "卡片最适合用笔记、幻灯片和课堂录音来制作。Folio 从不使用任务说明。")
+T("No files in this subject yet.", "Aucun fichier dans cette matière pour l’instant.", "Todavía no hay archivos en esta asignatura.", "In diesem Fach gibt es noch keine Dateien.", "这个科目还没有文件。")
+T("No files match.", "Aucun fichier ne correspond.", "Ningún archivo coincide.", "Keine passenden Dateien.", "没有匹配的文件。")
+T("Write with", "Rédiger avec", "Escribir con", "Schreiben mit", "编写方式")
+T("On this Mac", "Sur ce Mac", "En este Mac", "Auf diesem Mac", "在这台 Mac 上")
+T("Claude", "Claude", "Claude", "Claude", "Claude")
+T("Sends the file's text to Anthropic with your key. Usually well under a US cent a file.", "Envoie le texte du fichier à Anthropic avec votre clé. En général bien moins d’un centime US par fichier.", "Envía el texto del archivo a Anthropic con tu clave. Normalmente mucho menos de un centavo de dólar por archivo.", "Sendet den Text der Datei mit deinem Schlüssel an Anthropic. Meist deutlich unter einem US-Cent pro Datei.", "使用你的密钥将文件文本发送给 Anthropic。每个文件通常远低于 1 美分。")
+T("The on-device AI writes the cards. Nothing leaves your Mac.", "L’IA sur l’appareil rédige les fiches. Rien ne quitte votre Mac.", "La IA del dispositivo escribe las tarjetas. Nada sale de tu Mac.", "Die KI auf dem Gerät schreibt die Karten. Nichts verlässt deinen Mac.", "由设备端 AI 编写卡片，任何内容都不会离开你的 Mac。")
+T("Write Cards", "Rédiger les fiches", "Escribir tarjetas", "Karten schreiben", "编写卡片")
+T("Reading “{}”…", "Lecture de « {} »…", "Leyendo «{}»…", "„{}“ wird gelesen …", "正在读取“{}”…")
+T("You can keep working. Long files take a minute or two.", "Vous pouvez continuer à travailler. Les longs fichiers prennent une minute ou deux.", "Puedes seguir trabajando. Los archivos largos tardan un minuto o dos.", "Du kannst weiterarbeiten. Lange Dateien dauern ein, zwei Minuten.", "你可以继续工作。较长的文件需要一两分钟。")
+T("Writing cards… part {} of {}", "Rédaction des fiches… partie {} sur {}", "Escribiendo tarjetas… parte {} de {}", "Karten werden geschrieben … Teil {} von {}", "正在编写卡片…第 {} 部分，共 {} 部分")
+T("Claude is writing cards…", "Claude rédige les fiches…", "Claude está escribiendo las tarjetas…", "Claude schreibt die Karten …", "Claude 正在编写卡片…")
+T("No cards from “{}”", "Aucune fiche tirée de « {} »", "Ninguna tarjeta de «{}»", "Keine Karten aus „{}“", "没有来自“{}”的卡片")
+T("Try Anyway", "Essayer quand même", "Intentarlo igualmente", "Trotzdem versuchen", "仍然尝试")
+T("Cards from “{}”", "Fiches tirées de « {} »", "Tarjetas de «{}»", "Karten aus „{}“", "来自“{}”的卡片")
+T("Untick any you don't want, or change their words.", "Décochez celles dont vous ne voulez pas, ou modifiez leur texte.", "Desmarca las que no quieras o cambia su texto.", "Entferne den Haken bei denen, die du nicht willst, oder ändere ihren Wortlaut.", "取消勾选不需要的卡片，或修改它们的文字。")
+P("Untick any you don't want, or change their words. Folio left out {} whose answer wasn't in the file.", "Untick any you don't want, or change their words. Folio left out {} whose answers weren't in the file.",
+  ["Décochez celles dont vous ne voulez pas, ou modifiez leur texte. Folio en a écarté {} dont la réponse n’était pas dans le fichier.", "Décochez celles dont vous ne voulez pas, ou modifiez leur texte. Folio en a écarté {} dont les réponses n’étaient pas dans le fichier."],
+  ["Desmarca las que no quieras o cambia su texto. Folio ha descartado {} cuya respuesta no estaba en el archivo.", "Desmarca las que no quieras o cambia su texto. Folio ha descartado {} cuyas respuestas no estaban en el archivo."],
+  ["Entferne den Haken bei denen, die du nicht willst, oder ändere ihren Wortlaut. Folio hat {} weggelassen, deren Antwort nicht in der Datei stand.", "Entferne den Haken bei denen, die du nicht willst, oder ändere ihren Wortlaut. Folio hat {} weggelassen, deren Antworten nicht in der Datei standen."],
+  "取消勾选不需要的卡片，或修改它们的文字。Folio 省略了 {} 张答案不在文件中的卡片。")
+P("Add {} Card", "Add {} Cards", ["Ajouter {} fiche", "Ajouter {} fiches"], ["Añadir {} tarjeta", "Añadir {} tarjetas"], ["{} Karte hinzufügen", "{} Karten hinzufügen"], "添加 {} 张卡片")
+T("Keep", "Garder", "Conservar", "Behalten", "保留")
+T("Folio doesn't make cards from task sheets or marking criteria, so it never writes answers for an assessment.", "Folio ne crée pas de fiches à partir des consignes ou des critères de notation, pour ne jamais rédiger les réponses d’une évaluation.", "Folio no crea tarjetas a partir de enunciados ni criterios de evaluación, así nunca escribe las respuestas de una evaluación.", "Folio erstellt keine Karten aus Aufgabenblättern oder Bewertungskriterien, damit es nie Antworten für eine Leistungsüberprüfung schreibt.", "Folio 不会用任务说明或评分标准制作卡片，因此绝不会替你写考核的答案。")
+T("Folio needs your School folder to read files.", "Folio a besoin de votre dossier scolaire pour lire les fichiers.", "Folio necesita tu carpeta escolar para leer archivos.", "Folio braucht deinen Schulordner, um Dateien zu lesen.", "Folio 需要你的学校文件夹才能读取文件。")
+T("Folio couldn't read this file.", "Folio n’a pas pu lire ce fichier.", "Folio no ha podido leer este archivo.", "Folio konnte diese Datei nicht lesen.", "Folio 无法读取此文件。")
+T("This looks like questions, such as an exam paper or a worksheet, so the answers probably aren't in it. Cards work best from notes.", "Ce fichier ressemble à des questions, comme un sujet d’examen ou une feuille d’exercices : les réponses n’y sont sans doute pas. Les fiches sont meilleures à partir de notes.", "Parece una lista de preguntas, como un examen o una hoja de ejercicios, así que probablemente no tenga las respuestas. Las tarjetas salen mejor de apuntes.", "Das sieht nach Fragen aus, etwa einer Prüfung oder einem Arbeitsblatt, die Antworten stehen also wahrscheinlich nicht darin. Karten gelingen am besten aus Notizen.", "这看起来是一份题目，比如试卷或练习题，所以里面可能没有答案。卡片最适合用笔记来制作。")
+T("No cards came out of this file. Cards work best from notes that explain things.", "Aucune fiche n’a pu être tirée de ce fichier. Les fiches sont meilleures à partir de notes qui expliquent.", "No han salido tarjetas de este archivo. Las tarjetas salen mejor de apuntes que explican las cosas.", "Aus dieser Datei sind keine Karten entstanden. Karten gelingen am besten aus Notizen, die etwas erklären.", "这个文件没有生成卡片。卡片最适合用有讲解内容的笔记来制作。")
+
+# The study timer
+T("Study Timer", "Minuteur de révision", "Temporizador de estudio", "Lerntimer", "学习计时器")
+T("Study timer", "Minuteur de révision", "Temporizador de estudio", "Lerntimer", "学习计时器")
+T("No study session running", "Aucune séance en cours", "No hay ninguna sesión en curso", "Keine Lerneinheit läuft", "没有正在进行的学习时段")
+T("Start one from Today, the Planner or Study.", "Lancez-en une depuis Aujourd’hui, le Planning ou Révisions.", "Empieza una desde Hoy, la Agenda o Estudio.", "Starte eine unter „Heute“, im Planer oder unter „Lernen“.", "可从“今天”“计划”或“学习”开始。")
+T("Close", "Fermer", "Cerrar", "Schließen", "关闭")
+T("General study", "Révisions libres", "Estudio general", "Allgemeines Lernen", "常规学习")
+T("Past paper", "Annale", "Examen anterior", "Alte Prüfung", "历年试卷")
+P("of {} minute", "of {} minutes", ["sur {} minute", "sur {} minutes"], ["de {} minuto", "de {} minutos"], ["von {} Minute", "von {} Minuten"], "共 {} 分钟")
+P("{} minute left", "{} minutes left", ["{} minute restante", "{} minutes restantes"], ["Queda {} minuto", "Quedan {} minutos"], ["Noch {} Minute", "Noch {} Minuten"], "还剩 {} 分钟")
+T("Pause", "Pause", "Pausa", "Pause", "暂停")
+T("Resume", "Reprendre", "Reanudar", "Fortsetzen", "继续")
+T("+5 min", "+5 min", "+5 min", "+5 Min.", "+5 分钟")
+T("Add five minutes", "Ajouter cinq minutes", "Añadir cinco minutos", "Fünf Minuten hinzufügen", "增加五分钟")
+T("End", "Terminer", "Terminar", "Beenden", "结束")
+T("Stop and say how it went", "Arrêter et dire comment ça s’est passé", "Parar y contar qué tal fue", "Beenden und sagen, wie es lief", "停止并说说进展")
+T("Your files", "Vos fichiers", "Tus archivos", "Deine Dateien", "你的文件")
+T("The paper", "Le sujet", "El examen", "Die Prüfung", "试卷")
+T("The marking guidelines are here when you finish.", "Le corrigé sera là quand vous aurez fini.", "Los criterios de corrección estarán aquí cuando termines.", "Der Erwartungshorizont ist hier, wenn du fertig bist.", "完成后可以在这里查看评分指南。")
+T("Time's up", "C’est l’heure", "Se acabó el tiempo", "Die Zeit ist um", "时间到")
+T("Session ended", "Séance terminée", "Sesión terminada", "Einheit beendet", "时段已结束")
+T("How did it go?", "Comment ça s’est passé ?", "¿Qué tal ha ido?", "Wie lief es?", "进展如何？")
+T("Partly", "En partie", "En parte", "Teilweise", "部分完成")
+P("Studied for {} minute", "Studied for {} minutes", ["Révisé pendant {} minute", "Révisé pendant {} minutes"], ["Estudiado durante {} minuto", "Estudiado durante {} minutos"], ["{} Minute gelernt", "{} Minuten gelernt"], "学习了 {} 分钟")
+T("Your mark", "Votre note", "Tu nota", "Deine Punktzahl", "你的分数")
+T("Total", "Total", "Total", "Gesamt", "总分")
+T("Folio hasn't found marking guidelines for this paper. Drop them on Folio and they'll appear here.", "Folio n’a pas trouvé de corrigé pour ce sujet. Déposez-le sur Folio et il apparaîtra ici.", "Folio no ha encontrado criterios de corrección para este examen. Arrástralos a Folio y aparecerán aquí.", "Folio hat für diese Prüfung keinen Erwartungshorizont gefunden. Zieh ihn auf Folio, dann erscheint er hier.", "Folio 没有找到这份试卷的评分指南。把它拖到 Folio 上，它就会出现在这里。")
+T("Open {}", "Ouvrir {}", "Abrir {}", "{} öffnen", "打开 {}")
+T("What got in the way? (optional)", "Qu’est-ce qui vous en a empêché ? (facultatif)", "¿Qué te lo impidió? (opcional)", "Was ist dazwischengekommen? (optional)", "是什么妨碍了你？（可选）")
+T("Where did you get up to? (optional)", "Où en êtes-vous arrivé ? (facultatif)", "¿Hasta dónde llegaste? (opcional)", "Wie weit bist du gekommen? (optional)", "你做到哪里了？（可选）")
+T("Keep going for five more minutes", "Continuer cinq minutes de plus", "Seguir cinco minutos más", "Noch fünf Minuten weitermachen", "再继续五分钟")
+T("Say How It Went", "Dire comment ça s’est passé", "Contar qué tal fue", "Sagen, wie es lief", "说说进展")
+T("Say how it went to record it.", "Dites comment ça s’est passé pour l’enregistrer.", "Cuenta qué tal fue para registrarlo.", "Sag, wie es lief, um es festzuhalten.", "说说进展情况来记录这次学习。")
+T("Starts the timer and opens the files for this session", "Lance le minuteur et ouvre les fichiers de cette séance", "Inicia el temporizador y abre los archivos de esta sesión", "Startet den Timer und öffnet die Dateien für diese Einheit", "开始计时并打开此时段的文件")
+T("Start Studying", "Commencer à réviser", "Empezar a estudiar", "Mit dem Lernen beginnen", "开始学习")
+T("Mark as Skipped", "Marquer comme sauté", "Marcar como omitido", "Als ausgelassen markieren", "标记为已跳过")
+T("Finish the session that's running first.", "Terminez d’abord la séance en cours.", "Termina primero la sesión en curso.", "Beende zuerst die laufende Einheit.", "请先结束正在进行的时段。")
+T("Play a sound when time's up", "Émettre un son à la fin du temps", "Reproducir un sonido al acabarse el tiempo", "Ton abspielen, wenn die Zeit um ist", "时间到时播放提示音")
+T("The timer records the minutes you actually study, so Plan My Week knows how much is left for each assessment.", "Le minuteur enregistre les minutes réellement révisées, pour que « Planifier ma semaine » sache ce qu’il reste pour chaque évaluation.", "El temporizador registra los minutos que estudias de verdad, para que «Planificar mi semana» sepa cuánto queda de cada evaluación.", "Der Timer hält fest, wie viele Minuten du wirklich lernst, damit „Woche planen“ weiß, wie viel für jede Leistungsüberprüfung noch fehlt.", "计时器会记录你实际学习的分钟数，让“规划我的一周”知道每项考核还剩多少。")
+
+# Past papers
+T("Past papers", "Annales", "Exámenes anteriores", "Alte Prüfungen", "历年试卷")
+T("Past papers you drop on Folio appear here, paired with their marking guidelines, ready to practise against the clock.", "Les annales que vous déposez sur Folio apparaissent ici, avec leur corrigé, prêtes pour s’entraîner en temps limité.", "Los exámenes anteriores que arrastres a Folio aparecen aquí, junto con sus criterios de corrección, listos para practicar contra reloj.", "Alte Prüfungen, die du auf Folio ziehst, erscheinen hier mit ihrem Erwartungshorizont, bereit zum Üben auf Zeit.", "拖到 Folio 上的历年试卷会显示在这里，并配上评分指南，方便你限时练习。")
+T("Marking guidelines", "Corrigé", "Criterios de corrección", "Erwartungshorizont", "评分指南")
+T("Last practised {}", "Dernier entraînement le {}", "Última práctica: {}", "Zuletzt geübt am {}", "上次练习：{}")
+T("Practise", "S’entraîner", "Practicar", "Üben", "练习")
+T("Open Paper", "Ouvrir le sujet", "Abrir el examen", "Prüfung öffnen", "打开试卷")
+T("Practise {}", "S’entraîner : {}", "Practicar: {}", "Üben: {}", "练习：{}")
+T("The paper allows {}. Do it all, or set a shorter time for a section.", "Le sujet prévoit {}. Faites-le en entier ou choisissez un temps plus court pour une partie.", "El examen permite {}. Hazlo entero o pon menos tiempo para una sección.", "Die Prüfung sieht {} vor. Mach sie ganz oder stell eine kürzere Zeit für einen Teil ein.", "这份试卷限时 {}。可以完整做完，也可以为某一部分设置更短的时间。")
+T("Set how long you'll spend. A whole paper is usually two or three hours.", "Indiquez combien de temps vous y passerez. Un sujet complet dure en général deux ou trois heures.", "Indica cuánto tiempo le dedicarás. Un examen completo suele durar dos o tres horas.", "Leg fest, wie lange du dir Zeit nimmst. Eine ganze Prüfung dauert meist zwei oder drei Stunden.", "设定你要花多长时间。一整份试卷通常需要两三个小时。")
+T("When you finish, Folio asks for your mark. It hasn't found marking guidelines for this paper yet.", "À la fin, Folio vous demandera votre note. Il n’a pas encore trouvé de corrigé pour ce sujet.", "Al terminar, Folio te pedirá tu nota. Aún no ha encontrado criterios de corrección para este examen.", "Am Ende fragt Folio nach deiner Punktzahl. Einen Erwartungshorizont für diese Prüfung hat es noch nicht gefunden.", "完成后，Folio 会询问你的分数。它还没有找到这份试卷的评分指南。")
+T("When you finish, Folio opens the marking guidelines and asks for your mark.", "À la fin, Folio ouvre le corrigé et vous demande votre note.", "Al terminar, Folio abre los criterios de corrección y te pide tu nota.", "Am Ende öffnet Folio den Erwartungshorizont und fragt nach deiner Punktzahl.", "完成后，Folio 会打开评分指南并询问你的分数。")
+
+# Searching and what files are about
+T("Search names and what's in files", "Rechercher dans les noms et le contenu", "Buscar en nombres y contenido", "Namen und Inhalte durchsuchen", "搜索名称和文件内容")
+T("Found {}", "Trouvé : {}", "Encontrado: {}", "Gefunden: {}", "找到：{}")
+T("Reading your files so search can find what's in them… {} of {}", "Lecture de vos fichiers pour la recherche… {} sur {}", "Leyendo tus archivos para que la búsqueda encuentre su contenido… {} de {}", "Deine Dateien werden für die Suche gelesen … {} von {}", "正在读取你的文件以便搜索内容…第 {} 个，共 {} 个")
+T("What's This?", "Qu’est-ce que c’est ?", "¿Qué es esto?", "Was ist das?", "这是什么？")
+T("What's this?", "Qu’est-ce que c’est ?", "¿Qué es esto?", "Was ist das?", "这是什么？")
+T("Related Files", "Fichiers similaires", "Archivos relacionados", "Ähnliche Dateien", "相关文件")
+T("Related files", "Fichiers similaires", "Archivos relacionados", "Ähnliche Dateien", "相关文件")
+T("Like “{}”", "Comme « {} »", "Como «{}»", "Wie „{}“", "类似“{}”")
+T("Summarising…", "Résumé en cours…", "Resumiendo…", "Wird zusammengefasst …", "正在总结…")
+T("Written on this Mac by the on-device AI, from the start of the file. Check anything important in the file itself.", "Rédigé sur ce Mac par l’IA sur l’appareil, à partir du début du fichier. Vérifiez tout point important dans le fichier lui-même.", "Escrito en este Mac por la IA del dispositivo, a partir del principio del archivo. Comprueba lo importante en el propio archivo.", "Auf diesem Mac von der KI auf dem Gerät geschrieben, aus dem Anfang der Datei. Prüfe Wichtiges in der Datei selbst.", "由这台 Mac 上的设备端 AI 根据文件开头部分编写。重要内容请在文件中核实。")
+T("Folio is still reading your files. Try again in a minute.", "Folio lit encore vos fichiers. Réessayez dans une minute.", "Folio todavía está leyendo tus archivos. Vuelve a intentarlo en un minuto.", "Folio liest deine Dateien noch. Versuch es in einer Minute noch mal.", "Folio 仍在读取你的文件，请稍后再试。")
+T("Nothing else in your library is much like this file.", "Rien d’autre dans votre bibliothèque ne ressemble vraiment à ce fichier.", "Nada más en tu biblioteca se parece mucho a este archivo.", "Sonst ähnelt nichts in deiner Bibliothek dieser Datei besonders.", "你的资料库里没有其他与此文件相似的内容。")
+
+# FolioKit: the study tools' messages
+T("It gave no points.", "Elle n’a donné aucun point.", "No ha dado ningún punto.", "Sie hat keine Punkte geliefert.", "它没有给出任何要点。")
+T("Mock", "Examen blanc", "Simulacro", "Probeprüfung", "模拟考")
+T("Trial", "Examen blanc", "Simulacro", "Probeprüfung", "模拟考")
+T("Paper {}", "Épreuve {}", "Prueba {}", "Teil {}", "试卷 {}")
+T("The on-device AI couldn't finish: {}", "L’IA sur l’appareil n’a pas pu terminer : {}", "La IA del dispositivo no ha podido terminar: {}", "Die KI auf dem Gerät konnte nicht fertig werden: {}", "设备端 AI 未能完成：{}")
+T("The on-device AI declined to write about this file.", "L’IA sur l’appareil a refusé d’écrire sur ce fichier.", "La IA del dispositivo se ha negado a escribir sobre este archivo.", "Die KI auf dem Gerät hat abgelehnt, über diese Datei zu schreiben.", "设备端 AI 拒绝处理这个文件。")
+T("The on-device AI doesn't read this file's language yet.", "L’IA sur l’appareil ne lit pas encore la langue de ce fichier.", "La IA del dispositivo aún no lee el idioma de este archivo.", "Die KI auf dem Gerät liest die Sprache dieser Datei noch nicht.", "设备端 AI 还不支持这个文件的语言。")
+T("The on-device AI is busy. Try again in a minute.", "L’IA sur l’appareil est occupée. Réessayez dans une minute.", "La IA del dispositivo está ocupada. Vuelve a intentarlo en un minuto.", "Die KI auf dem Gerät ist beschäftigt. Versuch es in einer Minute noch mal.", "设备端 AI 正忙，请稍后再试。")
+T("There isn't enough text in this file to work from.", "Ce fichier ne contient pas assez de texte.", "Este archivo no tiene suficiente texto.", "Diese Datei enthält nicht genug Text.", "这个文件的文字不够。")
+
+# Study tasks: plans in sessions, sessions the student makes, and to-dos.
+T("Your plan", "Votre plan", "Tu plan", "Dein Plan", "你的计划")
+T("Plan", "Plan", "Plan", "Plan", "计划")
+T("Suggestions", "Suggestions", "Sugerencias", "Vorschläge", "建议")
+T("Add All", "Tout ajouter", "Añadir todo", "Alle hinzufügen", "全部添加")
+T("Add to your plan", "Ajouter à votre plan", "Añadir a tu plan", "Zu deinem Plan hinzufügen", "加入你的计划")
+T("Add to the plan", "Ajouter au plan", "Añadir al plan", "Zum Plan hinzufügen", "加入计划")
+T("Add {} to the plan", "Ajouter « {} » au plan", "Añadir «{}» al plan", "„{}“ zum Plan hinzufügen", "将“{}”加入计划")
+T("Remove from Plan", "Retirer du plan", "Quitar del plan", "Aus dem Plan entfernen", "从计划中移除")
+T("Edit Plan…", "Modifier le plan…", "Editar plan…", "Plan bearbeiten …", "编辑计划…")
+T("Plan Session…", "Planifier la séance…", "Planificar sesión…", "Einheit planen …", "规划时段…")
+T("Decide what you'll do now, so it's ready when you sit down.", "Décidez maintenant de ce que vous ferez, pour que ce soit prêt quand vous vous y mettrez.", "Decide ahora qué vas a hacer, para tenerlo listo cuando te sientes.", "Leg jetzt fest, was du machst, dann ist es bereit, wenn du anfängst.", "现在就决定要做什么，坐下学习时就能直接开始。")
+T("What will you do? Add it here, or pick from Folio's ideas.", "Que ferez-vous ? Ajoutez-le ici, ou choisissez parmi les idées de Folio.", "¿Qué vas a hacer? Añádelo aquí o elige entre las ideas de Folio.", "Was machst du? Füg es hier hinzu oder wähl aus Folios Ideen.", "你要做什么？在这里添加，或从 Folio 的建议中选择。")
+T("What you'll do when you sit down. Anything you don't tick off moves to your next session.", "Ce que vous ferez en vous y mettant. Ce que vous ne cochez pas passe à votre prochaine séance.", "Lo que harás cuando te sientes. Lo que no marques pasa a tu próxima sesión.", "Was du machst, wenn du anfängst. Was du nicht abhakst, wandert in deine nächste Einheit.", "坐下学习时要做的事。没勾选的内容会移到你的下一个时段。")
+T("Anything not ticked off moves to your next {} session, {}.", "Ce qui n’est pas coché passe à votre prochaine séance de {}, {}.", "Lo que no marques pasará a tu próxima sesión de {}, {}.", "Was nicht abgehakt ist, wandert in deine nächste Einheit {}, {}.", "未勾选的内容会移到你下一次{}学习时段（{}）。")
+T("Anything not ticked off goes on the {} to-do list.", "Ce qui n’est pas coché va dans la liste des tâches de {}.", "Lo que no marques irá a los pendientes de {}.", "Was nicht abgehakt ist, kommt auf die To-do-Liste für {}.", "未勾选的内容会加入{}的待办清单。")
+T("Review this subject's cards in the main window", "Réviser les fiches de cette matière dans la fenêtre principale", "Repasar las tarjetas de esta asignatura en la ventana principal", "Die Karten dieses Fachs im Hauptfenster wiederholen", "在主窗口中复习这门科目的卡片")
+T("e.g. Questions 21 to 25 of the 2019 paper", "p. ex. Questions 21 à 25 du sujet 2019", "p. ej., preguntas 21 a 25 del examen de 2019", "z. B. Fragen 21 bis 25 der Prüfung 2019", "例如：2019 年试卷第 21–25 题")
+T("Item", "Élément", "Elemento", "Eintrag", "项目")
+T("plan: {} of {} done", "plan : {} sur {} faits", "plan: {} de {} hechos", "Plan: {} von {} erledigt", "计划：已完成 {}/{}")
+P("and {} more", "and {} more", ["et {} autre", "et {} autres"], ["y {} más", "y {} más"], ["und noch {}", "und noch {}"], "还有 {} 项")
+
+# Sessions the student makes
+T("New Study Session", "Nouvelle séance", "Nueva sesión de estudio", "Neue Lerneinheit", "新建学习时段")
+T("New Study Session…", "Nouvelle séance…", "Nueva sesión de estudio…", "Neue Lerneinheit …", "新建学习时段…")
+T("Edit Study Session", "Modifier la séance", "Editar sesión de estudio", "Lerneinheit bearbeiten", "编辑学习时段")
+T("Edit Session…", "Modifier la séance…", "Editar sesión…", "Einheit bearbeiten …", "编辑时段…")
+T("New Session Here…", "Nouvelle séance ici…", "Nueva sesión aquí…", "Neue Einheit hier …", "在此新建时段…")
+T("Add Session", "Ajouter la séance", "Añadir sesión", "Einheit hinzufügen", "添加时段")
+T("Add a study session, an assessment or your exams", "Ajouter une séance, une évaluation ou vos examens", "Añadir una sesión de estudio, una evaluación o tus exámenes", "Lerneinheit, Leistungsüberprüfung oder deine Prüfungen hinzufügen", "添加学习时段、考核或考试")
+T("For", "Pour", "Para", "Für", "用于")
+T("Clashes with {} at {}", "Chevauche {} à {}", "Coincide con {} a las {}", "Überschneidet sich mit {} um {}", "与 {}（{}）冲突")
+T("Opens the session to change it and its plan", "Ouvre la séance pour la modifier, avec son plan", "Abre la sesión para cambiarla a ella y a su plan", "Öffnet die Einheit, um sie und ihren Plan zu ändern", "打开此时段以修改它和它的计划")
+T("Yours: Plan My Week leaves it where it is.", "À vous : « Planifier ma semaine » la laisse à sa place.", "Tuya: «Planificar mi semana» la deja donde está.", "Deine: „Woche planen“ lässt sie, wo sie ist.", "你自己的：“规划我的一周”不会移动它。")
+
+# To-dos
+T("To do", "À faire", "Pendientes", "To-dos", "待办")
+T("To-do", "Tâche", "Pendiente", "To-do", "待办")
+T("Add a to-do", "Ajouter une tâche", "Añadir un pendiente", "To-do hinzufügen", "添加待办")
+T("Edit To-Do", "Modifier la tâche", "Editar pendiente", "To-do bearbeiten", "编辑待办")
+T("Edit To-Do…", "Modifier la tâche…", "Editar pendiente…", "To-do bearbeiten …", "编辑待办…")
+T("Delete To-Do", "Supprimer la tâche", "Eliminar pendiente", "To-do löschen", "删除待办")
+T("Change this to-do", "Modifier cette tâche", "Cambiar este pendiente", "Dieses To-do ändern", "修改此待办")
+T("Show Done", "Afficher les terminées", "Mostrar hechos", "Erledigte einblenden", "显示已完成")
+T("Hide Done", "Masquer les terminées", "Ocultar hechos", "Erledigte ausblenden", "隐藏已完成")
+T("Takes about", "Durée estimée", "Tiempo aproximado", "Dauert etwa", "大约需要")
+T("Not sure", "Je ne sais pas", "No lo sé", "Weiß nicht", "不确定")
+T("Nothing in particular", "Rien en particulier", "Nada en concreto", "Nichts Bestimmtes", "无特定考核")
+T("for {}", "pour {}", "para {}", "für {}", "用于 {}")
+T("Nothing to do yet. Add jobs for this subject that aren't assessments, and Plan My Week finds time for them.", "Rien à faire pour l’instant. Ajoutez les tâches de cette matière qui ne sont pas des évaluations, et « Planifier ma semaine » leur trouvera du temps.", "Nada pendiente por ahora. Añade cosas de esta asignatura que no sean evaluaciones y «Planificar mi semana» les buscará tiempo.", "Noch nichts zu tun. Füg Dinge für dieses Fach hinzu, die keine Leistungsüberprüfungen sind, und „Woche planen“ findet Zeit dafür.", "暂时没有待办。添加这门科目中不属于考核的事项，“规划我的一周”会为它们安排时间。")
+T("Nothing to do yet. Add things like “Copy up Tuesday's notes”, and Plan My Week finds time for them.", "Rien à faire pour l’instant. Ajoutez par exemple « Recopier les notes de mardi », et « Planifier ma semaine » leur trouvera du temps.", "Nada pendiente por ahora. Añade cosas como «Pasar a limpio los apuntes del martes» y «Planificar mi semana» les buscará tiempo.", "Noch nichts zu tun. Füg Dinge wie „Notizen von Dienstag abschreiben“ hinzu, und „Woche planen“ findet Zeit dafür.", "暂时没有待办。添加像“整理周二的笔记”这样的事项，“规划我的一周”会为它们安排时间。")
+P("{} to-do", "{} to-dos", ["{} tâche", "{} tâches"], ["{} pendiente", "{} pendientes"], ["{} To-do", "{} To-dos"], "{} 项待办")
+
+# Sample plans, for screenshots
+T("Read over last lesson's notes", "Relire les notes du dernier cours", "Repasar los apuntes de la última clase", "Notizen der letzten Stunde durchlesen", "复习上节课的笔记")
+T("Questions 1 to 6 of the worksheet", "Questions 1 à 6 de la fiche d’exercices", "Preguntas 1 a 6 de la hoja de ejercicios", "Fragen 1 bis 6 vom Arbeitsblatt", "练习单第 1–6 题")
+T("Write a summary of the method", "Rédiger un résumé de la méthode", "Escribir un resumen del método", "Eine Zusammenfassung der Methode schreiben", "写一份方法总结")
+
+# FolioKit: Folio's ideas for a session's plan
+T("Pick up from last time: {}", "Reprendre là où vous en étiez : {}", "Retoma donde lo dejaste: {}", "Weitermachen, wo du aufgehört hast: {}", "接着上次：{}")
+T("{} for {}", "{} pour {}", "{} para {}", "{} für {}", "{}：{}")
+T("Practise a past paper: {}", "S’entraîner sur un sujet d’annales : {}", "Practicar un examen anterior: {}", "Eine alte Prüfung üben: {}", "练习一份历年试卷：{}")
+P("Review {} card", "Review {} cards", ["Réviser {} fiche", "Réviser {} fiches"], ["Repasar {} tarjeta", "Repasar {} tarjetas"], ["{} Karte wiederholen", "{} Karten wiederholen"], "复习 {} 张卡片")
+
+# Phase 8: progress.
+T("Progress", "Progrès", "Progreso", "Fortschritt", "进度")
+T("{} average", "{} de moyenne", "{} de media", "{} im Schnitt", "平均 {}")
+T("Marks", "Notes", "Notas", "Ergebnisse", "成绩")
+T("Average mark", "Note moyenne", "Nota media", "Durchschnitt", "平均分")
+T("average mark", "note moyenne", "nota media", "Durchschnitt", "平均分")
+T("Marks appear here when marked work comes back.", "Les notes apparaissent ici quand vos travaux corrigés vous sont rendus.", "Las notas aparecen aquí cuando te devuelven los trabajos corregidos.", "Ergebnisse erscheinen hier, sobald bewertete Arbeiten zurückkommen.", "批改后的作业发回后，成绩会显示在这里。")
+P("From {} mark.", "From {} marks, each counted by what it's worth.", ["À partir de {} note.", "À partir de {} notes, chacune comptée selon sa valeur."], ["A partir de {} nota.", "A partir de {} notas, cada una según lo que vale."], ["Aus {} Ergebnis.", "Aus {} Ergebnissen, jedes nach seiner Gewichtung."], "根据 {} 个成绩，按各自权重计算。")
+P("{} mark", "{} marks", ["{} note", "{} notes"], ["{} nota", "{} notas"], ["{} Ergebnis", "{} Ergebnisse"], "{} 个成绩")
+T("{} of the course marked", "{} du cours noté", "{} de la asignatura calificado", "{} des Kurses bewertet", "已评分 {} 的课程")
+T("last: {} {}", "dernière : {} {}", "última: {} {}", "zuletzt: {} {}", "最近：{} {}")
+T("No marks yet", "Pas encore de note", "Aún no hay notas", "Noch keine Ergebnisse", "暂无成绩")
+T("No marks yet. When marked work comes back, add the mark to its assessment, or drop the marked file on Folio and it will offer to.", "Pas encore de note. Quand un travail corrigé vous est rendu, ajoutez la note à son évaluation, ou déposez le fichier corrigé sur Folio, qui proposera de le faire.", "Aún no hay notas. Cuando te devuelvan un trabajo corregido, añade la nota a su evaluación o arrastra el archivo corregido a Folio y te ofrecerá hacerlo.", "Noch keine Ergebnisse. Wenn eine bewertete Arbeit zurückkommt, trag die Punkte bei ihrer Leistungsüberprüfung ein oder zieh die bewertete Datei auf Folio, dann bietet es das an.", "暂无成绩。批改后的作业发回后，可以在对应考核中填写分数，或把批改后的文件拖到 Folio，它会主动帮你填写。")
+T("Date", "Date", "Fecha", "Datum", "日期")
+T("Due in the next 7 days", "À rendre dans les 7 prochains jours", "Para los próximos 7 días", "In den nächsten 7 Tagen fällig", "未来 7 天内截止")
+T("A good time to get ahead.", "Le bon moment pour prendre de l’avance.", "Buen momento para adelantar trabajo.", "Eine gute Zeit, um vorzuarbeiten.", "正是提前准备的好时机。")
+T("Of {} planned.", "Sur {} prévues.", "De {} previstas.", "Von {} geplant.", "计划 {}。")
+T("Nothing planned this week yet.", "Rien de prévu cette semaine pour l’instant.", "Aún no hay nada previsto esta semana.", "Für diese Woche ist noch nichts geplant.", "本周还没有计划。")
+T("Review Your Week…", "Faire le bilan de la semaine…", "Repasar tu semana…", "Woche zurückblicken …", "回顾本周…")
+
+# Weeks ahead
+T("Weeks ahead", "Semaines à venir", "Próximas semanas", "Kommende Wochen", "接下来几周")
+T("Busy week: {}", "Semaine chargée : {}", "Semana cargada: {}", "Volle Woche: {}", "繁忙的一周：{}")
+T("Busy weeks: {}", "Semaines chargées : {}", "Semanas cargadas: {}", "Volle Wochen: {}", "繁忙的几周：{}")
+P("{} thing is due.", "{} things are due.", ["{} chose à rendre.", "{} choses à rendre."], ["Hay {} entrega.", "Hay {} entregas."], ["{} Sache ist fällig.", "{} Sachen sind fällig."], "有 {} 项要截止。")
+T("About {} of work for assessments in the busiest week, and a usual week has room for {} of study.", "Environ {} de travail pour les évaluations la semaine la plus chargée, alors qu’une semaine normale laisse place à {} de révisions.", "Unas {} de trabajo para evaluaciones en la semana más cargada, y una semana normal tiene sitio para {} de estudio.", "Etwa {} Arbeit für Leistungsüberprüfungen in der vollsten Woche, und eine normale Woche hat Platz für {} Lernzeit.", "最忙的那周约有 {} 的考核任务，而平常一周只能安排 {} 的学习。")
+T("Start earlier on {}?", "Commencer plus tôt : {} ?", "¿Empezar antes con {}?", "Früher anfangen mit {}?", "提前开始 {}？")
+T("from today", "dès aujourd’hui", "desde hoy", "ab heute", "从今天开始")
+T("from {}", "à partir du {}", "desde el {}", "ab {}", "从 {} 开始")
+T("Start Earlier", "Commencer plus tôt", "Empezar antes", "Früher anfangen", "提前开始")
+T("Not Now", "Pas maintenant", "Ahora no", "Nicht jetzt", "以后再说")
+T("Started earlier. Plan My Week now spreads that work into the weeks before.", "C’est fait. « Planifier ma semaine » répartit maintenant ce travail sur les semaines d’avant.", "Hecho. «Planificar mi semana» repartirá ahora ese trabajo en las semanas anteriores.", "Erledigt. „Woche planen“ verteilt diese Arbeit jetzt auf die Wochen davor.", "已提前。“规划我的一周”会把这些任务分摊到之前的几周。")
+T("Starting some of the work earlier would help.", "Commencer une partie du travail plus tôt aiderait.", "Empezar antes parte del trabajo ayudaría.", "Früher mit einem Teil der Arbeit anzufangen würde helfen.", "提前开始部分任务会有帮助。")
+T("See Progress", "Voir les progrès", "Ver progreso", "Fortschritt ansehen", "查看进度")
+
+# Study time
+T("Study time, last 4 weeks", "Temps de révision, 4 dernières semaines", "Tiempo de estudio, últimas 4 semanas", "Lernzeit, letzte 4 Wochen", "学习时间（最近 4 周）")
+T("Study, last 4 weeks", "Révisions, 4 dernières semaines", "Estudio, últimas 4 semanas", "Lernen, letzte 4 Wochen", "学习（最近 4 周）")
+T("{} of the work due soon, but {} of your study.", "{} du travail à rendre bientôt, mais {} de vos révisions.", "El {} del trabajo que vence pronto, pero el {} de tu estudio.", "{} der bald fälligen Arbeit, aber {} deiner Lernzeit.", "占即将截止任务的 {}，却只占你学习时间的 {}。")
+T("Darker bars are time studied; lighter ones, time planned. Shares compare your study with the work due in the next six weeks.", "Les barres foncées montrent le temps révisé, les claires le temps prévu. Les parts comparent vos révisions au travail à rendre dans les six prochaines semaines.", "Las barras oscuras son el tiempo estudiado y las claras, el previsto. Los porcentajes comparan tu estudio con el trabajo de las próximas seis semanas.", "Dunkle Balken zeigen die Lernzeit, helle die geplante Zeit. Die Anteile vergleichen deine Lernzeit mit der Arbeit, die in den nächsten sechs Wochen fällig ist.", "深色条表示已学习的时间，浅色条表示计划的时间。占比将你的学习时间与未来六周内要完成的任务进行比较。")
+T("Finish sessions with the timer, or mark them done in the Planner, and your study shows here.", "Terminez les séances avec le minuteur, ou marquez-les comme faites dans le Planning, et vos révisions apparaîtront ici.", "Termina las sesiones con el temporizador o márcalas como hechas en la Agenda, y tu estudio aparecerá aquí.", "Beende Einheiten mit dem Timer oder markiere sie im Planer als erledigt, dann erscheint deine Lernzeit hier.", "用计时器完成学习时段，或在计划中把它们标为已完成，你的学习时间就会显示在这里。")
+
+# Weekly review
+T("Weekly review", "Bilan de la semaine", "Resumen semanal", "Wochenrückblick", "每周回顾")
+T("Your week in review", "Le bilan de votre semaine", "Tu semana en resumen", "Deine Woche im Rückblick", "本周回顾")
+T("Your week in review is ready", "Le bilan de votre semaine est prêt", "El resumen de tu semana está listo", "Dein Wochenrückblick ist fertig", "本周回顾已准备好")
+T("See how it went, and plan the next one.", "Voyez comment elle s’est passée, et planifiez la suivante.", "Mira cómo te ha ido y planifica la siguiente.", "Sieh dir an, wie sie lief, und plane die nächste.", "看看这周过得怎样，再规划下一周。")
+T("See how this week went, and plan the next one.", "Voyez comment s’est passée cette semaine, et planifiez la suivante.", "Mira cómo te ha ido esta semana y planifica la siguiente.", "Sieh dir an, wie diese Woche lief, und plane die nächste.", "看看这周过得怎样，再规划下一周。")
+T("Remind me on Sunday evening", "Me le rappeler le dimanche soir", "Recordármelo el domingo por la tarde", "Am Sonntagabend erinnern", "周日晚上提醒我")
+T("A notification at 6 pm on Sundays to look back on your week and plan the next one. The review is also on Today from Sunday afternoon.", "Une notification le dimanche à 18 h pour faire le bilan de votre semaine et planifier la suivante. Le bilan est aussi sur Aujourd’hui dès le dimanche après-midi.", "Una notificación los domingos a las 18:00 para repasar tu semana y planificar la siguiente. El resumen también aparece en Hoy desde el domingo por la tarde.", "Eine Mitteilung sonntags um 18 Uhr, um auf deine Woche zurückzublicken und die nächste zu planen. Der Rückblick steht ab Sonntagnachmittag auch unter Heute.", "每周日下午 6 点发送通知，提醒你回顾本周并规划下一周。从周日下午起，回顾也会显示在“今天”中。")
+T("You studied {} of {} planned.", "Vous avez révisé {} sur {} prévues.", "Has estudiado {} de {} previstas.", "Du hast {} von {} geplant gelernt.", "你学习了 {}，计划为 {}。")
+T("You studied {}, with nothing planned.", "Vous avez révisé {}, sans rien de prévu.", "Has estudiado {} sin nada previsto.", "Du hast {} gelernt, ohne etwas geplant zu haben.", "你学习了 {}，本周没有计划。")
+P("{} session done", "{} sessions done", ["{} séance faite", "{} séances faites"], ["{} sesión hecha", "{} sesiones hechas"], ["{} Einheit erledigt", "{} Einheiten erledigt"], "完成 {} 个时段")
+P("{} partly done", "{} partly done", ["{} faite en partie", "{} faites en partie"], ["{} hecha en parte", "{} hechas en parte"], ["{} teilweise", "{} teilweise"], "{} 个部分完成")
+P("{} didn't start", "{} didn't start", ["{} non commencée", "{} non commencées"], ["{} sin empezar", "{} sin empezar"], ["{} nicht angefangen", "{} nicht angefangen"], "{} 个未开始")
+P("{} not recorded", "{} not recorded", ["{} non enregistrée", "{} non enregistrées"], ["{} sin registrar", "{} sin registrar"], ["{} nicht erfasst", "{} nicht erfasst"], "{} 个未记录")
+T("No sessions recorded.", "Aucune séance enregistrée.", "No hay sesiones registradas.", "Keine Einheiten erfasst.", "没有记录的时段。")
+T("By subject", "Par matière", "Por asignatura", "Nach Fach", "按科目")
+T("Work", "Travaux", "Trabajos", "Arbeiten", "作业")
+T("Handed in {}", "{} rendu", "{} entregado", "{} abgegeben", "已提交 {}")
+T("{} was due {}.", "{} était à rendre {}.", "{} vencía el {}.", "{} war am {} fällig.", "{} 的截止日是{}。")
+T("Handed In", "Rendu", "Entregado", "Abgegeben", "已提交")
+T("Mark back for {}: {}", "Note reçue pour {} : {}", "Nota recibida de {}: {}", "Ergebnis für {}: {}", "{} 的成绩已发回：{}")
+P("Ticked off {} to-do", "Ticked off {} to-dos", ["{} tâche cochée", "{} tâches cochées"], ["{} pendiente hecho", "{} pendientes hechos"], ["{} To-do abgehakt", "{} To-dos abgehakt"], "完成了 {} 项待办")
+T("Next week, {}", "Semaine prochaine, {}", "Próxima semana, {}", "Nächste Woche, {}", "下周，{}")
+T("{} of study planned so far.", "{} de révisions prévues pour l’instant.", "{} de estudio previstas por ahora.", "Bisher {} Lernzeit geplant.", "目前已计划 {} 的学习。")
+T("No study planned yet.", "Aucune révision prévue pour l’instant.", "Aún no hay estudio previsto.", "Noch keine Lernzeit geplant.", "还没有计划学习。")
+T("No free time left to plan that week.", "Plus de temps libre à planifier cette semaine-là.", "No queda tiempo libre que planificar esa semana.", "In dieser Woche ist keine freie Zeit mehr zum Planen.", "那一周已经没有空闲时间可以安排了。")
+T("Plan Next Week", "Planifier la semaine prochaine", "Planificar la próxima semana", "Nächste Woche planen", "规划下周")
+
+# Terms
+T("studied", "révisées", "estudiadas", "gelernt", "已学习")
+T("handed in", "rendus", "entregados", "abgegeben", "已提交")
+T("files", "fichiers", "archivos", "Dateien", "个文件")
+P("{} handed in", "{} handed in", ["{} rendu", "{} rendus"], ["{} entregado", "{} entregados"], ["{} abgegeben", "{} abgegeben"], "已提交 {} 项")
+T("Earlier subjects", "Matières précédentes", "Asignaturas anteriores", "Frühere Fächer", "以前的科目")
+T("How {} went", "Bilan : {}", "Cómo fue {}", "So lief {}", "{}回顾")
+T("last term", "la période passée", "el periodo anterior", "das letzte Halbjahr", "上学期")
+T("It stays under Progress, in Past terms.", "Il reste dans Progrès, sous Périodes passées.", "Seguirá en Progreso, en Periodos anteriores.", "Er bleibt unter Fortschritt bei Frühere Halbjahre.", "它会保留在“进度”的“往期学期”中。")
+
+# FolioKit: a file that took too long to judge
+T("Couldn't sort this file in time", "Impossible de trier ce fichier à temps", "No se ha podido ordenar este archivo a tiempo", "Diese Datei konnte nicht rechtzeitig einsortiert werden", "未能及时整理这个文件")
+
+
+# 1.0: first-run wording, and Today offering next week from Sunday midday
+T("Tell Folio about your week", "Parlez à Folio de votre semaine", "Cuéntale a Folio cómo es tu semana", "Erzähl Folio von deiner Woche", "跟 Folio 说说你的一周")
+T("It plans study sessions around school and the times you like to study.", "Il planifie vos révisions autour des cours et des moments où vous aimez travailler.", "Planifica las sesiones de estudio en función del horario de clase y de cuándo te gusta estudiar.", "Folio plant Lerneinheiten rund um die Schule und zu den Zeiten, in denen du gern lernst.", "Folio 会围绕上学时间和你喜欢的学习时间来安排学习时段。")
+T("It plans study sessions around your classes and the times you like to study.", "Il planifie vos révisions autour de vos cours et des moments où vous aimez travailler.", "Planifica las sesiones de estudio en función de tus clases y de cuándo te gusta estudiar.", "Folio plant Lerneinheiten rund um deinen Unterricht und zu den Zeiten, in denen du gern lernst.", "Folio 会围绕你的课程和你喜欢的学习时间来安排学习时段。")
+T("You're all set", "Tout est prêt", "Ya está todo listo", "Alles bereit", "一切就绪")
+T("Here's what Folio will do. You can change any of it later in Settings.", "Voici ce que Folio va faire. Vous pourrez tout modifier plus tard dans les Réglages.", "Esto es lo que hará Folio. Puedes cambiar cualquier cosa después en Ajustes.", "Das wird Folio tun. Du kannst später alles in den Einstellungen ändern.", "以下是 Folio 将会执行的操作。之后你可以在“设置”中更改。")
+T("Next week isn't planned yet", "La semaine prochaine n’est pas encore planifiée", "La próxima semana aún no está planificada", "Nächste Woche ist noch nicht geplant", "下周还没有安排")
+T("Nothing more planned this week", "Plus rien de prévu cette semaine", "No hay nada más planificado esta semana", "Diese Woche ist nichts mehr geplant", "本周没有更多安排了")
+T("Folio can plan next week's study around school and your events, working back from what's due.", "Folio peut planifier vos révisions de la semaine prochaine autour de l’école et de vos événements, en partant de ce qui est à rendre.", "Folio puede planificar el estudio de la próxima semana en torno al colegio y tus eventos, partiendo de lo que tienes que entregar.", "Folio kann deine Lernzeit nächste Woche um Schule und Termine herum planen, ausgehend davon, was fällig ist.", "Folio 可以围绕上学时间和你的日程规划下周学习，从截止事项倒推。")
+
+# 1.0: choosing a whole home, Desktop, Documents or Downloads folder as the School folder
+T("Use your whole “{}” folder?", "Utiliser tout votre dossier « {} » ?", "¿Usar toda tu carpeta «{}»?", "Deinen ganzen Ordner „{}“ verwenden?", "要使用整个“{}”文件夹吗？")
+T("Folio would add a folder for each subject straight into it. To keep your schoolwork together, Folio can make a Folio folder inside it instead.", "Folio y ajouterait directement un dossier par matière. Pour garder vos cours ensemble, Folio peut plutôt y créer un dossier Folio.", "Folio añadiría una carpeta por asignatura directamente dentro. Para tener tus trabajos juntos, Folio puede crear dentro una carpeta Folio.", "Folio würde darin direkt einen Ordner pro Fach anlegen. Damit deine Schulsachen zusammenbleiben, kann Folio stattdessen darin einen Ordner „Folio“ anlegen.", "Folio 会直接在其中为每个科目添加一个文件夹。为了让你的学习资料集中在一起，Folio 可以改为在其中新建一个 Folio 文件夹。")
+T("Make a Folio Folder", "Créer un dossier Folio", "Crear una carpeta Folio", "Ordner „Folio“ anlegen", "新建 Folio 文件夹")
+T("Use “{}”", "Utiliser « {} »", "Usar «{}»", "„{}“ verwenden", "使用“{}”")

@@ -1,0 +1,99 @@
+{
+ "id": "university",
+ "name": "University",
+ "fullName": "University and college",
+ "region": "",
+ "regionCodes": [],
+ "language": "en",
+ "level": "university",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [],
+ "documentTypes": [
+  {
+   "name": "Lectures",
+   "aliases": [
+    "lecture",
+    "lectures",
+    "lecture slides",
+    "lecture notes",
+    "lec"
+   ]
+  },
+  {
+   "name": "Tutorials",
+   "aliases": [
+    "tutorial",
+    "tute",
+    "tutorial sheet",
+    "tutorial questions",
+    "problem set",
+    "workshop"
+   ]
+  },
+  {
+   "name": "Labs",
+   "aliases": [
+    "lab",
+    "laboratory",
+    "lab sheet",
+    "lab report",
+    "practical",
+    "prac"
+   ]
+  },
+  {
+   "name": "Readings",
+   "aliases": [
+    "reading",
+    "readings",
+    "journal article",
+    "chapter",
+    "case study",
+    "abstract",
+    "doi"
+   ]
+  },
+  {
+   "name": "Assignments",
+   "aliases": [
+    "assignment",
+    "assessment",
+    "assessment task",
+    "project",
+    "rubric",
+    "marking criteria",
+    "submission",
+    "due date"
+   ]
+  },
+  {
+   "name": "Exams",
+   "aliases": [
+    "exam",
+    "final exam",
+    "past exam",
+    "sample exam",
+    "practice exam",
+    "midterm",
+    "mid-semester",
+    "exam paper"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "regional",
+ "subjects": [],
+ "suggested": [],
+ "popular": []
+}

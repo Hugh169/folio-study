@@ -1,0 +1,945 @@
+{
+  "about": "Labelled files for `folio-eval --assessments`: task sheets in each curriculum's style, marking criteria, marked work, and look-alikes. Dates are read as if today were Saturday 10 October 2026 in Sydney. Files marked “held out” were written after the reader was tuned on the others, and measure it fairly. `titleWords` must all appear in the title Folio finds; `due` is checked to the minute when it has a time. Files styled “Not schoolwork” would be left alone by the app before it reads them for assessments.",
+  "now": "2026-10-10T12:00:00",
+  "timeZone": "Australia/Sydney",
+  "samples": [
+    {
+      "id": "hsc-bio-depth",
+      "style": "NSW HSC",
+      "file": "Biology Task 2 notification.pdf",
+      "text": "Riverside High School\nAssessment Notification\nBiology – Year 12\nTask 2: Depth Study – Investigating Enzymes\nWeighting: 30%\nDue date: Friday 13 November 2026, 3:00 pm\nOutcomes assessed: BIO12-1, BIO12-7\nTotal marks: 40\nYou will design and carry out a first-hand investigation into how temperature affects enzyme activity.",
+      "expect": {
+        "titleWords": [
+          "Depth",
+          "Study"
+        ],
+        "kind": "task",
+        "due": "2026-11-13T15:00",
+        "weighting": 30,
+        "totalMarks": 40,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "hsc-history-source",
+      "style": "NSW HSC",
+      "file": "Modern History AT1.pdf",
+      "text": "Modern History – Year 12\nAssessment Task 1 – Source Analysis: Power and Authority\nDate issued: Monday 12 October 2026\nDue: Week 5 Term 4 (Friday 6 November 2026)\nWeighting: 25%\nAnalyse the sources provided and explain how Nazi propaganda shaped public opinion.",
+      "expect": {
+        "titleWords": [
+          "Source",
+          "Analysis"
+        ],
+        "kind": "task",
+        "due": "2026-11-06",
+        "weighting": 25,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "hsc-maths-test",
+      "style": "NSW HSC",
+      "file": "Maths Adv task 3.pdf",
+      "text": "Mathematics Advanced – Year 12\nAssessment Task 3: In-class test\nDate of task: Thursday 22 October 2026, Period 3\nWeighting: 20%\nTime allowed: 50 minutes\nTopics: differential calculus, applications of the derivative.",
+      "expect": {
+        "titleWords": [
+          "Task",
+          "3"
+        ],
+        "kind": "test",
+        "due": "2026-10-22",
+        "weighting": 20,
+        "lengthMinutes": 50,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "hsc-english-multimodal",
+      "style": "NSW HSC",
+      "file": "English Adv AT2.pdf",
+      "text": "English Advanced\nAssessment Task 2: Multimodal presentation\nDue: Tuesday 27 October 2026\n25% of the course mark\nPresent an analysis of the prescribed poems to the class.",
+      "expect": {
+        "titleWords": [
+          "Multimodal",
+          "presentation"
+        ],
+        "kind": "presentation",
+        "due": "2026-10-27",
+        "weighting": 25,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "hsc-chem-practical",
+      "style": "NSW HSC",
+      "file": "Chemistry task 1.pdf",
+      "text": "Chemistry – Year 12\nTask 1: Practical investigation – Rates of reaction\nSubmission date: Friday 30 October 2026\nWeighting: 20%\nTotal marks: 35",
+      "expect": {
+        "titleWords": [
+          "Practical",
+          "investigation"
+        ],
+        "kind": "practical",
+        "due": "2026-10-30",
+        "weighting": 20,
+        "totalMarks": 35,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "hsc-physics-trial",
+      "style": "NSW HSC",
+      "file": "Physics trial exam.pdf",
+      "text": "Year 12 Trial HSC Examination\nPhysics\nExam date: Monday 2 November 2026, 9:00 am\nReading time: 5 minutes\nWorking time: 3 hours\nWeighting: 30%",
+      "expect": {
+        "titleWords": [
+          "Trial"
+        ],
+        "kind": "exam",
+        "due": "2026-11-02T09:00",
+        "weighting": 30,
+        "lengthMinutes": 180,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "vce-methods-sac",
+      "style": "VCE",
+      "file": "Methods SAC 2.pdf",
+      "text": "Mathematical Methods\nUnit 3 SAC 2: Data analysis\nDate of task: Thursday 12 November 2026\nThis SAC is completed under test conditions and is worth 10% of your study score.",
+      "expect": {
+        "titleWords": [
+          "SAC",
+          "2"
+        ],
+        "kind": "test",
+        "due": "2026-11-12",
+        "weighting": 10,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "vce-english-sac",
+      "style": "VCE",
+      "file": "English U3 SAC.pdf",
+      "text": "English Unit 3 Outcome 1 SAC: Text response essay\nDate: Tuesday 3 November 2026\nTime: 100 minutes\nYou will write an analytical essay on your studied text.",
+      "expect": {
+        "titleWords": [
+          "Text",
+          "response"
+        ],
+        "kind": "test",
+        "due": "2026-11-03",
+        "lengthMinutes": 100,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "qce-ia1",
+      "style": "QCE",
+      "file": "Methods IA1.pdf",
+      "text": "IA1 Data test – Mathematical Methods\nDate: Week 6, Thursday 12 November 2026\nDuration: 90 minutes\nInternal assessment 1 contributes 15% to your subject result.",
+      "expect": {
+        "titleWords": [
+          "IA1"
+        ],
+        "kind": "test",
+        "due": "2026-11-12",
+        "weighting": 15,
+        "lengthMinutes": 90,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "wace-physics-validation",
+      "style": "WACE",
+      "file": "Physics validation test.pdf",
+      "text": "Year 12 ATAR Physics\nValidation test 2: Electromagnetism\nDate: Monday 19 October 2026, period 2\nWeighting: 5%",
+      "expect": {
+        "titleWords": [
+          "Validation"
+        ],
+        "kind": "test",
+        "due": "2026-10-19",
+        "weighting": 5,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "sace-research",
+      "style": "SACE",
+      "file": "Research Project outcome.pdf",
+      "text": "Stage 2 Research Project\nOutcome due: Friday 30 October 2026\nThe Outcome is worth 15% of the subject grade.",
+      "expect": {
+        "titleWords": [
+          "Research",
+          "Project"
+        ],
+        "kind": "task",
+        "due": "2026-10-30",
+        "weighting": 15,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "ib-bio-ia",
+      "style": "IB Diploma",
+      "file": "Biology IA guide.pdf",
+      "text": "Internal Assessment – Biology HL\nIA draft due: Friday 6 November 2026\nFinal IA due: Friday 15 January 2027\nWeighting: 20% of final grade",
+      "expect": {
+        "titleWords": [
+          "Biology"
+        ],
+        "kind": "task",
+        "due": "2026-11-06",
+        "weighting": 20,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "ib-tok-essay",
+      "style": "IB Diploma",
+      "file": "TOK essay deadlines.pdf",
+      "text": "Theory of Knowledge essay\nFirst draft deadline: Friday 20 November 2026\nWord limit: 1,600 words",
+      "expect": {
+        "titleWords": [
+          "Theory",
+          "Knowledge"
+        ],
+        "kind": "task",
+        "due": "2026-11-20"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "uk-cs-nea",
+      "style": "UK GCSE",
+      "file": "Computer Science NEA.pdf",
+      "text": "GCSE Computer Science NEA\nProgramming project\nDeadline for submission: Friday 4 December 2026\nAll code must be your own.",
+      "expect": {
+        "titleWords": [
+          "NEA"
+        ],
+        "kind": "task",
+        "due": "2026-12-04",
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "uk-history-coursework",
+      "style": "UK A level",
+      "file": "History coursework.pdf",
+      "text": "A level History coursework (NEA)\nFinal deadline: Thursday 18 March 2027\nWord count: 3,000–4,000 words\nThe NEA is worth 20% of the A level.",
+      "expect": {
+        "titleWords": [
+          "History",
+          "coursework"
+        ],
+        "kind": "task",
+        "due": "2027-03-18",
+        "weighting": 20,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "us-ap-bio-test",
+      "style": "US AP",
+      "file": "AP Bio unit 4 test.pdf",
+      "text": "AP Biology\nUnit 4 Test: Cell Communication and Cell Cycle\nTest date: Friday, October 23, 2026\nYou may use a four-function calculator.",
+      "expect": {
+        "titleWords": [
+          "Unit",
+          "4"
+        ],
+        "kind": "test",
+        "due": "2026-10-23"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "us-chem-project",
+      "style": "US high school",
+      "file": "Calorimeter project.pdf",
+      "text": "Chemistry Project: Build a Calorimeter\nDue Friday, November 6, 2026\nWorth 15% of your semester grade\nWork in pairs.",
+      "expect": {
+        "titleWords": [
+          "Calorimeter"
+        ],
+        "kind": "task",
+        "due": "2026-11-06",
+        "weighting": 15,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "us-algebra-homework",
+      "style": "US high school",
+      "file": "Algebra II HW 3.4.pdf",
+      "text": "Algebra II Homework 3.4\nDue: Tuesday, October 13, 2026\nComplete problems 1–29 odd.",
+      "expect": {
+        "titleWords": [
+          "Homework"
+        ],
+        "kind": "task",
+        "due": "2026-10-13"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "uni-comp-assignment",
+      "style": "University",
+      "file": "COMP1511 ass1 spec.pdf",
+      "text": "COMP1511 Assignment 1 – CS Pong\nDue: Friday 6 November 2026, 8:00 pm\nWorth 15% of the course mark\nSubmit with give.",
+      "expect": {
+        "titleWords": [
+          "Assignment",
+          "1"
+        ],
+        "kind": "task",
+        "due": "2026-11-06T20:00",
+        "weighting": 15,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "uni-lab-report",
+      "style": "University",
+      "file": "CHEM1011 lab report.pdf",
+      "text": "CHEM1011 Lab report 3\nSubmission deadline: Wednesday 28 October 2026, 11:59 pm\nThis report is worth 5% of your final mark.",
+      "expect": {
+        "titleWords": [
+          "Lab",
+          "report"
+        ],
+        "kind": "task",
+        "due": "2026-10-28T23:59",
+        "weighting": 5,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "cambridge-fieldwork",
+      "style": "Cambridge",
+      "file": "Geography coursework.pdf",
+      "text": "IGCSE Geography coursework – fieldwork report\nSubmission deadline: Friday 20 November 2026\nTotal marks: 60",
+      "expect": {
+        "titleWords": [
+          "fieldwork"
+        ],
+        "kind": "task",
+        "due": "2026-11-20",
+        "totalMarks": 60,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "seminar-presentation",
+      "style": "University",
+      "file": "ECON seminar.pdf",
+      "text": "Seminar presentation – Economics\nPresentations will be held on Wednesday 4 November 2026\nWeighting: 10%",
+      "expect": {
+        "titleWords": [
+          "Seminar",
+          "presentation"
+        ],
+        "kind": "presentation",
+        "due": "2026-11-04",
+        "weighting": 10,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "speech-delivery",
+      "style": "NSW HSC",
+      "file": "Speech task.pdf",
+      "text": "English Standard\nAssessment Task 3: Persuasive speech\nYou will deliver your speech in class on Wednesday 28 October 2026.\nWeighting: 20%",
+      "expect": {
+        "titleWords": [
+          "Persuasive",
+          "speech"
+        ],
+        "kind": "presentation",
+        "due": "2026-10-28",
+        "weighting": 20,
+        "role": "taskSheet"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "extension-major-work",
+      "style": "NSW HSC",
+      "file": "Ext 2 proposal.pdf",
+      "text": "English Extension 2\nMajor Work proposal due: Friday 4 December 2026\nSubmit your proposal and reflection statement.",
+      "expect": {
+        "titleWords": [
+          "Extension"
+        ],
+        "kind": "task",
+        "due": "2026-12-04"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "cambridge-practical-test",
+      "style": "Cambridge",
+      "file": "Chemistry practical test.pdf",
+      "text": "Cambridge IGCSE Chemistry\nPractical test – Paper 5\nTest date: Monday 16 November 2026, 1:30 pm\nDuration: 1 hour 15 minutes",
+      "expect": {
+        "titleWords": [
+          "Practical"
+        ],
+        "kind": "test",
+        "due": "2026-11-16T13:30",
+        "lengthMinutes": 75
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "criteria-depth",
+      "style": "NSW HSC",
+      "file": "Depth Study marking criteria.pdf",
+      "text": "Marking criteria\nTask 2: Depth Study\nA – Designs a valid and reliable investigation (9–10 marks)\nB – Designs a mostly valid investigation (7–8 marks)",
+      "expect": {
+        "role": "criteria"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "rubric-research",
+      "style": "US high school",
+      "file": "Research paper rubric.pdf",
+      "text": "English 11 Honors\nResearch Paper Rubric\nThesis 20 points\nEvidence 30 points\nOrganisation 20 points",
+      "expect": {
+        "role": "criteria"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "returned-mark",
+      "style": "NSW HSC",
+      "file": "Source analysis marked.pdf",
+      "text": "Source Analysis – Power and Authority\nMark: 21/25\nFeedback\nStrong use of sources; tighten your conclusion.",
+      "expect": {
+        "role": "returned",
+        "mark": {
+          "score": 21,
+          "outOf": 25
+        }
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "returned-band",
+      "style": "NSW HSC",
+      "file": "Essay returned.pdf",
+      "text": "Module A essay\nBand 5\nTeacher comments: Your thesis is clear, but develop your analysis of form.",
+      "expect": {
+        "role": "returned",
+        "mark": {
+          "grade": "Band 5"
+        }
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "returned-grade",
+      "style": "US high school",
+      "file": "Lab graded.pdf",
+      "text": "Lab 6: Titration\nScore: 34 out of 40\nGrade: B+\nComments: check your significant figures.",
+      "expect": {
+        "role": "returned",
+        "mark": {
+          "score": 34,
+          "outOf": 40,
+          "grade": "B+"
+        }
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "notes-history-dates",
+      "style": "Not an assessment",
+      "file": "Darwin notes.pdf",
+      "text": "Evolution notes\nDarwin published On the Origin of Species on 24 November 1859.\nNatural selection acts on variation within populations.",
+      "expect": null,
+      "set": "tuning"
+    },
+    {
+      "id": "past-paper-guidelines",
+      "style": "Not an assessment",
+      "file": "2023 HSC Biology marking guidelines.pdf",
+      "text": "2023 HSC Biology Marking Guidelines\nQuestion 21 (5 marks)\nCriteria\nDescribes the role of enzymes",
+      "expect": null,
+      "facets": {
+        "documentType": "Past Papers",
+        "year": 2023,
+        "exam": "HSC"
+      },
+      "set": "tuning"
+    },
+    {
+      "id": "worksheet-no-date",
+      "style": "Not an assessment",
+      "file": "Vectors worksheet.pdf",
+      "text": "Week 3 Vectors Worksheet\n1. Find the magnitude of the vector (3, 4).\n2. Find a unit vector parallel to (1, 2, 2).",
+      "expect": null,
+      "set": "tuning"
+    },
+    {
+      "id": "term-dates",
+      "style": "Not an assessment",
+      "file": "Term 4 calendar.pdf",
+      "text": "Term 4 2026\nTerm starts Monday 12 October 2026\nYear 12 formal: Friday 27 November 2026",
+      "expect": null,
+      "set": "tuning"
+    },
+    {
+      "id": "lecture-notes",
+      "style": "Not an assessment",
+      "file": "Week 6 lecture.pdf",
+      "text": "COMP1511 Week 6 lecture\nLinked lists and pointers.\nAssignment 2 will be released in Week 8.",
+      "expect": null,
+      "set": "tuning"
+    },
+    {
+      "id": "formal-payment",
+      "style": "Not schoolwork",
+      "file": "Formal tickets.pdf",
+      "text": "Year 12 Formal\nTickets are $95.\nPayment due: Friday 23 October 2026",
+      "expect": null,
+      "set": "tuning"
+    },
+    {
+      "id": "library-receipt",
+      "style": "Not schoolwork",
+      "file": "Library receipt.pdf",
+      "text": "City Library\nThe Great Gatsby\nDue back: Monday 2 November 2026",
+      "expect": null,
+      "set": "tuning"
+    },
+    {
+      "id": "h-business-report",
+      "style": "NSW HSC",
+      "file": "Business AT2.pdf",
+      "text": "BUSINESS STUDIES\nYear 12 – Assessment Task 2\nBusiness Report: Marketing\nHand-in date: Tuesday 10 November 2026 by 8:30 am\nMark value: 25%",
+      "expect": {
+        "titleWords": [
+          "Report"
+        ],
+        "kind": "task",
+        "due": "2026-11-10T08:30",
+        "weighting": 25,
+        "role": "taskSheet"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-legal-inclass",
+      "style": "NSW HSC",
+      "file": "Legal Studies task.pdf",
+      "text": "Legal Studies\nCrime – In-class extended response\nWhen: Week 3, Wednesday 21 October 2026\nTime: 45 minutes\nValue: 20%",
+      "expect": {
+        "titleWords": [
+          "extended",
+          "response"
+        ],
+        "kind": "test",
+        "due": "2026-10-21",
+        "weighting": 20,
+        "lengthMinutes": 45
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-pdhpe-research",
+      "style": "NSW HSC",
+      "file": "PDHPE AT1.pdf",
+      "text": "PDHPE\nAssessment Task 1 – Research Task\nDue Week 4 Term 4 – Friday 30 October 2026\nWeighting: 30%",
+      "expect": {
+        "titleWords": [
+          "Research"
+        ],
+        "kind": "task",
+        "due": "2026-10-30",
+        "weighting": 30,
+        "role": "taskSheet"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-vce-bio-sac",
+      "style": "VCE",
+      "file": "Bio SAC.pdf",
+      "text": "Biology\nUnit 3 Area of Study 1 SAC – Response to stimulus\nSAC date: Monday 26 October 2026\nBring a calculator.",
+      "expect": {
+        "titleWords": [
+          "SAC"
+        ],
+        "kind": "test",
+        "due": "2026-10-26"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-ib-oral",
+      "style": "IB Diploma",
+      "file": "English IO.pdf",
+      "text": "English A: Language and Literature\nIndividual Oral (IO)\nYour IO will take place on Thursday 5 November 2026.\nDuration: 15 minutes",
+      "expect": {
+        "titleWords": [
+          "Oral"
+        ],
+        "kind": "presentation",
+        "due": "2026-11-05"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-uk-required-practical",
+      "style": "UK GCSE",
+      "file": "Required practical.pdf",
+      "text": "Required practical write-up: Osmosis in potato cylinders\nHand in by Friday 13 November 2026",
+      "expect": {
+        "titleWords": [
+          "practical"
+        ],
+        "kind": "practical",
+        "due": "2026-11-13"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-us-dbq",
+      "style": "US high school",
+      "file": "DBQ essay.pdf",
+      "text": "History 10 – DBQ Essay\nFinal draft due Monday, November 16, 2026\nThis assignment counts for 20% of your quarter grade.",
+      "expect": {
+        "titleWords": [
+          "DBQ"
+        ],
+        "kind": "task",
+        "due": "2026-11-16",
+        "weighting": 20,
+        "role": "taskSheet"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-us-quiz",
+      "style": "US high school",
+      "file": "Spanish quiz.pdf",
+      "text": "Spanish II – Quiz Capítulo 3\nQuiz on Thursday, October 29, 2026\nVocabulary and preterite verbs.",
+      "expect": {
+        "titleWords": [
+          "Quiz"
+        ],
+        "kind": "test",
+        "due": "2026-10-29"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-uni-report",
+      "style": "University",
+      "file": "PSYC1001 report.pdf",
+      "text": "PSYC1001 Research Report\nDue date: 5pm Friday 27 November 2026 (Week 10)\nWeighting: 35%",
+      "expect": {
+        "titleWords": [
+          "Research",
+          "Report"
+        ],
+        "kind": "task",
+        "due": "2026-11-27T17:00",
+        "weighting": 35,
+        "role": "taskSheet"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-uni-midsem",
+      "style": "University",
+      "file": "Midsem info.pdf",
+      "text": "Mid-semester exam\nThe mid-semester exam will be held in Week 7 on Tuesday 3 November 2026 at 2:00 pm.\nIt is worth 25% of your final grade.",
+      "expect": {
+        "titleWords": [
+          "exam"
+        ],
+        "kind": "exam",
+        "due": "2026-11-03T14:00",
+        "weighting": 25,
+        "role": "taskSheet"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-cambridge-mock",
+      "style": "Cambridge",
+      "file": "9709 mock.pdf",
+      "text": "9709 Mathematics – Mock examination\nPaper 1: Monday 23 November 2026, 9:00 am\nDuration 1 hour 50 minutes",
+      "expect": {
+        "titleWords": [
+          "Mock"
+        ],
+        "kind": "exam",
+        "due": "2026-11-23T09:00",
+        "lengthMinutes": 110
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-rubric-speech",
+      "style": "NSW HSC",
+      "file": "Speech rubric.pdf",
+      "text": "Assessment rubric – Persuasive speech\nExcellent | Good | Developing\nUses rhetorical devices",
+      "expect": {
+        "role": "criteria"
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-returned-result",
+      "style": "NSW HSC",
+      "file": "Depth study returned.pdf",
+      "text": "Depth Study – Enzymes\nResult: 32/40\nComments: Good experimental design.",
+      "expect": {
+        "role": "returned",
+        "mark": {
+          "score": 32,
+          "outOf": 40
+        }
+      },
+      "set": "held out"
+    },
+    {
+      "id": "h-exam-tips",
+      "style": "Not an assessment",
+      "file": "Exam tips.pdf",
+      "text": "Exam preparation tips\nThe HSC exams start on Thursday 15 October 2026.\nSleep well and eat breakfast.",
+      "expect": null,
+      "set": "held out"
+    },
+    {
+      "id": "h-excursion",
+      "style": "Not schoolwork",
+      "file": "Excursion note.pdf",
+      "text": "Excursion to the Art Gallery\nDate: Wednesday 28 October 2026\nReturn this form by Friday 23 October.",
+      "expect": null,
+      "set": "held out"
+    },
+    {
+      "id": "h-reading",
+      "style": "Not an assessment",
+      "file": "Chapter 7.pdf",
+      "text": "Chapter 7 questions\nRead pages 120–135 before next lesson.",
+      "expect": null,
+      "set": "held out"
+    },
+    {
+      "id": "h2-bio-numeric",
+      "style": "NSW HSC",
+      "file": "Bio AT3.pdf",
+      "text": "Year 11 Biology\nAssessment Task 3: Research Investigation\nIssued: 12/10/2026\nDue: 9/11/2026\nWeighting 25%",
+      "expect": {
+        "titleWords": [
+          "Research",
+          "Investigation"
+        ],
+        "kind": "task",
+        "due": "2026-11-09",
+        "weighting": 25,
+        "role": "taskSheet"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-us-lab",
+      "style": "US high school",
+      "file": "Pendulum lab.pdf",
+      "text": "Physics 1 – Lab Report: Pendulum Motion\nDue: Thursday, November 12, 2026 at 11:59 PM\nWorth 50 points",
+      "expect": {
+        "titleWords": [
+          "Lab",
+          "Report"
+        ],
+        "kind": "task",
+        "due": "2026-11-12T23:59"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-canvas-essay",
+      "style": "NSW HSC",
+      "file": "Hand-in essay.pdf",
+      "text": "Assessment Task 2 – Hand-in essay\nStudents must submit via Canvas by 11:59 pm, Sunday 15 November 2026.\nWeighting: 30%",
+      "expect": {
+        "titleWords": [
+          "essay"
+        ],
+        "kind": "task",
+        "due": "2026-11-15T23:59",
+        "weighting": 30,
+        "role": "taskSheet"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-sor-halfyearly",
+      "style": "NSW HSC",
+      "file": "SOR half yearly.pdf",
+      "text": "Year 12 Studies of Religion\nHalf-yearly examination\nDate: Tuesday 17 November 2026, Period 1–2\nLength: 1 hour 30 minutes",
+      "expect": {
+        "titleWords": [
+          "examination"
+        ],
+        "kind": "exam",
+        "due": "2026-11-17",
+        "lengthMinutes": 90
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-sdd-milestone",
+      "style": "NSW HSC",
+      "file": "Major project M1.pdf",
+      "text": "Software Engineering\nMajor project – milestone 1 (design documentation)\nDue: Friday 6 November 2026\nMilestone 1 is worth 10%",
+      "expect": {
+        "titleWords": [
+          "project"
+        ],
+        "kind": "task",
+        "due": "2026-11-06",
+        "weighting": 10,
+        "role": "taskSheet"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-visual-arts",
+      "style": "NSW HSC",
+      "file": "VA BOW submission.pdf",
+      "text": "Visual Arts Body of Work\nSubmission of Body of Work: Monday 2 November 2026",
+      "expect": {
+        "titleWords": [
+          "Body",
+          "Work"
+        ],
+        "kind": "task",
+        "due": "2026-11-02"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-drama",
+      "style": "NSW HSC",
+      "file": "Drama group performance.pdf",
+      "text": "Drama – Group Performance\nPerformances: Wednesday 11 November 2026, Hall\nThis task is worth 30% of the course",
+      "expect": {
+        "titleWords": [
+          "Performance"
+        ],
+        "kind": "presentation",
+        "due": "2026-11-11",
+        "weighting": 30,
+        "role": "taskSheet"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-french-oral",
+      "style": "NSW HSC",
+      "file": "French speaking.pdf",
+      "text": "French Continuers\nSpeaking assessment (oral interview)\nYour interview is on Tuesday 27 October 2026 at 10:15 am",
+      "expect": {
+        "titleWords": [
+          "Speaking"
+        ],
+        "kind": "presentation",
+        "due": "2026-10-27T10:15"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-uni-quiz",
+      "style": "University",
+      "file": "MATH1131 quiz 3.pdf",
+      "text": "MATH1131 Online Quiz 3\nOpens: Monday 26 October 2026\nCloses: Friday 30 October 2026, 11:59 pm\nWorth 2%",
+      "expect": {
+        "titleWords": [
+          "Quiz"
+        ],
+        "kind": "test",
+        "due": "2026-10-30T23:59",
+        "weighting": 2,
+        "role": "taskSheet"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-criteria-bow",
+      "style": "NSW HSC",
+      "file": "BOW marking guidelines.pdf",
+      "text": "Marking guidelines – Body of Work\nConceptual strength and meaning\nResolution",
+      "expect": {
+        "role": "criteria"
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-returned-essay",
+      "style": "NSW HSC",
+      "file": "Essay feedback.pdf",
+      "text": "Feedback sheet\nTask 2 – Hand-in essay\nYour mark: 26 / 30\nWell argued.",
+      "expect": {
+        "role": "returned",
+        "mark": {
+          "score": 26,
+          "outOf": 30
+        }
+      },
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-schedule",
+      "style": "Not an assessment",
+      "file": "Assessment schedule.pdf",
+      "text": "Assessment schedule 2026\nTask 1 – Week 8 Term 1\nTask 2 – Week 5 Term 2\nTask 3 – Week 9 Term 3",
+      "expect": null,
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-study-timetable",
+      "style": "Not an assessment",
+      "file": "My study timetable.pdf",
+      "text": "Year 12 study timetable\nMonday: Maths 4–5 pm\nTuesday: English 4–5 pm",
+      "expect": null,
+      "set": "held out 2"
+    },
+    {
+      "id": "h2-notes",
+      "style": "Not an assessment",
+      "file": "Module 6 notes.pdf",
+      "text": "Biology notes – Module 6\nThe due date for your depth study is in the notification.\nMutations change DNA sequences.",
+      "expect": null,
+      "set": "held out 2"
+    }
+  ]
+}

@@ -1,0 +1,680 @@
+{
+ "id": "au-vic-vce",
+ "name": "VCE",
+ "fullName": "Victorian Certificate of Education",
+ "region": "Australia",
+ "regionCodes": [
+  "AU"
+ ],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "VCE",
+   "aliases": [
+    "Victorian Certificate of Education",
+    "VCAA",
+    "Victorian Curriculum and Assessment Authority"
+   ]
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "VCAA exam",
+    "VCE exam",
+    "examination report",
+    "assessor report",
+    "practice exam"
+   ]
+  },
+  {
+   "name": "SACs",
+   "aliases": [
+    "SAC",
+    "school-assessed coursework",
+    "SAT",
+    "school-assessed task",
+    "outcome",
+    "assessment task",
+    "rubric",
+    "due date"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes",
+    "class notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Practicals",
+   "aliases": [
+    "practical",
+    "prac",
+    "experiment",
+    "lab report",
+    "hypothesis"
+   ]
+  },
+  {
+   "name": "Practice",
+   "aliases": [
+    "practice",
+    "practice set",
+    "practice questions",
+    "revision questions"
+   ]
+  },
+  {
+   "name": "Sources",
+   "aliases": [
+    "source",
+    "sources",
+    "primary source",
+    "secondary source",
+    "source analysis"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "calendarYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 525,
+  "end": 920
+ },
+ "subjects": [
+  {
+   "id": "english",
+   "name": "English",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "VCE English"
+   ],
+   "keywords": [
+    "analysing argument",
+    "crafting texts",
+    "reading and responding",
+    "text response",
+    "argument analysis"
+   ]
+  },
+  {
+   "id": "english-language",
+   "name": "English Language",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "EngLang"
+   ],
+   "keywords": [
+    "linguistics",
+    "subsystems of language",
+    "morphology",
+    "lexicology",
+    "syntax",
+    "discourse",
+    "phonetics",
+    "phonology",
+    "semantics",
+    "register",
+    "Australian English",
+    "language variation"
+   ]
+  },
+  {
+   "id": "literature",
+   "name": "Literature",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "VCE Literature"
+   ]
+  },
+  {
+   "id": "eal",
+   "name": "English as an Additional Language",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "EAL"
+   ]
+  },
+  {
+   "id": "foundation-mathematics",
+   "name": "Foundation Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Foundation Maths"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "general-mathematics",
+   "name": "General Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "General Maths",
+    "Further Maths",
+    "Further Mathematics"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "mathematical-methods",
+   "name": "Mathematical Methods",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Methods",
+    "MM"
+   ],
+   "folderNames": [
+    "Methods"
+   ],
+   "keywords": [
+    "functions and graphs",
+    "algebra",
+    "calculus",
+    "discrete random variables",
+    "continuous random variables",
+    "CAS calculator",
+    "tech-free",
+    "tech-active"
+   ]
+  },
+  {
+   "id": "specialist-mathematics",
+   "name": "Specialist Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Specialist Maths",
+    "Spesh"
+   ],
+   "folderNames": [
+    "Specialist"
+   ],
+   "keywords": [
+    "complex numbers",
+    "de Moivre",
+    "proof",
+    "integration by parts",
+    "mechanics",
+    "simple harmonic motion",
+    "resisted motion",
+    "vectors in three dimensions",
+    "Argand diagram",
+    "logic and proof"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Science"
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Science"
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Science"
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Science"
+  },
+  {
+   "id": "environmental-science",
+   "name": "Environmental Science",
+   "topic": "earth-environment",
+   "group": "Science"
+  },
+  {
+   "id": "history-revolutions",
+   "name": "History: Revolutions",
+   "topic": "history",
+   "group": "Humanities",
+   "aliases": [
+    "History Revolutions"
+   ],
+   "folderNames": [
+    "Revolutions"
+   ],
+   "keywords": [
+    "American Revolution",
+    "French Revolution",
+    "Russian Revolution",
+    "Chinese Revolution",
+    "ancien régime",
+    "new society"
+   ]
+  },
+  {
+   "id": "australian-history",
+   "name": "Australian History",
+   "topic": "history",
+   "group": "Humanities"
+  },
+  {
+   "id": "ancient-history",
+   "name": "Ancient History",
+   "topic": "history",
+   "group": "Humanities"
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Humanities"
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Humanities"
+  },
+  {
+   "id": "business-management",
+   "name": "Business Management",
+   "topic": "business",
+   "group": "Humanities",
+   "aliases": [
+    "Bus Man"
+   ]
+  },
+  {
+   "id": "accounting",
+   "name": "Accounting",
+   "topic": "accounting",
+   "group": "Humanities"
+  },
+  {
+   "id": "legal-studies",
+   "name": "Legal Studies",
+   "topic": "legal",
+   "group": "Humanities"
+  },
+  {
+   "id": "australian-politics",
+   "name": "Australian Politics",
+   "topic": "politics",
+   "group": "Humanities"
+  },
+  {
+   "id": "global-politics",
+   "name": "Global Politics",
+   "topic": "politics",
+   "group": "Humanities"
+  },
+  {
+   "id": "philosophy",
+   "name": "Philosophy",
+   "topic": "philosophy",
+   "group": "Humanities"
+  },
+  {
+   "id": "sociology",
+   "name": "Sociology",
+   "topic": "society-culture",
+   "group": "Humanities"
+  },
+  {
+   "id": "religion-and-society",
+   "name": "Religion and Society",
+   "topic": "religion",
+   "group": "Humanities"
+  },
+  {
+   "id": "texts-and-traditions",
+   "name": "Texts and Traditions",
+   "topic": "religion",
+   "group": "Humanities"
+  },
+  {
+   "id": "art-making-and-exhibiting",
+   "name": "Art Making and Exhibiting",
+   "topic": "visual-arts",
+   "group": "The Arts",
+   "aliases": [
+    "AME"
+   ]
+  },
+  {
+   "id": "art-creative-practice",
+   "name": "Art Creative Practice",
+   "topic": "visual-arts",
+   "group": "The Arts"
+  },
+  {
+   "id": "visual-communication-design",
+   "name": "Visual Communication Design",
+   "topic": "visual-arts",
+   "group": "The Arts",
+   "aliases": [
+    "VCD",
+    "Vis Com"
+   ],
+   "keywords": [
+    "typography",
+    "branding",
+    "design process",
+    "visual communication",
+    "design brief",
+    "infographic"
+   ]
+  },
+  {
+   "id": "media",
+   "name": "Media",
+   "topic": "media",
+   "group": "The Arts"
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "The Arts",
+   "aliases": [
+    "Music Inquiry",
+    "Music Composition",
+    "Music Repertoire Performance",
+    "Music Contemporary Performance"
+   ]
+  },
+  {
+   "id": "theatre-studies",
+   "name": "Theatre Studies",
+   "topic": "drama",
+   "group": "The Arts"
+  },
+  {
+   "id": "drama",
+   "name": "Drama",
+   "topic": "drama",
+   "group": "The Arts"
+  },
+  {
+   "id": "dance",
+   "name": "Dance",
+   "topic": "dance",
+   "group": "The Arts"
+  },
+  {
+   "id": "health-and-human-development",
+   "name": "Health and Human Development",
+   "topic": "health-pe",
+   "group": "Health and PE",
+   "aliases": [
+    "HHD"
+   ],
+   "keywords": [
+    "Sustainable Development Goals",
+    "health status",
+    "burden of disease",
+    "human development"
+   ]
+  },
+  {
+   "id": "physical-education",
+   "name": "Physical Education",
+   "topic": "health-pe",
+   "group": "Health and PE",
+   "aliases": [
+    "PE"
+   ]
+  },
+  {
+   "id": "outdoor-environmental-studies",
+   "name": "Outdoor and Environmental Studies",
+   "topic": "earth-environment",
+   "group": "Health and PE",
+   "aliases": [
+    "OES"
+   ]
+  },
+  {
+   "id": "algorithmics",
+   "name": "Algorithmics (HESS)",
+   "topic": "computing",
+   "group": "Technologies",
+   "aliases": [
+    "Algorithmics"
+   ]
+  },
+  {
+   "id": "applied-computing-data",
+   "name": "Applied Computing: Data Analytics",
+   "topic": "computing",
+   "group": "Technologies",
+   "aliases": [
+    "Data Analytics"
+   ]
+  },
+  {
+   "id": "applied-computing-software",
+   "name": "Applied Computing: Software Development",
+   "topic": "computing",
+   "group": "Technologies",
+   "aliases": [
+    "Software Development"
+   ]
+  },
+  {
+   "id": "product-design",
+   "name": "Product Design and Technologies",
+   "topic": "design-technology",
+   "group": "Technologies",
+   "aliases": [
+    "Product Design"
+   ]
+  },
+  {
+   "id": "systems-engineering",
+   "name": "Systems Engineering",
+   "topic": "engineering",
+   "group": "Technologies"
+  },
+  {
+   "id": "food-studies",
+   "name": "Food Studies",
+   "topic": "food-nutrition",
+   "group": "Technologies"
+  },
+  {
+   "id": "agricultural-studies",
+   "name": "Agricultural and Horticultural Studies",
+   "topic": "agriculture",
+   "group": "Technologies"
+  },
+  {
+   "id": "french",
+   "name": "French",
+   "topic": "french",
+   "group": "Languages",
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "german",
+   "name": "German",
+   "topic": "german",
+   "group": "Languages",
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "spanish",
+   "name": "Spanish",
+   "topic": "spanish",
+   "group": "Languages",
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "italian",
+   "name": "Italian",
+   "topic": "italian",
+   "group": "Languages",
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "japanese-second-language",
+   "name": "Japanese Second Language",
+   "topic": "japanese",
+   "group": "Languages",
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "chinese-second-language",
+   "name": "Chinese Second Language",
+   "topic": "chinese",
+   "group": "Languages",
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "chinese-first-language",
+   "name": "Chinese First Language",
+   "topic": "chinese",
+   "group": "Languages",
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "indonesian-second-language",
+   "name": "Indonesian Second Language",
+   "topic": "indonesian",
+   "group": "Languages",
+   "languageOfStudy": "id"
+  },
+  {
+   "id": "korean-second-language",
+   "name": "Korean Second Language",
+   "topic": "korean",
+   "group": "Languages",
+   "languageOfStudy": "ko"
+  },
+  {
+   "id": "latin",
+   "name": "Latin",
+   "topic": "latin",
+   "group": "Languages"
+  }
+ ],
+ "suggested": [
+  "english",
+  "mathematical-methods",
+  "physics",
+  "chemistry",
+  "history-revolutions"
+ ],
+ "popular": [
+  "biology",
+  "psychology",
+  "specialist-mathematics",
+  "general-mathematics",
+  "literature",
+  "business-management",
+  "legal-studies",
+  "health-and-human-development",
+  "economics",
+  "visual-communication-design"
+ ]
+}

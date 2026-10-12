@@ -1,0 +1,782 @@
+{
+ "id": "cambridge-intl",
+ "name": "Cambridge International",
+ "fullName": "Cambridge IGCSE and International AS & A Level",
+ "region": "International",
+ "regionCodes": [],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "IGCSE",
+   "aliases": [
+    "Cambridge IGCSE",
+    "International GCSE"
+   ]
+  },
+  {
+   "name": "A Level",
+   "aliases": [
+    "Cambridge International A Level",
+    "AS Level",
+    "AS & A Level"
+   ]
+  },
+  {
+   "name": "O Level",
+   "aliases": [
+    "Cambridge O Level"
+   ]
+  },
+  {
+   "name": "Cambridge International",
+   "aliases": [
+    "CAIE",
+    "CIE",
+    "Cambridge Assessment International Education"
+   ]
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "insert",
+    "pre-release material",
+    "confidential instructions"
+   ]
+  },
+  {
+   "name": "Mark Schemes",
+   "aliases": [
+    "mark scheme",
+    "examiner report",
+    "principal examiner report",
+    "grade thresholds"
+   ]
+  },
+  {
+   "name": "Revision",
+   "aliases": [
+    "revision",
+    "revision notes",
+    "flashcards",
+    "topical questions",
+    "topical past papers"
+   ]
+  },
+  {
+   "name": "Coursework",
+   "aliases": [
+    "coursework",
+    "portfolio",
+    "component 4"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes",
+    "class notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Practicals",
+   "aliases": [
+    "practical",
+    "experiment",
+    "practical test",
+    "alternative to practical",
+    "lab report"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "academicYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 480,
+  "end": 900
+ },
+ "subjects": [
+  {
+   "id": "mathematics",
+   "name": "Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths"
+   ],
+   "codes": [
+    "0580",
+    "0980",
+    "0607",
+    "0444",
+    "9709"
+   ]
+  },
+  {
+   "id": "additional-mathematics",
+   "name": "Additional Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Add Maths",
+    "Additional Maths"
+   ],
+   "codes": [
+    "0606"
+   ],
+   "keywords": [
+    "binomial expansion",
+    "logarithms",
+    "circular measure",
+    "differentiation",
+    "integration"
+   ]
+  },
+  {
+   "id": "further-mathematics",
+   "name": "Further Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Further Maths"
+   ],
+   "codes": [
+    "9231"
+   ],
+   "keywords": [
+    "complex numbers",
+    "de Moivre",
+    "proof",
+    "integration by parts",
+    "mechanics",
+    "simple harmonic motion",
+    "resisted motion",
+    "vectors in three dimensions",
+    "Argand diagram"
+   ]
+  },
+  {
+   "id": "statistics",
+   "name": "Statistics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "codes": [
+    "0479"
+   ]
+  },
+  {
+   "id": "english-first-language",
+   "name": "English First Language",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "First Language English",
+    "English Language"
+   ],
+   "codes": [
+    "0500",
+    "0990",
+    "0524",
+    "9093"
+   ]
+  },
+  {
+   "id": "english-second-language",
+   "name": "English as a Second Language",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "ESL",
+    "English as an Additional Language"
+   ],
+   "codes": [
+    "0510",
+    "0511",
+    "0991",
+    "0993",
+    "0472",
+    "0772"
+   ]
+  },
+  {
+   "id": "english-literature",
+   "name": "English Literature",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "Literature in English",
+    "World Literature"
+   ],
+   "codes": [
+    "0475",
+    "0992",
+    "0408",
+    "9695",
+    "8695"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Sciences",
+   "codes": [
+    "0610",
+    "0970",
+    "9700"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Sciences",
+   "codes": [
+    "0620",
+    "0971",
+    "9701"
+   ]
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Sciences",
+   "codes": [
+    "0625",
+    "0972",
+    "9702"
+   ]
+  },
+  {
+   "id": "combined-science",
+   "name": "Combined Science",
+   "topic": "general-science",
+   "group": "Sciences",
+   "aliases": [
+    "Co-ordinated Sciences",
+    "Physical Science"
+   ],
+   "codes": [
+    "0653",
+    "0654",
+    "0973",
+    "0652"
+   ]
+  },
+  {
+   "id": "environmental-management",
+   "name": "Environmental Management",
+   "topic": "earth-environment",
+   "group": "Sciences",
+   "codes": [
+    "0680",
+    "8291"
+   ]
+  },
+  {
+   "id": "marine-science",
+   "name": "Marine Science",
+   "topic": "biology",
+   "group": "Sciences",
+   "codes": [
+    "0697",
+    "9693"
+   ],
+   "keywords": [
+    "marine",
+    "coral reef",
+    "ocean",
+    "fisheries"
+   ]
+  },
+  {
+   "id": "agriculture",
+   "name": "Agriculture",
+   "topic": "agriculture",
+   "group": "Sciences",
+   "codes": [
+    "0600"
+   ]
+  },
+  {
+   "id": "computer-science",
+   "name": "Computer Science",
+   "topic": "computing",
+   "group": "Technology",
+   "codes": [
+    "0478",
+    "0984",
+    "0265",
+    "9618"
+   ]
+  },
+  {
+   "id": "ict",
+   "name": "Information and Communication Technology",
+   "topic": "computing",
+   "group": "Technology",
+   "aliases": [
+    "ICT",
+    "Information Technology"
+   ],
+   "codes": [
+    "0417",
+    "0983",
+    "9626"
+   ]
+  },
+  {
+   "id": "design-technology",
+   "name": "Design and Technology",
+   "topic": "design-technology",
+   "group": "Technology",
+   "aliases": [
+    "D&T"
+   ],
+   "codes": [
+    "0445",
+    "0979",
+    "9705"
+   ]
+  },
+  {
+   "id": "food-nutrition",
+   "name": "Food and Nutrition",
+   "topic": "food-nutrition",
+   "group": "Technology",
+   "codes": [
+    "0648"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "0455",
+    "0987",
+    "9708"
+   ]
+  },
+  {
+   "id": "business",
+   "name": "Business Studies",
+   "topic": "business",
+   "group": "Humanities and Social Sciences",
+   "aliases": [],
+   "folderNames": [
+    "Business"
+   ],
+   "codes": [
+    "0450",
+    "0986",
+    "0264",
+    "0774",
+    "9609"
+   ]
+  },
+  {
+   "id": "accounting",
+   "name": "Accounting",
+   "topic": "accounting",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "0452",
+    "0985",
+    "9706"
+   ]
+  },
+  {
+   "id": "enterprise",
+   "name": "Enterprise",
+   "topic": "business",
+   "group": "Humanities and Social Sciences",
+   "aliases": [],
+   "folderNames": [
+    "Commerce"
+   ],
+   "codes": [
+    "0454",
+    "0715"
+   ]
+  },
+  {
+   "id": "travel-tourism",
+   "name": "Travel and Tourism",
+   "topic": "business",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Travel & Tourism"
+   ],
+   "codes": [
+    "0471",
+    "9395"
+   ]
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "0460",
+    "0976",
+    "9696"
+   ]
+  },
+  {
+   "id": "history",
+   "name": "History",
+   "topic": "history",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "American History",
+    "International History",
+    "European History"
+   ],
+   "codes": [
+    "0470",
+    "0977",
+    "0409",
+    "9489",
+    "9981",
+    "9982",
+    "8101",
+    "8102"
+   ]
+  },
+  {
+   "id": "global-perspectives",
+   "name": "Global Perspectives",
+   "topic": "research-project",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Global Perspectives and Research",
+    "GP"
+   ],
+   "codes": [
+    "0457",
+    "9239"
+   ]
+  },
+  {
+   "id": "sociology",
+   "name": "Sociology",
+   "topic": "society-culture",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "0495",
+    "9699"
+   ]
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "0266",
+    "9990"
+   ]
+  },
+  {
+   "id": "law",
+   "name": "Law",
+   "topic": "legal",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "9084"
+   ]
+  },
+  {
+   "id": "thinking-skills",
+   "name": "Thinking Skills",
+   "topic": "philosophy",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "9694"
+   ]
+  },
+  {
+   "id": "religious-studies",
+   "name": "Religious Studies",
+   "topic": "religion",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Islamiyat",
+    "Islamic Studies",
+    "Hinduism",
+    "Biblical Studies"
+   ],
+   "codes": [
+    "0490",
+    "0493",
+    "9488",
+    "9487",
+    "9484"
+   ]
+  },
+  {
+   "id": "classical-studies",
+   "name": "Classical Studies",
+   "topic": "history",
+   "group": "Humanities and Social Sciences",
+   "codes": [
+    "9274"
+   ]
+  },
+  {
+   "id": "art-design",
+   "name": "Art and Design",
+   "topic": "visual-arts",
+   "group": "Creative Arts",
+   "aliases": [],
+   "folderNames": [
+    "Art"
+   ],
+   "codes": [
+    "0400",
+    "0989",
+    "9479"
+   ]
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "Creative Arts",
+   "codes": [
+    "0410",
+    "0978",
+    "9483"
+   ]
+  },
+  {
+   "id": "drama",
+   "name": "Drama",
+   "topic": "drama",
+   "group": "Creative Arts",
+   "codes": [
+    "0411",
+    "0994",
+    "9482"
+   ]
+  },
+  {
+   "id": "media-studies",
+   "name": "Media Studies",
+   "topic": "media",
+   "group": "Creative Arts",
+   "aliases": [
+    "Digital Media and Design"
+   ],
+   "codes": [
+    "9607",
+    "9481"
+   ]
+  },
+  {
+   "id": "physical-education",
+   "name": "Physical Education",
+   "topic": "health-pe",
+   "group": "Physical Education",
+   "aliases": [
+    "PE",
+    "Sport and Physical Education"
+   ],
+   "codes": [
+    "0413",
+    "0995",
+    "8386"
+   ]
+  },
+  {
+   "id": "french",
+   "name": "French",
+   "topic": "french",
+   "group": "Languages",
+   "codes": [
+    "0520",
+    "7156",
+    "0501",
+    "9898",
+    "8028"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "spanish",
+   "name": "Spanish",
+   "topic": "spanish",
+   "group": "Languages",
+   "codes": [
+    "0530",
+    "7160",
+    "0502",
+    "0474",
+    "9844",
+    "8022"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "german",
+   "name": "German",
+   "topic": "german",
+   "group": "Languages",
+   "codes": [
+    "0525",
+    "7159",
+    "0505",
+    "9897",
+    "8027"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "chinese",
+   "name": "Chinese",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [
+    "Mandarin",
+    "Chinese (Mandarin)"
+   ],
+   "codes": [
+    "0547",
+    "0523",
+    "0509",
+    "9868",
+    "8238"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "japanese",
+   "name": "Japanese",
+   "topic": "japanese",
+   "group": "Languages",
+   "codes": [
+    "0716"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "italian",
+   "name": "Italian",
+   "topic": "italian",
+   "group": "Languages",
+   "codes": [
+    "0535",
+    "7164"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "bahasa-indonesia",
+   "name": "Bahasa Indonesia",
+   "topic": "indonesian",
+   "group": "Languages",
+   "codes": [
+    "0538"
+   ],
+   "languageOfStudy": "id"
+  },
+  {
+   "id": "latin",
+   "name": "Latin",
+   "topic": "latin",
+   "group": "Languages",
+   "codes": [
+    "0480"
+   ]
+  }
+ ],
+ "suggested": [
+  "mathematics",
+  "english-first-language",
+  "physics",
+  "chemistry",
+  "history"
+ ],
+ "popular": [
+  "biology",
+  "english-literature",
+  "economics",
+  "business",
+  "computer-science",
+  "geography",
+  "ict",
+  "additional-mathematics",
+  "art-design",
+  "french",
+  "spanish",
+  "global-perspectives"
+ ]
+}

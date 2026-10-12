@@ -1,0 +1,1037 @@
+{
+ "id": "us-hs-ap",
+ "name": "US high school and AP",
+ "fullName": "US high school courses and Advanced Placement",
+ "region": "United States",
+ "regionCodes": [
+  "US"
+ ],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "AP",
+   "aliases": [
+    "Advanced Placement",
+    "College Board",
+    "AP Exam"
+   ]
+  },
+  {
+   "name": "SAT",
+   "aliases": []
+  },
+  {
+   "name": "ACT",
+   "aliases": []
+  },
+  {
+   "name": "PSAT",
+   "aliases": [
+    "PSAT/NMSQT"
+   ]
+  },
+  {
+   "name": "Regents",
+   "aliases": [
+    "New York State Regents",
+    "Regents Exam"
+   ]
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Homework",
+   "aliases": [
+    "homework",
+    "HW"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "class notes",
+    "Cornell notes",
+    "study notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Study Guides",
+   "aliases": [
+    "study guide",
+    "review sheet",
+    "review packet",
+    "test review",
+    "unit review"
+   ]
+  },
+  {
+   "name": "Tests and Quizzes",
+   "aliases": [
+    "test",
+    "quiz",
+    "unit test",
+    "midterm",
+    "final exam",
+    "chapter test"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Labs",
+   "aliases": [
+    "lab",
+    "lab report",
+    "experiment",
+    "data table"
+   ]
+  },
+  {
+   "name": "Projects",
+   "aliases": [
+    "project",
+    "poster",
+    "rubric",
+    "presentation"
+   ]
+  },
+  {
+   "name": "Practice Exams",
+   "aliases": [
+    "practice exam",
+    "FRQ",
+    "free-response question",
+    "free response",
+    "multiple-choice practice",
+    "released exam",
+    "scoring guidelines",
+    "AP practice",
+    "SAT practice",
+    "ACT practice"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "academicYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 480,
+  "end": 900
+ },
+ "subjects": [
+  {
+   "id": "english",
+   "name": "English",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "ELA",
+    "Language Arts",
+    "English 9",
+    "English 10",
+    "English 11",
+    "English 12",
+    "Honors English"
+   ]
+  },
+  {
+   "id": "ap-english-language",
+   "name": "AP English Language and Composition",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "AP Lang",
+    "AP English Language",
+    "APLAC"
+   ],
+   "keywords": [
+    "rhetorical analysis",
+    "synthesis essay",
+    "argument essay",
+    "rhetorical situation",
+    "ethos",
+    "pathos",
+    "logos"
+   ]
+  },
+  {
+   "id": "ap-english-literature",
+   "name": "AP English Literature and Composition",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "AP Lit",
+    "AP English Literature"
+   ],
+   "keywords": [
+    "poetry analysis",
+    "prose fiction analysis",
+    "literary argument"
+   ]
+  },
+  {
+   "id": "algebra-1",
+   "name": "Algebra I",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "Algebra 1"
+   ],
+   "keywords": [
+    "linear equations",
+    "slope-intercept form",
+    "systems of equations",
+    "factoring",
+    "quadratic formula"
+   ]
+  },
+  {
+   "id": "geometry",
+   "name": "Geometry",
+   "topic": "mathematics",
+   "group": "Math",
+   "keywords": [
+    "congruent triangles",
+    "similar triangles",
+    "two-column proof",
+    "Pythagorean theorem",
+    "circles",
+    "transformations"
+   ]
+  },
+  {
+   "id": "algebra-2",
+   "name": "Algebra II",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "Algebra 2"
+   ],
+   "keywords": [
+    "polynomial functions",
+    "rational functions",
+    "exponential functions",
+    "logarithmic functions",
+    "complex numbers"
+   ]
+  },
+  {
+   "id": "precalculus",
+   "name": "Precalculus",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "Pre-Calculus",
+    "Precalc",
+    "Pre-Calc"
+   ],
+   "keywords": [
+    "unit circle",
+    "trigonometric identities",
+    "polar coordinates",
+    "conic sections",
+    "limits"
+   ]
+  },
+  {
+   "id": "calculus",
+   "name": "Calculus",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "Calc"
+   ]
+  },
+  {
+   "id": "ap-precalculus",
+   "name": "AP Precalculus",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "AP Precalc"
+   ]
+  },
+  {
+   "id": "ap-calculus-ab",
+   "name": "AP Calculus AB",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "AP Calc AB",
+    "Calc AB"
+   ],
+   "keywords": [
+    "limits",
+    "derivatives",
+    "integrals",
+    "Fundamental Theorem of Calculus",
+    "related rates",
+    "differential equations"
+   ]
+  },
+  {
+   "id": "ap-calculus-bc",
+   "name": "AP Calculus BC",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "AP Calc BC",
+    "Calc BC"
+   ],
+   "keywords": [
+    "series",
+    "Taylor series",
+    "parametric equations",
+    "polar coordinates",
+    "Fundamental Theorem of Calculus"
+   ]
+  },
+  {
+   "id": "ap-statistics",
+   "name": "AP Statistics",
+   "topic": "mathematics",
+   "group": "Math",
+   "aliases": [
+    "AP Stats"
+   ],
+   "folderNames": [
+    "Statistics"
+   ],
+   "keywords": [
+    "sampling distribution",
+    "confidence interval",
+    "significance test",
+    "p-value",
+    "regression",
+    "chi-square"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Science",
+   "aliases": [
+    "Honors Biology",
+    "Bio"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Science",
+   "aliases": [
+    "Honors Chemistry",
+    "Chem"
+   ]
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Science",
+   "aliases": [
+    "Honors Physics"
+   ]
+  },
+  {
+   "id": "earth-science",
+   "name": "Earth Science",
+   "topic": "earth-environment",
+   "group": "Science",
+   "aliases": [
+    "Earth and Space Science"
+   ]
+  },
+  {
+   "id": "anatomy-physiology",
+   "name": "Anatomy and Physiology",
+   "topic": "biology",
+   "group": "Science",
+   "aliases": [
+    "A&P",
+    "Anatomy & Physiology"
+   ]
+  },
+  {
+   "id": "ap-biology",
+   "name": "AP Biology",
+   "topic": "biology",
+   "group": "Science",
+   "aliases": [
+    "AP Bio"
+   ]
+  },
+  {
+   "id": "ap-chemistry",
+   "name": "AP Chemistry",
+   "topic": "chemistry",
+   "group": "Science",
+   "aliases": [
+    "AP Chem"
+   ]
+  },
+  {
+   "id": "ap-physics-1",
+   "name": "AP Physics 1",
+   "topic": "physics",
+   "group": "Science",
+   "aliases": [
+    "AP Physics 1: Algebra-Based",
+    "AP Phys 1"
+   ]
+  },
+  {
+   "id": "ap-physics-2",
+   "name": "AP Physics 2",
+   "topic": "physics",
+   "group": "Science",
+   "aliases": [
+    "AP Physics 2: Algebra-Based",
+    "AP Phys 2"
+   ]
+  },
+  {
+   "id": "ap-physics-c-mech",
+   "name": "AP Physics C: Mechanics",
+   "topic": "physics",
+   "group": "Science",
+   "aliases": [
+    "AP Physics C Mechanics",
+    "Physics C Mech"
+   ]
+  },
+  {
+   "id": "ap-physics-c-em",
+   "name": "AP Physics C: Electricity and Magnetism",
+   "topic": "physics",
+   "group": "Science",
+   "aliases": [
+    "AP Physics C E&M",
+    "Physics C E&M"
+   ]
+  },
+  {
+   "id": "ap-environmental-science",
+   "name": "AP Environmental Science",
+   "topic": "earth-environment",
+   "group": "Science",
+   "aliases": [
+    "APES",
+    "AP Enviro",
+    "AP Environmental"
+   ]
+  },
+  {
+   "id": "world-history",
+   "name": "World History",
+   "topic": "history",
+   "group": "Social Studies"
+  },
+  {
+   "id": "us-history",
+   "name": "US History",
+   "topic": "history",
+   "group": "Social Studies",
+   "aliases": [
+    "U.S. History",
+    "American History",
+    "USH"
+   ],
+   "keywords": [
+    "Constitution",
+    "Civil War",
+    "Reconstruction",
+    "New Deal",
+    "Cold War",
+    "civil rights movement"
+   ]
+  },
+  {
+   "id": "government",
+   "name": "Government",
+   "topic": "politics",
+   "group": "Social Studies",
+   "aliases": [
+    "US Government",
+    "American Government",
+    "Civics"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Social Studies",
+   "aliases": [
+    "Econ"
+   ]
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Social Studies"
+  },
+  {
+   "id": "ap-us-history",
+   "name": "AP US History",
+   "topic": "history",
+   "group": "Social Studies",
+   "aliases": [
+    "APUSH",
+    "AP United States History"
+   ],
+   "keywords": [
+    "DBQ",
+    "LEQ",
+    "SAQ",
+    "period 1",
+    "Reconstruction",
+    "Progressive Era"
+   ]
+  },
+  {
+   "id": "ap-world-history",
+   "name": "AP World History: Modern",
+   "topic": "history",
+   "group": "Social Studies",
+   "aliases": [
+    "AP World",
+    "APWH",
+    "AP World History"
+   ],
+   "keywords": [
+    "DBQ",
+    "LEQ",
+    "SAQ",
+    "1200 to the present"
+   ]
+  },
+  {
+   "id": "ap-european-history",
+   "name": "AP European History",
+   "topic": "history",
+   "group": "Social Studies",
+   "aliases": [
+    "AP Euro",
+    "APEH"
+   ],
+   "keywords": [
+    "DBQ",
+    "LEQ",
+    "SAQ",
+    "Renaissance",
+    "Reformation"
+   ]
+  },
+  {
+   "id": "ap-us-government",
+   "name": "AP United States Government and Politics",
+   "topic": "politics",
+   "group": "Social Studies",
+   "aliases": [
+    "AP Gov",
+    "AP US Gov",
+    "AP Government"
+   ],
+   "keywords": [
+    "foundational documents",
+    "required Supreme Court cases",
+    "argument essay"
+   ]
+  },
+  {
+   "id": "ap-comparative-government",
+   "name": "AP Comparative Government and Politics",
+   "topic": "politics",
+   "group": "Social Studies",
+   "aliases": [
+    "AP Comp Gov",
+    "AP Comparative Government"
+   ]
+  },
+  {
+   "id": "ap-macroeconomics",
+   "name": "AP Macroeconomics",
+   "topic": "economics",
+   "group": "Social Studies",
+   "aliases": [
+    "AP Macro"
+   ]
+  },
+  {
+   "id": "ap-microeconomics",
+   "name": "AP Microeconomics",
+   "topic": "economics",
+   "group": "Social Studies",
+   "aliases": [
+    "AP Micro"
+   ]
+  },
+  {
+   "id": "ap-psychology",
+   "name": "AP Psychology",
+   "topic": "psychology",
+   "group": "Social Studies",
+   "aliases": [
+    "AP Psych"
+   ]
+  },
+  {
+   "id": "ap-human-geography",
+   "name": "AP Human Geography",
+   "topic": "geography",
+   "group": "Social Studies",
+   "aliases": [
+    "APHG",
+    "AP Human Geo"
+   ]
+  },
+  {
+   "id": "ap-african-american-studies",
+   "name": "AP African American Studies",
+   "topic": "history",
+   "group": "Social Studies",
+   "aliases": [
+    "AP AAS"
+   ]
+  },
+  {
+   "id": "computer-science",
+   "name": "Computer Science",
+   "topic": "computing",
+   "group": "Computer Science",
+   "aliases": [],
+   "folderNames": [
+    "Coding"
+   ]
+  },
+  {
+   "id": "ap-csa",
+   "name": "AP Computer Science A",
+   "topic": "computing",
+   "group": "Computer Science",
+   "aliases": [
+    "AP CSA",
+    "APCSA",
+    "AP CS A"
+   ],
+   "keywords": [
+    "Java",
+    "classes",
+    "ArrayList",
+    "2D array"
+   ]
+  },
+  {
+   "id": "ap-csp",
+   "name": "AP Computer Science Principles",
+   "topic": "computing",
+   "group": "Computer Science",
+   "aliases": [
+    "AP CSP",
+    "APCSP",
+    "AP CS Principles"
+   ],
+   "keywords": [
+    "create performance task",
+    "the internet",
+    "data",
+    "algorithms and programming"
+   ]
+  },
+  {
+   "id": "spanish",
+   "name": "Spanish",
+   "topic": "spanish",
+   "group": "World Languages",
+   "aliases": [
+    "Spanish I",
+    "Spanish II",
+    "Spanish III",
+    "Spanish IV",
+    "Spanish 1",
+    "Spanish 2",
+    "Spanish 3",
+    "Spanish 4"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "ap-spanish-language-and-culture",
+   "name": "AP Spanish Language and Culture",
+   "topic": "spanish",
+   "group": "World Languages",
+   "aliases": [
+    "AP Spanish"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "ap-spanish-literature-and-culture",
+   "name": "AP Spanish Literature and Culture",
+   "topic": "spanish",
+   "group": "World Languages",
+   "aliases": [
+    "AP Spanish Literature"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "french",
+   "name": "French",
+   "topic": "french",
+   "group": "World Languages",
+   "aliases": [
+    "French I",
+    "French II",
+    "French III",
+    "French IV",
+    "French 1",
+    "French 2",
+    "French 3",
+    "French 4"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "ap-french-language-and-culture",
+   "name": "AP French Language and Culture",
+   "topic": "french",
+   "group": "World Languages",
+   "aliases": [
+    "AP French"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "german",
+   "name": "German",
+   "topic": "german",
+   "group": "World Languages",
+   "aliases": [
+    "German I",
+    "German II",
+    "German III",
+    "German IV",
+    "German 1",
+    "German 2",
+    "German 3",
+    "German 4"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "ap-german-language-and-culture",
+   "name": "AP German Language and Culture",
+   "topic": "german",
+   "group": "World Languages",
+   "aliases": [
+    "AP German"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "chinese",
+   "name": "Chinese",
+   "topic": "chinese",
+   "group": "World Languages",
+   "aliases": [
+    "Chinese I",
+    "Chinese II",
+    "Chinese III",
+    "Chinese IV",
+    "Chinese 1",
+    "Chinese 2",
+    "Chinese 3",
+    "Chinese 4"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "ap-chinese-language-and-culture",
+   "name": "AP Chinese Language and Culture",
+   "topic": "chinese",
+   "group": "World Languages",
+   "aliases": [
+    "AP Chinese"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "japanese",
+   "name": "Japanese",
+   "topic": "japanese",
+   "group": "World Languages",
+   "aliases": [
+    "Japanese I",
+    "Japanese II",
+    "Japanese III",
+    "Japanese IV",
+    "Japanese 1",
+    "Japanese 2",
+    "Japanese 3",
+    "Japanese 4"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "ap-japanese-language-and-culture",
+   "name": "AP Japanese Language and Culture",
+   "topic": "japanese",
+   "group": "World Languages",
+   "aliases": [
+    "AP Japanese"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "italian",
+   "name": "Italian",
+   "topic": "italian",
+   "group": "World Languages",
+   "aliases": [
+    "Italian I",
+    "Italian II",
+    "Italian III",
+    "Italian IV",
+    "Italian 1",
+    "Italian 2",
+    "Italian 3",
+    "Italian 4"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "ap-italian-language-and-culture",
+   "name": "AP Italian Language and Culture",
+   "topic": "italian",
+   "group": "World Languages",
+   "aliases": [
+    "AP Italian"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "latin",
+   "name": "Latin",
+   "topic": "latin",
+   "group": "World Languages",
+   "aliases": [
+    "Latin I",
+    "Latin II",
+    "Latin III",
+    "Latin IV",
+    "Latin 1",
+    "Latin 2",
+    "Latin 3",
+    "Latin 4"
+   ]
+  },
+  {
+   "id": "ap-latin",
+   "name": "AP Latin",
+   "topic": "latin",
+   "group": "World Languages",
+   "aliases": []
+  },
+  {
+   "id": "art",
+   "name": "Art",
+   "topic": "visual-arts",
+   "group": "Arts",
+   "aliases": [
+    "Studio Art",
+    "Drawing and Painting"
+   ]
+  },
+  {
+   "id": "ap-2d-art",
+   "name": "AP 2-D Art and Design",
+   "topic": "visual-arts",
+   "group": "Arts",
+   "aliases": [
+    "AP 2D Art",
+    "AP 2-D Art"
+   ]
+  },
+  {
+   "id": "ap-3d-art",
+   "name": "AP 3-D Art and Design",
+   "topic": "visual-arts",
+   "group": "Arts",
+   "aliases": [
+    "AP 3D Art",
+    "AP 3-D Art"
+   ]
+  },
+  {
+   "id": "ap-drawing",
+   "name": "AP Drawing",
+   "topic": "visual-arts",
+   "group": "Arts"
+  },
+  {
+   "id": "ap-art-history",
+   "name": "AP Art History",
+   "topic": "visual-arts",
+   "group": "Arts"
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "Arts",
+   "aliases": [
+    "Orchestra",
+    "Choir"
+   ],
+   "folderNames": [
+    "Band",
+    "Chorus"
+   ]
+  },
+  {
+   "id": "ap-music-theory",
+   "name": "AP Music Theory",
+   "topic": "music",
+   "group": "Arts"
+  },
+  {
+   "id": "theater",
+   "name": "Theater",
+   "topic": "drama",
+   "group": "Arts",
+   "aliases": [],
+   "folderNames": [
+    "Theatre",
+    "Drama"
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Health",
+   "topic": "health-pe",
+   "group": "Health and PE"
+  },
+  {
+   "id": "physical-education",
+   "name": "Physical Education",
+   "topic": "health-pe",
+   "group": "Health and PE",
+   "aliases": [
+    "PE"
+   ],
+   "folderNames": [
+    "Gym"
+   ]
+  },
+  {
+   "id": "engineering",
+   "name": "Engineering",
+   "topic": "engineering",
+   "group": "Electives",
+   "aliases": [
+    "Project Lead The Way",
+    "PLTW"
+   ]
+  },
+  {
+   "id": "business",
+   "name": "Business",
+   "topic": "business",
+   "group": "Electives"
+  },
+  {
+   "id": "personal-finance",
+   "name": "Personal Finance",
+   "topic": "economics",
+   "group": "Electives",
+   "keywords": [
+    "budgeting",
+    "credit score",
+    "savings",
+    "taxes",
+    "investing",
+    "checking account",
+    "interest"
+   ]
+  },
+  {
+   "id": "ap-seminar",
+   "name": "AP Seminar",
+   "topic": "research-project",
+   "group": "AP Capstone",
+   "aliases": [
+    "AP Sem"
+   ]
+  },
+  {
+   "id": "ap-research",
+   "name": "AP Research",
+   "topic": "research-project",
+   "group": "AP Capstone"
+  }
+ ],
+ "suggested": [
+  "english",
+  "algebra-2",
+  "chemistry",
+  "us-history",
+  "spanish"
+ ],
+ "popular": [
+  "biology",
+  "physics",
+  "geometry",
+  "precalculus",
+  "ap-calculus-ab",
+  "ap-us-history",
+  "ap-biology",
+  "ap-english-language",
+  "government",
+  "psychology",
+  "art"
+ ]
+}

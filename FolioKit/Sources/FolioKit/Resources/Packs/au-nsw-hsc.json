@@ -1,0 +1,1113 @@
+{
+ "id": "au-nsw-hsc",
+ "name": "NSW HSC",
+ "fullName": "Higher School Certificate",
+ "region": "Australia",
+ "regionCodes": [
+  "AU"
+ ],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "HSC",
+   "aliases": [
+    "Higher School Certificate",
+    "NESA",
+    "NSW Education Standards Authority",
+    "Trial HSC"
+   ]
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "HSC exam",
+    "HSC examination",
+    "trial HSC",
+    "marking guidelines",
+    "sample answers"
+   ]
+  },
+  {
+   "name": "Assessment Tasks",
+   "aliases": [
+    "assessment task",
+    "assessment notification",
+    "task notification",
+    "hand-in task",
+    "in-class task",
+    "marking criteria",
+    "rubric",
+    "depth study",
+    "due date"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes",
+    "class notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Practicals",
+   "aliases": [
+    "practical",
+    "prac",
+    "experiment",
+    "lab report",
+    "hypothesis"
+   ]
+  },
+  {
+   "name": "Practice",
+   "aliases": [
+    "practice",
+    "practice set",
+    "practice questions",
+    "revision questions"
+   ]
+  },
+  {
+   "name": "Sources",
+   "aliases": [
+    "source",
+    "sources",
+    "primary source",
+    "secondary source",
+    "source analysis"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "calendarYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 525,
+  "end": 915
+ },
+ "subjects": [
+  {
+   "id": "english-advanced",
+   "name": "English Advanced",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "Advanced English",
+    "English Adv"
+   ],
+   "keywords": [
+    "Texts and Human Experiences",
+    "Textual Conversations",
+    "Critical Study of Literature",
+    "The Craft of Writing",
+    "Common Module",
+    "Module A",
+    "Module B",
+    "Module C"
+   ]
+  },
+  {
+   "id": "english-standard",
+   "name": "English Standard",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "Standard English",
+    "English Std"
+   ],
+   "keywords": [
+    "Texts and Human Experiences",
+    "Language, Identity and Culture",
+    "Close Study of Literature",
+    "The Craft of Writing",
+    "Common Module"
+   ]
+  },
+  {
+   "id": "english-studies",
+   "name": "English Studies",
+   "topic": "english",
+   "group": "English",
+   "keywords": [
+    "Texts and Human Experiences",
+    "We are Australians",
+    "Telling Us All About It",
+    "Part of a Family"
+   ]
+  },
+  {
+   "id": "english-eald",
+   "name": "English EAL/D",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "EAL/D",
+    "English as an Additional Language or Dialect",
+    "EALD"
+   ],
+   "keywords": [
+    "Close Study of Text",
+    "Focus on Writing",
+    "Language, Identity and Culture"
+   ]
+  },
+  {
+   "id": "english-ext1",
+   "name": "English Extension 1",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "English Ext 1",
+    "Ext 1 English",
+    "English Extension"
+   ],
+   "keywords": [
+    "Literary Worlds",
+    "Literary Homelands",
+    "Worlds of Upheaval",
+    "Reimagined Worlds",
+    "Literary Mindscapes",
+    "Intersecting Worlds"
+   ]
+  },
+  {
+   "id": "english-ext2",
+   "name": "English Extension 2",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "English Ext 2",
+    "Ext 2 English"
+   ],
+   "keywords": [
+    "major work",
+    "reflection statement",
+    "major work journal"
+   ]
+  },
+  {
+   "id": "maths-standard-1",
+   "name": "Mathematics Standard 1",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Standard 1",
+    "Standard 1 Maths",
+    "MS1"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "maths-standard-2",
+   "name": "Mathematics Standard 2",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Standard 2",
+    "Standard 2 Maths",
+    "Maths Standard",
+    "MS2"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "maths-advanced",
+   "name": "Mathematics Advanced",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Advanced",
+    "Advanced Maths",
+    "2U Maths",
+    "2 Unit Maths",
+    "Maths Adv"
+   ],
+   "keywords": [
+    "exponential and logarithmic functions",
+    "trigonometric functions",
+    "series and sequences",
+    "random variables",
+    "continuous probability distributions",
+    "financial mathematics"
+   ]
+  },
+  {
+   "id": "maths-ext1",
+   "name": "Mathematics Extension 1",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Extension 1",
+    "Maths Ext 1",
+    "Extension 1 Maths",
+    "3U Maths",
+    "3 Unit Maths",
+    "Ext 1 Maths"
+   ],
+   "keywords": [
+    "mathematical induction",
+    "vectors",
+    "projectile motion",
+    "binomial distribution",
+    "inverse trigonometric functions",
+    "related rates",
+    "differential equations",
+    "slope field",
+    "permutations",
+    "combinations",
+    "pigeonhole principle"
+   ]
+  },
+  {
+   "id": "maths-ext2",
+   "name": "Mathematics Extension 2",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Extension 2",
+    "Maths Ext 2",
+    "Extension 2 Maths",
+    "4U Maths",
+    "4 Unit Maths",
+    "Ext 2 Maths"
+   ],
+   "keywords": [
+    "complex numbers",
+    "de Moivre",
+    "proof",
+    "integration by parts",
+    "mechanics",
+    "simple harmonic motion",
+    "resisted motion",
+    "vectors in three dimensions",
+    "Argand diagram"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Science",
+   "keywords": [
+    "Heredity",
+    "Genetic Change",
+    "Infectious Disease",
+    "Non-infectious Disease and Disorders",
+    "depth study"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Science",
+   "keywords": [
+    "Equilibrium and Acid Reactions",
+    "Acid/base Reactions",
+    "Organic Chemistry",
+    "Applying Chemical Ideas",
+    "depth study"
+   ]
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Science",
+   "keywords": [
+    "Advanced Mechanics",
+    "Electromagnetism",
+    "The Nature of Light",
+    "From the Universe to the Atom",
+    "depth study"
+   ]
+  },
+  {
+   "id": "earth-environmental-science",
+   "name": "Earth and Environmental Science",
+   "topic": "earth-environment",
+   "group": "Science",
+   "aliases": [
+    "EES",
+    "Earth & Environmental Science"
+   ],
+   "keywords": [
+    "Earth's Resources",
+    "Hazards",
+    "Climate Science",
+    "Resource Management"
+   ]
+  },
+  {
+   "id": "investigating-science",
+   "name": "Investigating Science",
+   "topic": "general-science",
+   "group": "Science",
+   "keywords": [
+    "Scientific Investigations",
+    "Technologies",
+    "Fact or Fallacy?",
+    "Science and Society",
+    "Cause and Effect"
+   ]
+  },
+  {
+   "id": "science-extension",
+   "name": "Science Extension",
+   "topic": "general-science",
+   "group": "Science",
+   "keywords": [
+    "The Foundations of Scientific Thinking",
+    "The Scientific Research Proposal",
+    "The Data, Evidence and Decisions",
+    "The Scientific Research Report",
+    "scientific research project"
+   ]
+  },
+  {
+   "id": "modern-history",
+   "name": "Modern History",
+   "topic": "history",
+   "group": "Human Society and Its Environment",
+   "keywords": [
+    "Power and Authority in the Modern World 1919–1946",
+    "National Studies",
+    "Peace and Conflict",
+    "Change in the Modern World",
+    "core study"
+   ]
+  },
+  {
+   "id": "ancient-history",
+   "name": "Ancient History",
+   "topic": "history",
+   "group": "Human Society and Its Environment",
+   "keywords": [
+    "Cities of Vesuvius",
+    "Pompeii and Herculaneum",
+    "Ancient Societies",
+    "Personalities in their Times",
+    "Historical Periods",
+    "archaeology",
+    "Vesuvius",
+    "Egypt",
+    "Greece",
+    "Rome"
+   ]
+  },
+  {
+   "id": "history-extension",
+   "name": "History Extension",
+   "topic": "history",
+   "group": "Human Society and Its Environment",
+   "aliases": [
+    "History Ext"
+   ],
+   "keywords": [
+    "What is history?",
+    "history project",
+    "case study",
+    "historians and history"
+   ]
+  },
+  {
+   "id": "aboriginal-studies",
+   "name": "Aboriginal Studies",
+   "topic": "indigenous-studies",
+   "group": "Human Society and Its Environment"
+  },
+  {
+   "id": "business-studies",
+   "name": "Business Studies",
+   "topic": "business",
+   "group": "Human Society and Its Environment",
+   "keywords": [
+    "Operations",
+    "Finance",
+    "Human Resources",
+    "Marketing"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Human Society and Its Environment",
+   "keywords": [
+    "The Global Economy",
+    "Australia's Place in the Global Economy",
+    "Economic Issues",
+    "Economic Policies and Management"
+   ]
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Human Society and Its Environment",
+   "keywords": [
+    "Ecosystems at Risk",
+    "Urban Places",
+    "People and Economic Activity",
+    "Senior Geography Project"
+   ]
+  },
+  {
+   "id": "legal-studies",
+   "name": "Legal Studies",
+   "topic": "legal",
+   "group": "Human Society and Its Environment",
+   "keywords": [
+    "Crime",
+    "Human Rights",
+    "Consumers",
+    "Family",
+    "Global Environmental Protection",
+    "Indigenous Peoples",
+    "Shelter",
+    "Workplace",
+    "World Order"
+   ]
+  },
+  {
+   "id": "society-and-culture",
+   "name": "Society and Culture",
+   "topic": "society-culture",
+   "group": "Human Society and Its Environment",
+   "aliases": [
+    "Society & Culture"
+   ],
+   "keywords": [
+    "Social and Cultural Continuity and Change",
+    "Popular Culture",
+    "Belief Systems and Ideologies",
+    "Social Inclusion and Exclusion",
+    "Social Conformity and Nonconformity"
+   ]
+  },
+  {
+   "id": "studies-of-religion-1",
+   "name": "Studies of Religion I",
+   "topic": "religion",
+   "group": "Human Society and Its Environment",
+   "aliases": [
+    "Studies of Religion 1",
+    "SOR 1",
+    "SoR I",
+    "SOR1"
+   ]
+  },
+  {
+   "id": "studies-of-religion-2",
+   "name": "Studies of Religion II",
+   "topic": "religion",
+   "group": "Human Society and Its Environment",
+   "aliases": [
+    "Studies of Religion 2",
+    "SOR 2",
+    "SoR II",
+    "SOR2"
+   ]
+  },
+  {
+   "id": "cafs",
+   "name": "Community and Family Studies",
+   "topic": "society-culture",
+   "group": "Human Society and Its Environment",
+   "aliases": [
+    "CAFS",
+    "Community & Family Studies"
+   ],
+   "keywords": [
+    "Research Methodology",
+    "Groups in Context",
+    "Parenting and Caring",
+    "Individuals and Work",
+    "Family and Societal Interactions",
+    "Social Impact of Technology"
+   ]
+  },
+  {
+   "id": "health-movement-science",
+   "name": "Health and Movement Science",
+   "topic": "health-pe",
+   "group": "PDHPE",
+   "aliases": [
+    "PDHPE",
+    "HMS",
+    "Health & Movement Science"
+   ],
+   "keywords": [
+    "health in an Australian and global context",
+    "training for improved performance",
+    "depth study"
+   ]
+  },
+  {
+   "id": "visual-arts",
+   "name": "Visual Arts",
+   "topic": "visual-arts",
+   "group": "Creative Arts",
+   "aliases": [
+    "VA"
+   ],
+   "folderNames": [
+    "Art"
+   ],
+   "keywords": [
+    "Body of Work",
+    "BOW",
+    "the frames",
+    "the conceptual framework"
+   ]
+  },
+  {
+   "id": "music-1",
+   "name": "Music 1",
+   "topic": "music",
+   "group": "Creative Arts",
+   "aliases": [
+    "Music One"
+   ]
+  },
+  {
+   "id": "music-2",
+   "name": "Music 2",
+   "topic": "music",
+   "group": "Creative Arts",
+   "aliases": [
+    "Music Two"
+   ],
+   "keywords": [
+    "Music of the last 25 years",
+    "mandatory topic"
+   ]
+  },
+  {
+   "id": "music-extension",
+   "name": "Music Extension",
+   "topic": "music",
+   "group": "Creative Arts",
+   "aliases": [
+    "Music Ext"
+   ]
+  },
+  {
+   "id": "drama",
+   "name": "Drama",
+   "topic": "drama",
+   "group": "Creative Arts",
+   "keywords": [
+    "Individual Project",
+    "Group Performance",
+    "Australian Drama and Theatre",
+    "Studies in Drama and Theatre"
+   ]
+  },
+  {
+   "id": "dance",
+   "name": "Dance",
+   "topic": "dance",
+   "group": "Creative Arts"
+  },
+  {
+   "id": "software-engineering",
+   "name": "Software Engineering",
+   "topic": "computing",
+   "group": "Technologies",
+   "aliases": [
+    "SE",
+    "Software Design and Development",
+    "SDD"
+   ],
+   "keywords": [
+    "Secure Software Architecture",
+    "Programming for the Web",
+    "Software Automation",
+    "Software Engineering Project",
+    "programming fundamentals",
+    "object-oriented paradigm",
+    "programming mechatronics"
+   ]
+  },
+  {
+   "id": "enterprise-computing",
+   "name": "Enterprise Computing",
+   "topic": "computing",
+   "group": "Technologies",
+   "keywords": [
+    "Interactive Media and the User Experience",
+    "Database Systems",
+    "Data Science",
+    "Data Visualisation",
+    "Intelligent Systems",
+    "enterprise project"
+   ]
+  },
+  {
+   "id": "engineering-studies",
+   "name": "Engineering Studies",
+   "topic": "engineering",
+   "group": "Technologies",
+   "keywords": [
+    "Civil Structures",
+    "Personal and Public Transport",
+    "Aeronautical Engineering",
+    "Telecommunications Engineering"
+   ]
+  },
+  {
+   "id": "design-and-technology",
+   "name": "Design and Technology",
+   "topic": "design-technology",
+   "group": "Technologies",
+   "aliases": [
+    "D&T",
+    "Design & Technology"
+   ],
+   "keywords": [
+    "Major Design Project",
+    "innovation and emerging technologies"
+   ]
+  },
+  {
+   "id": "industrial-technology",
+   "name": "Industrial Technology",
+   "topic": "design-technology",
+   "group": "Technologies",
+   "aliases": [
+    "IT Timber",
+    "Industrial Tech"
+   ],
+   "keywords": [
+    "Major Project",
+    "Industry Study",
+    "timber products",
+    "multimedia",
+    "metal and engineering"
+   ]
+  },
+  {
+   "id": "textiles-and-design",
+   "name": "Textiles and Design",
+   "topic": "design-technology",
+   "group": "Technologies",
+   "aliases": [],
+   "folderNames": [
+    "Textiles"
+   ],
+   "keywords": [
+    "Major Textiles Project",
+    "Properties and Performance of Textiles"
+   ]
+  },
+  {
+   "id": "food-technology",
+   "name": "Food Technology",
+   "topic": "food-nutrition",
+   "group": "Technologies",
+   "aliases": [
+    "Food Tech"
+   ],
+   "keywords": [
+    "The Australian Food Industry",
+    "Food Manufacture",
+    "Food Product Development",
+    "Contemporary Nutrition Issues"
+   ]
+  },
+  {
+   "id": "agriculture",
+   "name": "Agriculture",
+   "topic": "agriculture",
+   "group": "Technologies",
+   "keywords": [
+    "Plant/Animal Production",
+    "Agri-food, Fibre and Fuel Technologies",
+    "Climate Challenge",
+    "Farming for the 21st Century"
+   ]
+  },
+  {
+   "id": "french-beginners",
+   "name": "French Beginners",
+   "topic": "french",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "french-continuers",
+   "name": "French Continuers",
+   "topic": "french",
+   "group": "Languages",
+   "aliases": [
+    "French Cont"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "french-extension",
+   "name": "French Extension",
+   "topic": "french",
+   "group": "Languages",
+   "aliases": [
+    "French Ext"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "german-beginners",
+   "name": "German Beginners",
+   "topic": "german",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "german-continuers",
+   "name": "German Continuers",
+   "topic": "german",
+   "group": "Languages",
+   "aliases": [
+    "German Cont"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "german-extension",
+   "name": "German Extension",
+   "topic": "german",
+   "group": "Languages",
+   "aliases": [
+    "German Ext"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "spanish-beginners",
+   "name": "Spanish Beginners",
+   "topic": "spanish",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "spanish-continuers",
+   "name": "Spanish Continuers",
+   "topic": "spanish",
+   "group": "Languages",
+   "aliases": [
+    "Spanish Cont"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "spanish-extension",
+   "name": "Spanish Extension",
+   "topic": "spanish",
+   "group": "Languages",
+   "aliases": [
+    "Spanish Ext"
+   ],
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "italian-beginners",
+   "name": "Italian Beginners",
+   "topic": "italian",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "italian-continuers",
+   "name": "Italian Continuers",
+   "topic": "italian",
+   "group": "Languages",
+   "aliases": [
+    "Italian Cont"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "italian-extension",
+   "name": "Italian Extension",
+   "topic": "italian",
+   "group": "Languages",
+   "aliases": [
+    "Italian Ext"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "japanese-beginners",
+   "name": "Japanese Beginners",
+   "topic": "japanese",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "japanese-continuers",
+   "name": "Japanese Continuers",
+   "topic": "japanese",
+   "group": "Languages",
+   "aliases": [
+    "Japanese Cont"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "japanese-extension",
+   "name": "Japanese Extension",
+   "topic": "japanese",
+   "group": "Languages",
+   "aliases": [
+    "Japanese Ext"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "japanese-in-context",
+   "name": "Japanese In Context",
+   "topic": "japanese",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "chinese-beginners",
+   "name": "Chinese Beginners",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "chinese-continuers",
+   "name": "Chinese Continuers",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [
+    "Chinese Cont"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "chinese-extension",
+   "name": "Chinese Extension",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [
+    "Chinese Ext"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "chinese-in-context",
+   "name": "Chinese In Context",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "chinese-and-literature",
+   "name": "Chinese and Literature",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "indonesian-beginners",
+   "name": "Indonesian Beginners",
+   "topic": "indonesian",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "id"
+  },
+  {
+   "id": "indonesian-continuers",
+   "name": "Indonesian Continuers",
+   "topic": "indonesian",
+   "group": "Languages",
+   "aliases": [
+    "Indonesian Cont"
+   ],
+   "languageOfStudy": "id"
+  },
+  {
+   "id": "indonesian-extension",
+   "name": "Indonesian Extension",
+   "topic": "indonesian",
+   "group": "Languages",
+   "aliases": [
+    "Indonesian Ext"
+   ],
+   "languageOfStudy": "id"
+  },
+  {
+   "id": "korean-beginners",
+   "name": "Korean Beginners",
+   "topic": "korean",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "ko"
+  },
+  {
+   "id": "korean-continuers",
+   "name": "Korean Continuers",
+   "topic": "korean",
+   "group": "Languages",
+   "aliases": [
+    "Korean Cont"
+   ],
+   "languageOfStudy": "ko"
+  },
+  {
+   "id": "korean-in-context",
+   "name": "Korean In Context",
+   "topic": "korean",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "ko"
+  },
+  {
+   "id": "korean-and-literature",
+   "name": "Korean and Literature",
+   "topic": "korean",
+   "group": "Languages",
+   "aliases": [],
+   "languageOfStudy": "ko"
+  },
+  {
+   "id": "latin-continuers",
+   "name": "Latin Continuers",
+   "topic": "latin",
+   "group": "Languages",
+   "aliases": [
+    "Latin Cont"
+   ]
+  },
+  {
+   "id": "latin-extension",
+   "name": "Latin Extension",
+   "topic": "latin",
+   "group": "Languages",
+   "aliases": [
+    "Latin Ext"
+   ]
+  }
+ ],
+ "suggested": [
+  "english-advanced",
+  "maths-advanced",
+  "physics",
+  "chemistry",
+  "modern-history"
+ ],
+ "popular": [
+  "biology",
+  "geography",
+  "economics",
+  "legal-studies",
+  "business-studies",
+  "visual-arts",
+  "music-1",
+  "health-movement-science",
+  "software-engineering",
+  "maths-ext1"
+ ]
+}

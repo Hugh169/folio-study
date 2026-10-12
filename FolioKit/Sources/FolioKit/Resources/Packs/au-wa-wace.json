@@ -1,0 +1,630 @@
+{
+ "id": "au-wa-wace",
+ "name": "WACE",
+ "fullName": "Western Australian Certificate of Education",
+ "region": "Australia",
+ "regionCodes": [
+  "AU"
+ ],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "WACE",
+   "aliases": [
+    "Western Australian Certificate of Education",
+    "SCSA",
+    "School Curriculum and Standards Authority",
+    "ATAR course"
+   ]
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "ATAR exam",
+    "WACE exam",
+    "marking key",
+    "practice exam",
+    "SCSA exam"
+   ]
+  },
+  {
+   "name": "Assessments",
+   "aliases": [
+    "assessment outline",
+    "assessment task",
+    "validation test",
+    "in-class test",
+    "response task",
+    "investigation",
+    "rubric",
+    "due date"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes",
+    "class notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Practicals",
+   "aliases": [
+    "practical",
+    "prac",
+    "experiment",
+    "lab report",
+    "hypothesis"
+   ]
+  },
+  {
+   "name": "Practice",
+   "aliases": [
+    "practice",
+    "practice set",
+    "practice questions",
+    "revision questions"
+   ]
+  },
+  {
+   "name": "Sources",
+   "aliases": [
+    "source",
+    "sources",
+    "primary source",
+    "secondary source",
+    "source analysis"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "calendarYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 520,
+  "end": 910
+ },
+ "subjects": [
+  {
+   "id": "english",
+   "name": "English",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "English ATAR"
+   ]
+  },
+  {
+   "id": "literature",
+   "name": "Literature",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "Literature ATAR"
+   ]
+  },
+  {
+   "id": "eald",
+   "name": "English as an Additional Language or Dialect",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "EAL/D",
+    "EALD",
+    "English as an Additional Language or Dialect ATAR"
+   ]
+  },
+  {
+   "id": "maths-applications",
+   "name": "Mathematics Applications",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Applications",
+    "Maths Apps",
+    "Mathematics Applications ATAR"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "maths-methods",
+   "name": "Mathematics Methods",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Methods",
+    "Mathematics Methods ATAR"
+   ],
+   "folderNames": [
+    "Methods"
+   ]
+  },
+  {
+   "id": "maths-specialist",
+   "name": "Mathematics Specialist",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Specialist",
+    "Mathematics Specialist ATAR"
+   ],
+   "folderNames": [
+    "Specialist"
+   ],
+   "keywords": [
+    "complex numbers",
+    "de Moivre",
+    "proof",
+    "integration by parts",
+    "mechanics",
+    "simple harmonic motion",
+    "resisted motion",
+    "vectors in three dimensions",
+    "Argand diagram"
+   ]
+  },
+  {
+   "id": "maths-essential",
+   "name": "Mathematics Essential",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Essential"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Science",
+   "aliases": [
+    "Biology ATAR"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Science",
+   "aliases": [
+    "Chemistry ATAR"
+   ]
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Science",
+   "aliases": [
+    "Physics ATAR"
+   ]
+  },
+  {
+   "id": "human-biology",
+   "name": "Human Biology",
+   "topic": "biology",
+   "group": "Science",
+   "aliases": [
+    "Human Bio",
+    "Human Biology ATAR"
+   ],
+   "keywords": [
+    "human body",
+    "reproduction",
+    "homeostasis",
+    "human evolution"
+   ]
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Science",
+   "aliases": [
+    "Psychology ATAR"
+   ]
+  },
+  {
+   "id": "earth-environmental-science",
+   "name": "Earth and Environmental Science",
+   "topic": "earth-environment",
+   "group": "Science",
+   "aliases": [
+    "Earth and Environmental Science ATAR"
+   ]
+  },
+  {
+   "id": "marine-maritime",
+   "name": "Marine and Maritime Studies",
+   "topic": "biology",
+   "group": "Science",
+   "aliases": [
+    "Marine and Maritime Studies ATAR"
+   ],
+   "keywords": [
+    "marine",
+    "maritime",
+    "ocean",
+    "coral reef",
+    "fisheries",
+    "navigation"
+   ]
+  },
+  {
+   "id": "integrated-science",
+   "name": "Integrated Science",
+   "topic": "general-science",
+   "group": "Science"
+  },
+  {
+   "id": "modern-history",
+   "name": "Modern History",
+   "topic": "history",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Modern History ATAR"
+   ]
+  },
+  {
+   "id": "ancient-history",
+   "name": "Ancient History",
+   "topic": "history",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Ancient History ATAR"
+   ]
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Geography ATAR"
+   ]
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Economics ATAR"
+   ]
+  },
+  {
+   "id": "accounting-finance",
+   "name": "Accounting and Finance",
+   "topic": "accounting",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Accounting and Finance ATAR"
+   ]
+  },
+  {
+   "id": "business-management",
+   "name": "Business Management and Enterprise",
+   "topic": "business",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "BME",
+    "Business Management and Enterprise ATAR"
+   ]
+  },
+  {
+   "id": "politics-law",
+   "name": "Politics and Law",
+   "topic": "legal",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Politics and Law ATAR"
+   ]
+  },
+  {
+   "id": "philosophy-ethics",
+   "name": "Philosophy and Ethics",
+   "topic": "philosophy",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Philosophy and Ethics ATAR"
+   ]
+  },
+  {
+   "id": "religion-life",
+   "name": "Religion and Life",
+   "topic": "religion",
+   "group": "Humanities and Social Sciences",
+   "aliases": [
+    "Religion and Life ATAR"
+   ]
+  },
+  {
+   "id": "visual-arts",
+   "name": "Visual Arts",
+   "topic": "visual-arts",
+   "group": "The Arts",
+   "aliases": [
+    "Visual Arts ATAR"
+   ],
+   "folderNames": [
+    "Art"
+   ]
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "The Arts",
+   "aliases": [
+    "Music ATAR"
+   ]
+  },
+  {
+   "id": "drama",
+   "name": "Drama",
+   "topic": "drama",
+   "group": "The Arts",
+   "aliases": [
+    "Drama ATAR"
+   ]
+  },
+  {
+   "id": "dance",
+   "name": "Dance",
+   "topic": "dance",
+   "group": "The Arts",
+   "aliases": [
+    "Dance ATAR"
+   ]
+  },
+  {
+   "id": "media-production",
+   "name": "Media Production and Analysis",
+   "topic": "media",
+   "group": "The Arts",
+   "aliases": [
+    "MPA",
+    "Media Production and Analysis ATAR"
+   ]
+  },
+  {
+   "id": "health-studies",
+   "name": "Health Studies",
+   "topic": "health-pe",
+   "group": "Health and PE",
+   "aliases": [
+    "Health Studies ATAR"
+   ]
+  },
+  {
+   "id": "physical-education-studies",
+   "name": "Physical Education Studies",
+   "topic": "health-pe",
+   "group": "Health and PE",
+   "aliases": [
+    "PES",
+    "PE Studies",
+    "Physical Education Studies ATAR"
+   ]
+  },
+  {
+   "id": "computer-science",
+   "name": "Computer Science",
+   "topic": "computing",
+   "group": "Technologies",
+   "aliases": [
+    "Computer Science ATAR"
+   ]
+  },
+  {
+   "id": "applied-it",
+   "name": "Applied Information Technology",
+   "topic": "computing",
+   "group": "Technologies",
+   "aliases": [
+    "AIT",
+    "Applied Information Technology ATAR"
+   ]
+  },
+  {
+   "id": "engineering-studies",
+   "name": "Engineering Studies",
+   "topic": "engineering",
+   "group": "Technologies",
+   "aliases": [
+    "Engineering Studies ATAR"
+   ]
+  },
+  {
+   "id": "design",
+   "name": "Design",
+   "topic": "design-technology",
+   "group": "Technologies",
+   "aliases": [
+    "Design ATAR"
+   ]
+  },
+  {
+   "id": "materials-design",
+   "name": "Materials Design and Technology",
+   "topic": "design-technology",
+   "group": "Technologies"
+  },
+  {
+   "id": "food-science",
+   "name": "Food Science and Technology",
+   "topic": "food-nutrition",
+   "group": "Technologies"
+  },
+  {
+   "id": "french-second-language",
+   "name": "French Second Language",
+   "topic": "french",
+   "group": "Languages",
+   "aliases": [
+    "French Second Language ATAR"
+   ],
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "german-second-language",
+   "name": "German Second Language",
+   "topic": "german",
+   "group": "Languages",
+   "aliases": [
+    "German Second Language ATAR"
+   ],
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "italian-second-language",
+   "name": "Italian Second Language",
+   "topic": "italian",
+   "group": "Languages",
+   "aliases": [
+    "Italian Second Language ATAR"
+   ],
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "japanese-second-language",
+   "name": "Japanese Second Language",
+   "topic": "japanese",
+   "group": "Languages",
+   "aliases": [
+    "Japanese Second Language ATAR"
+   ],
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "chinese-second-language",
+   "name": "Chinese Second Language",
+   "topic": "chinese",
+   "group": "Languages",
+   "aliases": [
+    "Chinese Second Language ATAR"
+   ],
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "indonesian-second-language",
+   "name": "Indonesian Second Language",
+   "topic": "indonesian",
+   "group": "Languages",
+   "aliases": [
+    "Indonesian Second Language ATAR"
+   ],
+   "languageOfStudy": "id"
+  }
+ ],
+ "suggested": [
+  "english",
+  "maths-methods",
+  "physics",
+  "chemistry",
+  "modern-history"
+ ],
+ "popular": [
+  "human-biology",
+  "biology",
+  "psychology",
+  "maths-applications",
+  "maths-specialist",
+  "geography",
+  "economics",
+  "politics-law",
+  "physical-education-studies",
+  "visual-arts"
+ ]
+}

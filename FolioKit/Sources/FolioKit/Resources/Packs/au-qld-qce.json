@@ -1,0 +1,549 @@
+{
+ "id": "au-qld-qce",
+ "name": "QCE",
+ "fullName": "Queensland Certificate of Education",
+ "region": "Australia",
+ "regionCodes": [
+  "AU"
+ ],
+ "language": "en",
+ "level": "school",
+ "version": 1,
+ "lastChecked": "2026-10",
+ "examBoards": [
+  {
+   "name": "QCE",
+   "aliases": [
+    "Queensland Certificate of Education",
+    "QCAA",
+    "Queensland Curriculum and Assessment Authority"
+   ]
+  }
+ ],
+ "documentTypes": [
+  {
+   "name": "Past Papers",
+   "aliases": [
+    "past paper",
+    "exam paper",
+    "examination",
+    "trial exam",
+    "trial paper",
+    "specimen paper",
+    "mock exam",
+    "question paper",
+    "paper 1",
+    "paper 2",
+    "paper 3",
+    "reading time",
+    "working time",
+    "time allowed",
+    "instructions to candidates",
+    "total marks",
+    "épreuve",
+    "sujet",
+    "examen",
+    "external assessment",
+    "external exam",
+    "sample assessment",
+    "practice exam"
+   ]
+  },
+  {
+   "name": "Internal Assessments",
+   "aliases": [
+    "IA1",
+    "IA2",
+    "IA3",
+    "internal assessment",
+    "PSMT",
+    "problem solving and modelling task",
+    "data test",
+    "student experiment",
+    "research investigation",
+    "ISMG",
+    "instrument-specific marking guide",
+    "task sheet",
+    "due date"
+   ]
+  },
+  {
+   "name": "Notes",
+   "aliases": [
+    "notes",
+    "summary",
+    "revision",
+    "study notes",
+    "class notes",
+    "lecture notes"
+   ]
+  },
+  {
+   "name": "Worksheets",
+   "aliases": [
+    "worksheet",
+    "exercises",
+    "handout",
+    "problem set",
+    "activity sheet"
+   ]
+  },
+  {
+   "name": "Essays",
+   "aliases": [
+    "essay",
+    "essay draft",
+    "extended response",
+    "draft"
+   ]
+  },
+  {
+   "name": "Practicals",
+   "aliases": [
+    "practical",
+    "prac",
+    "experiment",
+    "lab report",
+    "hypothesis"
+   ]
+  },
+  {
+   "name": "Practice",
+   "aliases": [
+    "practice",
+    "practice set",
+    "practice questions",
+    "revision questions"
+   ]
+  },
+  {
+   "name": "Sources",
+   "aliases": [
+    "source",
+    "sources",
+    "primary source",
+    "secondary source",
+    "source analysis"
+   ]
+  },
+  {
+   "name": "Slides",
+   "aliases": [
+    "slides",
+    "presentation",
+    "lecture slides",
+    "learning intentions",
+    "learning goals"
+   ]
+  }
+ ],
+ "defaultDocumentType": "Notes",
+ "folderTemplate": "{subject}/{type}",
+ "termStyle": "calendarYear",
+ "schoolHours": {
+  "weekdays": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "start": 510,
+  "end": 900
+ },
+ "subjects": [
+  {
+   "id": "english",
+   "name": "English",
+   "topic": "english",
+   "group": "English"
+  },
+  {
+   "id": "literature",
+   "name": "Literature",
+   "topic": "english",
+   "group": "English"
+  },
+  {
+   "id": "english-literature-extension",
+   "name": "English & Literature Extension",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "English and Literature Extension"
+   ]
+  },
+  {
+   "id": "eal",
+   "name": "English as an Additional Language",
+   "topic": "english",
+   "group": "English",
+   "aliases": [
+    "EAL"
+   ]
+  },
+  {
+   "id": "essential-english",
+   "name": "Essential English",
+   "topic": "english",
+   "group": "English"
+  },
+  {
+   "id": "general-mathematics",
+   "name": "General Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "General Maths"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "mathematical-methods",
+   "name": "Mathematical Methods",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Maths Methods"
+   ],
+   "folderNames": [
+    "Methods"
+   ]
+  },
+  {
+   "id": "specialist-mathematics",
+   "name": "Specialist Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Specialist Maths"
+   ],
+   "folderNames": [
+    "Specialist"
+   ],
+   "keywords": [
+    "complex numbers",
+    "de Moivre",
+    "proof",
+    "integration by parts",
+    "mechanics",
+    "simple harmonic motion",
+    "resisted motion",
+    "vectors in three dimensions",
+    "Argand diagram"
+   ]
+  },
+  {
+   "id": "essential-mathematics",
+   "name": "Essential Mathematics",
+   "topic": "mathematics",
+   "group": "Mathematics",
+   "aliases": [
+    "Essential Maths"
+   ],
+   "keywords": [
+    "financial mathematics",
+    "networks",
+    "critical path",
+    "measurement",
+    "non-right-angled trigonometry",
+    "annuities",
+    "depreciation",
+    "bivariate data",
+    "normal distribution",
+    "z-score",
+    "linear relationships",
+    "rates and ratios"
+   ]
+  },
+  {
+   "id": "biology",
+   "name": "Biology",
+   "topic": "biology",
+   "group": "Sciences"
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry",
+   "topic": "chemistry",
+   "group": "Sciences"
+  },
+  {
+   "id": "physics",
+   "name": "Physics",
+   "topic": "physics",
+   "group": "Sciences"
+  },
+  {
+   "id": "psychology",
+   "name": "Psychology",
+   "topic": "psychology",
+   "group": "Sciences"
+  },
+  {
+   "id": "earth-environmental-science",
+   "name": "Earth and Environmental Science",
+   "topic": "earth-environment",
+   "group": "Sciences"
+  },
+  {
+   "id": "marine-science",
+   "name": "Marine Science",
+   "topic": "biology",
+   "group": "Sciences",
+   "keywords": [
+    "marine",
+    "coral reef",
+    "Great Barrier Reef",
+    "ocean",
+    "oceanography",
+    "fisheries"
+   ]
+  },
+  {
+   "id": "agricultural-science",
+   "name": "Agricultural Science",
+   "topic": "agriculture",
+   "group": "Sciences"
+  },
+  {
+   "id": "science-in-practice",
+   "name": "Science in Practice",
+   "topic": "general-science",
+   "group": "Sciences"
+  },
+  {
+   "id": "modern-history",
+   "name": "Modern History",
+   "topic": "history",
+   "group": "Humanities"
+  },
+  {
+   "id": "ancient-history",
+   "name": "Ancient History",
+   "topic": "history",
+   "group": "Humanities"
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topic": "geography",
+   "group": "Humanities"
+  },
+  {
+   "id": "economics",
+   "name": "Economics",
+   "topic": "economics",
+   "group": "Humanities"
+  },
+  {
+   "id": "business",
+   "name": "Business",
+   "topic": "business",
+   "group": "Humanities"
+  },
+  {
+   "id": "accounting",
+   "name": "Accounting",
+   "topic": "accounting",
+   "group": "Humanities"
+  },
+  {
+   "id": "legal-studies",
+   "name": "Legal Studies",
+   "topic": "legal",
+   "group": "Humanities"
+  },
+  {
+   "id": "philosophy-reason",
+   "name": "Philosophy & Reason",
+   "topic": "philosophy",
+   "group": "Humanities",
+   "aliases": [
+    "Philosophy and Reason"
+   ]
+  },
+  {
+   "id": "study-of-religion",
+   "name": "Study of Religion",
+   "topic": "religion",
+   "group": "Humanities"
+  },
+  {
+   "id": "indigenous-studies",
+   "name": "Aboriginal and Torres Strait Islander Studies",
+   "topic": "indigenous-studies",
+   "group": "Humanities"
+  },
+  {
+   "id": "visual-art",
+   "name": "Visual Art",
+   "topic": "visual-arts",
+   "group": "The Arts",
+   "aliases": [
+    "Visual Arts"
+   ],
+   "folderNames": [
+    "Art"
+   ]
+  },
+  {
+   "id": "music",
+   "name": "Music",
+   "topic": "music",
+   "group": "The Arts"
+  },
+  {
+   "id": "music-extension",
+   "name": "Music Extension",
+   "topic": "music",
+   "group": "The Arts"
+  },
+  {
+   "id": "drama",
+   "name": "Drama",
+   "topic": "drama",
+   "group": "The Arts"
+  },
+  {
+   "id": "dance",
+   "name": "Dance",
+   "topic": "dance",
+   "group": "The Arts"
+  },
+  {
+   "id": "film-tv-new-media",
+   "name": "Film, Television and New Media",
+   "topic": "media",
+   "group": "The Arts",
+   "aliases": [
+    "FTVNM",
+    "FTV",
+    "Film and TV"
+   ]
+  },
+  {
+   "id": "health",
+   "name": "Health",
+   "topic": "health-pe",
+   "group": "Health and PE"
+  },
+  {
+   "id": "physical-education",
+   "name": "Physical Education",
+   "topic": "health-pe",
+   "group": "Health and PE",
+   "aliases": [
+    "PE"
+   ]
+  },
+  {
+   "id": "digital-solutions",
+   "name": "Digital Solutions",
+   "topic": "computing",
+   "group": "Technologies"
+  },
+  {
+   "id": "engineering",
+   "name": "Engineering",
+   "topic": "engineering",
+   "group": "Technologies"
+  },
+  {
+   "id": "design",
+   "name": "Design",
+   "topic": "design-technology",
+   "group": "Technologies"
+  },
+  {
+   "id": "food-and-nutrition",
+   "name": "Food & Nutrition",
+   "topic": "food-nutrition",
+   "group": "Technologies",
+   "aliases": [
+    "Food and Nutrition"
+   ]
+  },
+  {
+   "id": "french",
+   "name": "French",
+   "topic": "french",
+   "group": "Languages",
+   "languageOfStudy": "fr"
+  },
+  {
+   "id": "german",
+   "name": "German",
+   "topic": "german",
+   "group": "Languages",
+   "languageOfStudy": "de"
+  },
+  {
+   "id": "spanish",
+   "name": "Spanish",
+   "topic": "spanish",
+   "group": "Languages",
+   "languageOfStudy": "es"
+  },
+  {
+   "id": "italian",
+   "name": "Italian",
+   "topic": "italian",
+   "group": "Languages",
+   "languageOfStudy": "it"
+  },
+  {
+   "id": "japanese",
+   "name": "Japanese",
+   "topic": "japanese",
+   "group": "Languages",
+   "languageOfStudy": "ja"
+  },
+  {
+   "id": "chinese",
+   "name": "Chinese",
+   "topic": "chinese",
+   "group": "Languages",
+   "languageOfStudy": "zh"
+  },
+  {
+   "id": "korean",
+   "name": "Korean",
+   "topic": "korean",
+   "group": "Languages",
+   "languageOfStudy": "ko"
+  }
+ ],
+ "suggested": [
+  "english",
+  "mathematical-methods",
+  "physics",
+  "chemistry",
+  "modern-history"
+ ],
+ "popular": [
+  "biology",
+  "psychology",
+  "general-mathematics",
+  "specialist-mathematics",
+  "legal-studies",
+  "business",
+  "geography",
+  "health",
+  "digital-solutions",
+  "visual-art"
+ ]
+}

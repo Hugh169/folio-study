@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Folio app icon: a blue folder holding a sheet of paper on a dark rounded square">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34343a"></stop><stop offset="1" stop-color="#101012"></stop></linearGradient>
+<linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".26"></stop><stop offset=".45" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
+<linearGradient id="back" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4a51"></stop><stop offset="1" stop-color="#34343a"></stop></linearGradient>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"></stop><stop offset="1" stop-color="#d8d8de"></stop></linearGradient>
+<linearGradient id="front" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ab3ff"></stop><stop offset="1" stop-color="#0a74ea"></stop></linearGradient>
+<linearGradient id="edge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"></stop><stop offset=".25" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
+<filter id="drop" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000" flood-opacity=".55"></feDropShadow></filter>
+<filter id="cast" x="-20%" y="-30%" width="140%" height="160%"><feDropShadow dx="0" dy="-5" stdDeviation="9" flood-color="#000" flood-opacity=".28"></feDropShadow></filter>
+</defs>
+<path d="M924.0 512.0L923.6 650.4L922.6 694.5L920.8 726.3L918.3 751.9L915.1 773.7L911.2 792.6L906.4 809.3L901.0 824.2L894.7 837.7L887.6 849.8L879.6 860.8L870.7 870.7L860.8 879.6L849.8 887.6L837.7 894.7L824.2 901.0L809.3 906.4L792.6 911.2L773.7 915.1L751.9 918.3L726.3 920.8L694.5 922.6L650.4 923.6L512.0 924.0L373.6 923.6L329.5 922.6L297.7 920.8L272.1 918.3L250.3 915.1L231.4 911.2L214.7 906.4L199.8 901.0L186.3 894.7L174.2 887.6L163.2 879.6L153.3 870.7L144.4 860.8L136.4 849.8L129.3 837.7L123.0 824.2L117.6 809.3L112.8 792.6L108.9 773.7L105.7 751.9L103.2 726.3L101.4 694.5L100.4 650.4L100.0 512.0L100.4 373.6L101.4 329.5L103.2 297.7L105.7 272.1L108.9 250.3L112.8 231.4L117.6 214.7L123.0 199.8L129.3 186.3L136.4 174.2L144.4 163.2L153.3 153.3L163.2 144.4L174.2 136.4L186.3 129.3L199.8 123.0L214.7 117.6L231.4 112.8L250.3 108.9L272.1 105.7L297.7 103.2L329.5 101.4L373.6 100.4L512.0 100.0L650.4 100.4L694.5 101.4L726.3 103.2L751.9 105.7L773.7 108.9L792.6 112.8L809.3 117.6L824.2 123.0L837.7 129.3L849.8 136.4L860.8 144.4L870.7 153.3L879.6 163.2L887.6 174.2L894.7 186.3L901.0 199.8L906.4 214.7L911.2 231.4L915.1 250.3L918.3 272.1L920.8 297.7L922.6 329.5L923.6 373.6Z" fill="url(#bg)" filter="url(#drop)"></path>
+<path d="M924.0 512.0L923.6 650.4L922.6 694.5L920.8 726.3L918.3 751.9L915.1 773.7L911.2 792.6L906.4 809.3L901.0 824.2L894.7 837.7L887.6 849.8L879.6 860.8L870.7 870.7L860.8 879.6L849.8 887.6L837.7 894.7L824.2 901.0L809.3 906.4L792.6 911.2L773.7 915.1L751.9 918.3L726.3 920.8L694.5 922.6L650.4 923.6L512.0 924.0L373.6 923.6L329.5 922.6L297.7 920.8L272.1 918.3L250.3 915.1L231.4 911.2L214.7 906.4L199.8 901.0L186.3 894.7L174.2 887.6L163.2 879.6L153.3 870.7L144.4 860.8L136.4 849.8L129.3 837.7L123.0 824.2L117.6 809.3L112.8 792.6L108.9 773.7L105.7 751.9L103.2 726.3L101.4 694.5L100.4 650.4L100.0 512.0L100.4 373.6L101.4 329.5L103.2 297.7L105.7 272.1L108.9 250.3L112.8 231.4L117.6 214.7L123.0 199.8L129.3 186.3L136.4 174.2L144.4 163.2L153.3 153.3L163.2 144.4L174.2 136.4L186.3 129.3L199.8 123.0L214.7 117.6L231.4 112.8L250.3 108.9L272.1 105.7L297.7 103.2L329.5 101.4L373.6 100.4L512.0 100.0L650.4 100.4L694.5 101.4L726.3 103.2L751.9 105.7L773.7 108.9L792.6 112.8L809.3 117.6L824.2 123.0L837.7 129.3L849.8 136.4L860.8 144.4L870.7 153.3L879.6 163.2L887.6 174.2L894.7 186.3L901.0 199.8L906.4 214.7L911.2 231.4L915.1 250.3L918.3 272.1L920.8 297.7L922.6 329.5L923.6 373.6Z" fill="none" stroke="url(#sheen)" stroke-width="3"></path>
+<rect x="292" y="326" width="176" height="80" rx="30" fill="url(#back)"></rect>
+<rect x="292" y="362" width="440" height="330" rx="40" fill="url(#back)"></rect>
+<g transform="rotate(-5 512 480)">
+<rect x="346" y="318" width="332" height="300" rx="24" fill="url(#paper)"></rect>
+<rect x="396" y="372" width="200" height="16" rx="8" fill="#b4b4be"></rect>
+<rect x="396" y="412" width="140" height="16" rx="8" fill="#cdcdd5"></rect>
+</g>
+<g filter="url(#cast)"><rect x="292" y="462" width="440" height="240" rx="42" fill="url(#front)"></rect></g>
+<rect x="293" y="463" width="438" height="238" rx="41" fill="none" stroke="url(#edge)" stroke-width="2"></rect>
+</svg>
