@@ -2,8 +2,8 @@ import SwiftUI
 import FolioKit
 
 /// Writes flashcards from one of the student's files: choose the file, let
-/// the on-device AI (or Claude, if they turned it on) write questions from
-/// it, then keep the ones they want, changing any first.
+/// the on-device AI (or Claude, when the student saved a key) write questions
+/// from it, then keep the ones they want, changing any first.
 struct MakeCardsSheet: View {
     @Environment(AppModel.self) private var model
     @Environment(\.dismiss) private var dismiss
@@ -18,6 +18,8 @@ struct MakeCardsSheet: View {
     @State private var file: URL?
     @State private var filter = ""
     @State private var withClaude = false
+    /// Students with a Claude key write with Claude until they choose the Mac instead.
+    @AppStorage("writesCardsWithClaude") private var prefersClaude = true
     @State private var stage: Stage = .choosing
     @State private var drafts: [CardDraft] = []
     @State private var keeping: Set<CardDraft.ID> = []
@@ -56,6 +58,7 @@ struct MakeCardsSheet: View {
                 subjectID = model.libraryFile(at: file)?.subjectID
             }
             subjectID = subjectID ?? model.subjects.first?.id
+            withClaude = model.hasClaudeKey && prefersClaude
         }
         .onDisappear { task?.cancel() }
     }
@@ -131,16 +134,24 @@ struct MakeCardsSheet: View {
                 }
             }
 
-            if model.usesClaude && model.hasClaudeKey {
+            if model.hasClaudeKey {
                 Picker("Write with", selection: $withClaude) {
                     Text("On this Mac").tag(false)
                     Text("Claude").tag(true)
                 }
                 .pickerStyle(.segmented)
                 .fixedSize()
+                .onChange(of: withClaude) { prefersClaude = withClaude }
+                .shotTarget("write-with")
                 Text(withClaude
-                     ? "Sends the file's text to Anthropic with your key. Usually well under a US cent a file."
-                     : "The on-device AI writes the cards. Nothing leaves your Mac.")
+                     ? "Claude reads all of the file and writes a card for each important idea. It sends the file's text to Anthropic with your key: usually well under a US cent a file."
+                     : "The on-device AI writes up to 24 cards. Nothing leaves your Mac.")
+                    .font(.system(size: 11.5))
+                    .foregroundStyle(Theme.secondaryText)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            if let file, case let made = model.cards(madeFrom: file, sourceID: nil).count, made > 0 {
+                Text("You have \(made) cards from this file already. Folio leaves out any repeats.")
                     .font(.system(size: 11.5))
                     .foregroundStyle(Theme.secondaryText)
             }
@@ -227,18 +238,33 @@ struct MakeCardsSheet: View {
                 Spacer()
             } else {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("Cards from “\(writing.sourceName)”")
-                        .font(.system(size: 14, weight: .semibold))
+                    HStack(alignment: .firstTextBaseline) {
+                        Text("Cards from “\(writing.sourceName)”")
+                            .font(.system(size: 14, weight: .semibold))
+                        Spacer()
+                        if drafts.count > 8 {
+                            Button(keeping.count == drafts.count ? "Untick All" : "Tick All") {
+                                keeping = keeping.count == drafts.count ? [] : Set(drafts.map(\.id))
+                            }
+                            .buttonStyle(.folioLink)
+                        }
+                    }
                     Text(writing.dropped > 0
                          ? String(localized: "Untick any you don't want, or change their words. Folio left out \(writing.dropped) whose answers weren't in the file.")
                          : String(localized: "Untick any you don't want, or change their words."))
                         .font(.system(size: 12.5))
                         .foregroundStyle(Theme.secondaryText)
+                    if let note = writing.note {
+                        Text(verbatim: note)
+                            .font(.system(size: 12.5))
+                            .foregroundStyle(Theme.warning)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 14)
                 ScrollView {
-                    VStack(spacing: 8) {
+                    LazyVStack(spacing: 8) {
                         ForEach($drafts) { $draft in
                             DraftRow(draft: $draft, isKept: Binding(
                                 get: { keeping.contains(draft.id) },

@@ -15,7 +15,7 @@ enum FreshStart {
         let support = URL.applicationSupportDirectory.appending(path: "Folio Fresh Start", directoryHint: .isDirectory)
         try? FileManager.default.removeItem(at: support)
         UserDefaults(suiteName: defaultsSuite)?.removePersistentDomain(forName: defaultsSuite)
-        return AppModel.live(supportFolder: support, defaults: UserDefaults(suiteName: defaultsSuite) ?? .standard, usesKeychain: false)
+        return AppModel.live(supportFolder: support, defaults: UserDefaults(suiteName: defaultsSuite) ?? .standard, defaultsName: defaultsSuite, usesKeychain: false)
     }
 }
 #endif

@@ -27,9 +27,11 @@ extension AppModel {
         refreshClaudeUsage()
     }
 
-    /// The key, read from the keychain the first time it's needed.
+    /// The key, read from the keychain the first time it's needed: at launch
+    /// while Claude sorts files, otherwise when the student first writes
+    /// flashcards with it.
     @discardableResult
-    private func readClaudeKey() -> String? {
+    func readClaudeKey() -> String? {
         guard let live else { return nil }
         if let key = live.claudeKey { return key }
         do {

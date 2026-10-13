@@ -31,6 +31,8 @@ enum Theme {
     static let hover = Color.white.opacity(0.06)
     static let success = Color(hex: 0x30D158)
     static let warning = Color(hex: 0xFF9F0A)
+    /// For actions that can't be undone, such as Delete All Data.
+    static let danger = Color(hex: 0xFF453A)
     /// For the Inbox tile and sorting steps, so Today's colours vary.
     static let purple = Color(hex: 0xBF5AF2)
 

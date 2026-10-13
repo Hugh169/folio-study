@@ -106,16 +106,22 @@ you use Claude, for your Mac password so Folio can read its key. Choose
 - **Calendar is read only.** Folio plans around your events and never changes
   them. If you turn on Reminders, Folio adds your assessments to a list called
   Folio there.
-- **Claude is optional and off by default.** To use it, you add your own API
+- **Claude is optional, and off until you add a key.** You add your own API
   key, which Folio keeps in your Mac's keychain. Folio then sends Claude the
-  text of files it couldn't sort on its own (photos only if you allow it), and
-  the notes you choose when you ask Claude to write flashcards. Anthropic
-  doesn't train its models on this and normally deletes it within 30 days.
-  Requests are charged to your Anthropic account, roughly US 10–20 cents per
-  1,000 files. Anthropic accounts are for adults, so if you're under 18, a
-  parent should hold the account and the key.
-- **The only connection Folio makes** is to Anthropic's API, and only while
-  Claude is on.
+  notes you choose when you ask it to write flashcards, and, if you turn on
+  sorting with Claude, the text of files it couldn't sort on its own (photos
+  only if you allow it). Anthropic doesn't train its models on this and
+  normally deletes it within 30 days. Requests are charged to your Anthropic
+  account, so Folio doesn't limit them: flashcards usually cost well under a
+  US cent a file, and sorting roughly US 10–20 cents per 1,000 files.
+  Anthropic accounts are for adults, so if you're under 18, a parent should
+  hold the account and the key.
+- **The only connection Folio makes** is to Anthropic's API, and only when
+  you use Claude.
+- **Delete All Data.** Settings › AI & Privacy › Delete All Data removes
+  everything Folio keeps on your Mac, including its Claude key, then quits.
+  Your School folder and the files in it stay where they are. To remove Folio
+  itself, delete it from your Applications folder.
 
 ## Languages
 

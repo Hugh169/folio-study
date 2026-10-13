@@ -448,8 +448,9 @@ public final class Librarian {
     }
 
     /// Reads much more of a file than sorting does, for flashcards and summaries.
-    public func readThoroughly(_ url: URL, progress: (@Sendable (String) -> Void)? = nil) async throws -> Evidence {
-        try await Extractor.thorough.extract(from: url, progress: progress)
+    /// `whole` reads all of it, for Claude writing flashcards.
+    public func readThoroughly(_ url: URL, whole: Bool = false, progress: (@Sendable (String) -> Void)? = nil) async throws -> Evidence {
+        try await (whole ? Extractor.whole : Extractor.thorough).extract(from: url, progress: progress)
     }
 
     /// The filed record for a file in the library, if Folio filed it.

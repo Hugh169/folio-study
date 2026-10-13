@@ -130,6 +130,20 @@ enum RenderShots {
         return "clicked the first row, " + listSelection(in: window)
     }
 
+    /// Scrolls the first scrolling area to its end, such as a Settings pane.
+    static func scrollToEnd(in window: NSWindow) -> String {
+        func first(in view: NSView) -> NSScrollView? {
+            if let scroll = view as? NSScrollView, (scroll.documentView?.frame.height ?? 0) > scroll.contentSize.height { return scroll }
+            return view.subviews.lazy.compactMap(first(in:)).first
+        }
+        guard let content = window.contentView, let scroll = first(in: content), let document = scroll.documentView else { return "nothing to scroll" }
+        let end = document.isFlipped ? max(0, document.frame.height - scroll.contentSize.height) : 0
+        scroll.contentView.scroll(to: NSPoint(x: 0, y: end))
+        scroll.reflectScrolledClipView(scroll.contentView)
+        RunLoop.main.run(until: Date().addingTimeInterval(0.5))
+        return "scrolled to the end"
+    }
+
     /// Clicks the middle of a view marked with `shotTarget(name)`. A view
     /// moved with `offset` reports where it was before the move, so `lowered`
     /// adds that back.
@@ -176,6 +190,17 @@ enum RenderShots {
         }
         RunLoop.main.run(until: Date().addingTimeInterval(0.3))
         return true
+    }
+
+    /// Every card answered today, so none are due until tomorrow or later.
+    private static func reviewedEverything(_ model: AppModel) {
+        let tomorrow = model.calendar.date(byAdding: .day, value: 1, to: model.calendar.startOfDay(for: .now))!
+        model.flashcards = model.flashcards.map { card in
+            var card = card
+            card.due = max(card.due, tomorrow)
+            card.reviewedAt = .now
+            return card
+        }
     }
 
     /// Holds a shot's model, made when the shot is drawn, so its action can look at it after.
@@ -608,6 +633,65 @@ enum RenderShots {
                     model.libraryURL = URL(filePath: "/Users/student/Documents/School")
                 }))
             },
+            // The end of AI & Privacy, with Delete All Data, and a Claude key saved.
+            Shot(name: "settings-ai-end", width: 700, height: 800, toolbar: false, act: scrollToEnd) {
+                AnyView(SettingsView(pane: .ai).environment(sample { model in
+                    model.learnedExampleCount = 23
+                    model.libraryURL = URL(filePath: "/Users/student/Documents/School")
+                    model.hasClaudeKey = true
+                    model.claudeStatus = .ready
+                    model.claudeUsage = ClaudeUsageLedger.Usage(requests: 37, inputTokens: 212_000, outputTokens: 96_000)
+                }))
+            },
+            {
+                // Delete All Data… opens the sheet that asks first. Settings' rows
+                // are drawn in views of their own, so a click there may miss; the
+                // check then asks for the sheet as the button does.
+                let holder = ShotModel()
+                return Shot(name: "settings-delete-click", width: 700, height: 800, toolbar: false, act: { window in
+                    _ = scrollToEnd(in: window)
+                    let clicked = click(target: "delete-all-data", in: window)
+                    RunLoop.main.run(until: Date().addingTimeInterval(1))
+                    var line = clicked + "; sheet open: \(window.attachedSheet != nil)"
+                    if window.attachedSheet == nil {
+                        holder.model?.isShowingDeleteAll = true
+                        RunLoop.main.run(until: Date().addingTimeInterval(1))
+                        line += "; asked for directly, sheet open: \(window.attachedSheet != nil)"
+                    }
+                    return line
+                }) {
+                    let model = sample { model in
+                        model.libraryURL = URL(filePath: "/Users/student/Documents/School")
+                    }
+                    holder.model = model
+                    return AnyView(SettingsView(pane: .ai).environment(model))
+                }
+            }(),
+            Shot(name: "delete-all", width: 540, height: 640, toolbar: false) {
+                AnyView(DeleteAllDataSheet().environment(sample { model in
+                    model.libraryURL = URL(filePath: "/Users/student/Documents/School")
+                    model.hasClaudeKey = true
+                    model.usesReminders = true
+                }))
+            },
+            // Delete All Data in the sheet starts deleting. The deleting itself is
+            // a task, which can't run until the shots are drawn, so the self-test checks it.
+            Shot(name: "delete-all-click", width: 540, height: 460, toolbar: false, act: { window in
+                let clicked = click(target: "confirm-delete-all", in: window)
+                RunLoop.main.run(until: Date().addingTimeInterval(0.5))
+                return clicked + "; deleting: \(ShotTargets.frames["deleting-data"] != nil)"
+            }) {
+                AnyView(DeleteAllDataSheet().environment(sample { model in
+                    model.libraryURL = URL(filePath: "/Users/student/Documents/School")
+                }))
+            },
+            Shot(name: "delete-all-done", width: 540, height: 360, toolbar: false) {
+                AnyView(DeleteAllDataSheet(report: DeletionReport(removedReminders: 6, removedRemindersList: true)).environment(sample { _ in }))
+            },
+            Shot(name: "delete-all-problem", width: 540, height: 420, toolbar: false) {
+                let problem = String(localized: "Your Claude key couldn't be removed from the keychain. Delete “\(Keychain.claudeKey.label)” in Keychain Access.")
+                return AnyView(DeleteAllDataSheet(report: DeletionReport(problems: [problem])).environment(sample { _ in }))
+            },
             Shot(name: "settings-background", width: 700, height: 600, toolbar: false) {
                 AnyView(SettingsView(pane: .background).environment(sample { model in
                     var downloads = WatchedFolder.downloads
@@ -693,6 +777,58 @@ enum RenderShots {
                 let model = sample { studying($0) }
                 let file = model.libraryFiles.first { $0.name == "2021-hsc-physics.pdf" }
                 return AnyView(MakeCardsSheet(subjectID: model.subjects[2].id, file: file?.url).environment(model))
+            },
+            // A Claude key saved: Claude is chosen, and the file already has cards.
+            Shot(name: "make-cards-claude", width: 620, height: 560, toolbar: false, act: listSelection) {
+                let model = sample { model in
+                    studying(model)
+                    model.hasClaudeKey = true
+                    model.libraryFiles.append(SortedFile(name: "Electromagnetism notes.docx", subjectID: model.subjects[2].id, folder: "Notes", sortedAt: .now, url: URL(filePath: "/tmp/Electromagnetism notes.docx")))
+                }
+                return AnyView(MakeCardsSheet(subjectID: model.subjects[2].id, file: URL(filePath: "/tmp/Electromagnetism notes.docx")).environment(model))
+            },
+            // Claude's cards from a long file, stopped partway by the student's account.
+            Shot(name: "make-cards-many", width: 620, height: 560, toolbar: false) {
+                let model = sample { studying($0) }
+                let written = CardWriting(
+                    drafts: (1...40).map { CardDraft(question: "What is defined in rule \($0)?", answer: "The quantity measured in step \($0) of the method.", quote: "Rule \($0) defines the quantity measured in step \($0) of the method.") },
+                    origin: .claude,
+                    sourceName: "Physics textbook chapter 7.pdf",
+                    note: String(localized: "Claude stopped before the end of the file: \(ClaudeVoter.Problem.billing("").message)")
+                )
+                return AnyView(MakeCardsSheet(subjectID: model.subjects[2].id, written: written).environment(model))
+            },
+            // Every card reviewed: Practise Anyway instead of Start Review.
+            Shot(name: "study-reviewed", height: 1260) {
+                AnyView(ShotRoot().environment(sample { model in
+                    studying(model)
+                    reviewedEverything(model)
+                    model.destination = .study
+                }))
+            },
+            {
+                let holder = ShotModel()
+                return Shot(name: "study-practise-click", act: { window in
+                    let clicked = click(target: "practise-anyway", in: window)
+                    RunLoop.main.run(until: Date().addingTimeInterval(1))
+                    let practice = holder.model?.practiceCards().count ?? 0
+                    return clicked + "; sheet open: \(window.attachedSheet != nil); cards to practise: \(practice)"
+                }) {
+                    let model = sample { model in
+                        studying(model)
+                        reviewedEverything(model)
+                        model.destination = .study
+                    }
+                    holder.model = model
+                    return AnyView(ShotRoot().environment(model))
+                }
+            }(),
+            Shot(name: "practice", width: 600, height: 480, toolbar: false) {
+                let model = sample { model in
+                    studying(model)
+                    reviewedEverything(model)
+                }
+                return AnyView(ReviewSheet(cards: model.practiceCards(in: model.subjects[2].id), subjectID: model.subjects[2].id, isPractice: true, showsAnswer: true).environment(model))
             },
             Shot(name: "progress", height: 1640) {
                 AnyView(ShotRoot().environment(sample { model in

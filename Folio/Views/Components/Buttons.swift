@@ -1,11 +1,13 @@
 import SwiftUI
 
-/// The design's buttons: accent-filled primary, translucent ghost, and capsule chips.
+/// The design's buttons: accent-filled primary, translucent ghost, capsule
+/// chips, and red for what can't be undone.
 struct FilledButtonStyle: ButtonStyle {
     enum Kind {
         case primary
         case ghost
         case chip
+        case danger
     }
 
     var kind: Kind
@@ -32,7 +34,7 @@ private struct FilledButton: View {
     var body: some View {
         configuration.label
             .font(.system(size: isLarge ? 15 : 13, weight: .medium))
-            .foregroundStyle(kind == .primary ? Color.white : Theme.primaryText)
+            .foregroundStyle(kind == .primary || kind == .danger ? Color.white : Theme.primaryText)
             .padding(.leading, isLarge ? 22 : kind == .chip ? 12 : 14)
             .padding(.trailing, isLarge ? 22 : 14)
             .frame(maxWidth: fullWidth ? .infinity : nil)
@@ -52,6 +54,7 @@ private struct FilledButton: View {
         case .primary: isHovered && isEnabled ? Theme.accentFillHover : Theme.accentFill
         case .ghost: Color.white.opacity(isHovered ? 0.15 : 0.1)
         case .chip: Color.white.opacity(isHovered ? 0.16 : 0.1)
+        case .danger: Theme.danger.mixed(with: .black, by: isHovered && isEnabled ? 0.08 : 0.18)
         }
     }
 }
@@ -84,6 +87,7 @@ struct TextLinkButtonStyle: ButtonStyle {
 extension ButtonStyle where Self == FilledButtonStyle {
     static var folioPrimary: FilledButtonStyle { FilledButtonStyle(kind: .primary) }
     static var folioGhost: FilledButtonStyle { FilledButtonStyle(kind: .ghost) }
+    static var folioDanger: FilledButtonStyle { FilledButtonStyle(kind: .danger) }
     static var folioChip: FilledButtonStyle { FilledButtonStyle(kind: .chip) }
     static var folioPrimaryLarge: FilledButtonStyle { FilledButtonStyle(kind: .primary, isLarge: true) }
     static var folioGhostLarge: FilledButtonStyle { FilledButtonStyle(kind: .ghost, isLarge: true) }
