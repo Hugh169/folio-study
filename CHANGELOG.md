@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1 (not released yet)
+## 1.1 (13 October 2026)
 
 ### Flashcards
 - With your own Claude key, Make Flashcards can use Claude whenever you like,
