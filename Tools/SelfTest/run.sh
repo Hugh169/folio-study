@@ -1,9 +1,10 @@
 #!/bin/bash
 # Runs Folio's sandboxed self-test (Debug builds only): a setup run that sorts,
 # plans and studies with test files, then a restart run that reopens the same
-# records and checks they were kept.
+# records and checks they were kept. The delete run, only when asked for,
+# deletes those records as Settings › Delete All Data does and checks what's left.
 #
-#   Tools/SelfTest/run.sh <path to Folio.app> [both|setup|restart]
+#   Tools/SelfTest/run.sh <path to Folio.app> [both|setup|restart|delete]
 #
 # Before running:
 # - Quit every other copy of Folio, and don't build or run `swift test` at the
@@ -13,10 +14,11 @@
 #
 # The self-test never asks macOS for permission: it skips Calendar, Reminders,
 # notifications and the real keychain item. Reports are written to
-# ~/Library/Containers/<bundle ID>/Data/SelfTest/report.json and report-restart.json.
+# ~/Library/Containers/<bundle ID>/Data/SelfTest/report.json, report-restart.json
+# and report-delete.json.
 set -euo pipefail
 
-app="${1:?usage: Tools/SelfTest/run.sh <path to Folio.app> [both|setup|restart]}"
+app="${1:?usage: Tools/SelfTest/run.sh <path to Folio.app> [both|setup|restart|delete]}"
 phase="${2:-both}"
 repo="$(cd "$(dirname "$0")/../.." && pwd)"
 generated="$repo/TestSet/generated"
@@ -75,7 +77,7 @@ print(f"  recently sorted: {len(state.get('recentlySorted', []))}, waiting: {len
 failed = [item["name"] for item in state.get("sorting", []) if item.get("status") == "failed"]
 if failed:
     print(f"  failed to sort: {', '.join(failed)}")
-for key in ("planner", "study", "timetable"):
+for key in ("planner", "study", "timetable", "before", "after", "reopened"):
     if key in report:
         print(f"  {key}: {json.dumps(report[key], ensure_ascii=False)[:300]}")
 PY
@@ -121,4 +123,11 @@ if [[ "$phase" == "both" || "$phase" == "restart" ]]; then
     echo "Restart run…"
     run_folio -FolioSelfTestPhase restart
     summarise "$st/report-restart.json"
+fi
+
+if [[ "$phase" == "delete" ]]; then
+    echo "Delete run…"
+    rm -f "${st:?}/report-delete.json"
+    run_folio -FolioSelfTestPhase delete
+    summarise "$st/report-delete.json"
 fi

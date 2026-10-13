@@ -37,7 +37,11 @@ struct SettingsView: View {
             }
         }
         .frame(width: 700)
-        .disabled(model.phase == .setup)
+        .disabled(model.phase == .setup || model.hasDeletedEverything)
+        .sheet(isPresented: Binding(get: { model.isShowingDeleteAll }, set: { model.isShowingDeleteAll = $0 })) {
+            DeleteAllDataSheet()
+                .environment(model)
+        }
     }
 }
 
@@ -1000,6 +1004,23 @@ private struct AISettings: View {
                 Text(privacyText)
                     .foregroundStyle(.secondary)
             }
+
+            Section {
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Delete All Data")
+                        Text("Removes everything Folio keeps on this Mac, then quits, as if it had never been installed.")
+                            .font(.system(size: 11.5))
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    Button("Delete All Data…") { model.isShowingDeleteAll = true }
+                        .shotTarget("delete-all-data")
+                }
+            } footer: {
+                Text("Your School folder and the files in it stay where they are.")
+                    .foregroundStyle(.secondary)
+            }
         }
         .formStyle(.grouped)
         .frame(height: 760)
@@ -1067,8 +1088,9 @@ private struct ClaudeSection: View {
         } footer: {
             VStack(alignment: .leading, spacing: 6) {
                 Group {
-                    Text("When Folio can't decide on a file by itself, it sends Claude Haiku what the on-device AI reads: up to 1,500 characters of the file's text, its title, the website it came from, and its name when there's little text. Photos go only if you include them. This can include files from watched folders such as Downloads.")
-                    Text("Anthropic doesn't train its models on this and normally deletes it within 30 days. Requests are charged to your Anthropic account, at roughly US 10–20 cents per 1,000 files. Anthropic accounts are for adults, so if you're under 18, a parent should hold the account and the key.")
+                    Text("With a key, Make Flashcards can use Claude as often as you like. Folio sends the whole file's text, and Claude writes a card for each important idea in it, usually for well under a US cent a file.")
+                    Text("With the switch above on, Folio also asks Claude about files it can't decide by itself. It sends what the on-device AI reads: up to 1,500 characters of the file's text, its title, the website it came from, and its name when there's little text. Photos go only if you include them. This can include files from watched folders such as Downloads.")
+                    Text("Anthropic doesn't train its models on this and normally deletes it within 30 days. Requests are charged to your Anthropic account, so Folio doesn't limit them. Anthropic accounts are for adults, so if you're under 18, a parent should hold the account and the key.")
                 }
                 .foregroundStyle(.secondary)
                 if !model.hasClaudeKey {
@@ -1090,14 +1112,14 @@ private struct ClaudeSection: View {
         } else {
             switch model.claudeStatus {
             case .unchecked:
-                dot(Theme.secondaryText, model.usesClaude ? Text("On") : Text("Not checked yet"))
+                dot(Theme.secondaryText, Text("Not checked yet"))
             case .checking:
                 HStack(spacing: 6) {
                     ProgressView().controlSize(.small)
                     Text("Checking…")
                 }
             case .ready:
-                dot(Theme.success, model.usesClaude ? Text("Ready") : Text("Key works. Turn on Claude above to use it."))
+                dot(Theme.success, Text("Ready"))
             case .problem(let message):
                 dot(Theme.warning, Text(verbatim: message))
             }
@@ -1115,11 +1137,11 @@ private struct ClaudeSection: View {
 
     private var usageText: String {
         let usage = model.claudeUsage
-        guard usage.requests > 0 else { return String(localized: "No files yet") }
+        guard usage.requests > 0 else { return String(localized: "Nothing yet") }
         let cost = usage.cost < 0.01
             ? String(localized: "under US$0.01")
             : String(localized: "about \(usage.cost.formatted(.currency(code: "USD")))")
-        return "\(fileCountText(usage.requests)), \(cost)"
+        return "\(String(localized: "\(usage.requests) requests")), \(cost)"
     }
 
     private func saveKey() {

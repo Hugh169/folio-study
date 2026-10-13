@@ -1,5 +1,28 @@
 # Changelog
 
+## 1.1 (not released yet)
+
+### Flashcards
+- With your own Claude key, Make Flashcards can use Claude whenever you like,
+  not only when sorting with Claude is on. Claude reads the whole file and
+  writes a card for each important idea in it, with no limit on cards or
+  files: the requests are charged to your own Anthropic account.
+- Making cards from a file again gives new cards: Folio leaves out the ones
+  you already have.
+- Practise Anyway: once today's cards are reviewed, keep going through cards
+  that aren't due yet. Practising doesn't change when cards come back.
+- After a review, Review More carries on with any cards still due.
+
+### Privacy
+- Delete All Data, in Settings › AI & Privacy, removes everything Folio keeps
+  on your Mac and quits: its records, settings and what it learned, its Claude
+  key, its notifications, opening at login and, if you choose, the reminders
+  it added. Your School folder and the files in it stay where they are.
+
+### Fixed
+- After Folio restarted, a saved Claude key was only read while sorting with
+  Claude was on, so Claude couldn't write flashcards.
+
 ## 1.0 (12 October 2026)
 
 The first public release.

@@ -3477,6 +3477,94 @@
         }
       }
     },
+    "%lld requests" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld request"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld requests"
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld requête"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld requêtes"
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld solicitud"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld solicitudes"
+                }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld Anfrage"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld Anfragen"
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld 次请求"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "%lld selected" : {
       "localizations" : {
         "de" : {
@@ -6557,6 +6645,34 @@
         }
       }
     },
+    "Also delete the reminders Folio added to Reminders" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Supprimer aussi les rappels ajoutés par Folio dans Rappels"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Eliminar también los recordatorios que Folio añadió a Recordatorios"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Auch die Erinnerungen löschen, die Folio zu „Erinnerungen“ hinzugefügt hat"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "同时删除 Folio 添加到“提醒事项”的提醒"
+          }
+        }
+      }
+    },
     "Also in Reminders" : {
       "localizations" : {
         "de" : {
@@ -6757,30 +6873,30 @@
         }
       }
     },
-    "Anthropic doesn't train its models on this and normally deletes it within 30 days. Requests are charged to your Anthropic account, at roughly US 10–20 cents per 1,000 files. Anthropic accounts are for adults, so if you're under 18, a parent should hold the account and the key." : {
+    "Anthropic doesn't train its models on this and normally deletes it within 30 days. Requests are charged to your Anthropic account, so Folio doesn't limit them. Anthropic accounts are for adults, so if you're under 18, a parent should hold the account and the key." : {
       "localizations" : {
-        "de" : {
+        "fr" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Anthropic trainiert seine Modelle nicht damit und löscht die Daten normalerweise innerhalb von 30 Tagen. Anfragen werden deinem Anthropic-Konto berechnet, etwa 10–20 US-Cent pro 1.000 Dateien. Anthropic-Konten sind für Erwachsene – wenn du unter 18 bist, sollte ein Elternteil Konto und Schlüssel besitzen."
+            "value" : "Anthropic n’entraîne pas ses modèles avec ces données et les supprime normalement sous 30 jours. Les requêtes sont facturées sur votre compte Anthropic, donc Folio ne les limite pas. Les comptes Anthropic sont réservés aux adultes : si vous avez moins de 18 ans, un parent doit détenir le compte et la clé."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Anthropic no entrena sus modelos con esto y normalmente lo elimina en 30 días. Las solicitudes se cobran en tu cuenta de Anthropic, a unos 10–20 céntimos de dólar por cada 1000 archivos. Las cuentas de Anthropic son para adultos, así que, si tienes menos de 18 años, la cuenta y la clave deben ser de tu padre, madre o tutor."
+            "value" : "Anthropic no entrena sus modelos con esto y normalmente lo elimina en 30 días. Las solicitudes se cobran en tu cuenta de Anthropic, así que Folio no las limita. Las cuentas de Anthropic son para adultos, así que, si tienes menos de 18 años, la cuenta y la clave deben ser de tu padre, madre o tutor."
           }
         },
-        "fr" : {
+        "de" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Anthropic n’entraîne pas ses modèles avec ces données et les supprime normalement sous 30 jours. Les requêtes sont facturées sur votre compte Anthropic, environ 10 à 20 cents US pour 1 000 fichiers. Les comptes Anthropic sont réservés aux adultes : si vous avez moins de 18 ans, un parent doit détenir le compte et la clé."
+            "value" : "Anthropic trainiert seine Modelle nicht damit und löscht die Daten normalerweise innerhalb von 30 Tagen. Anfragen werden deinem Anthropic-Konto berechnet, deshalb begrenzt Folio sie nicht. Anthropic-Konten sind für Erwachsene – wenn du unter 18 bist, sollte ein Elternteil Konto und Schlüssel besitzen."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Anthropic 不会用这些内容训练模型，通常会在 30 天内删除。请求费用计入你的 Anthropic 帐户，每 1,000 个文件约 10–20 美分。Anthropic 帐户仅限成年人使用，如果你未满 18 岁，应由父母持有帐户和密钥。"
+            "value" : "Anthropic 不会用这些内容训练模型，通常会在 30 天内删除。请求费用计入你的 Anthropic 帐户，因此 Folio 不会限制请求次数。Anthropic 帐户仅限成年人使用，如果你未满 18 岁，应由父母持有帐户和密钥。"
           }
         }
       }
@@ -7349,6 +7465,34 @@
         }
       }
     },
+    "Assessments, exams, marks and study plans" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Évaluations, examens, notes et plannings de révision"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Evaluaciones, exámenes, notas y planes de estudio"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Leistungsnachweise, Prüfungen, Noten und Lernpläne"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "测评、考试、成绩和学习计划"
+          }
+        }
+      }
+    },
     "At most %lld sessions a day" : {
       "localizations" : {
         "de" : {
@@ -7545,6 +7689,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "放回第一个盒子：明天再出现（←）"
+          }
+        }
+      }
+    },
+    "Back Up First…" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Sauvegarder d’abord…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Hacer copia primero…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Zuerst sichern …"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "先备份…"
           }
         }
       }
@@ -8778,6 +8950,90 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Claude 正在编写卡片…"
+          }
+        }
+      }
+    },
+    "Claude is writing cards… %lld of %lld parts read" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude rédige les fiches… %lld parties lues sur %lld"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude está escribiendo las tarjetas… %lld de %lld partes leídas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude schreibt die Karten … %lld von %lld Teilen gelesen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude 正在编写卡片…已读 %lld 部分，共 %lld 部分"
+          }
+        }
+      }
+    },
+    "Claude reads all of the file and writes a card for each important idea. It sends the file's text to Anthropic with your key: usually well under a US cent a file." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude lit tout le fichier et rédige une fiche pour chaque idée importante. Le texte du fichier est envoyé à Anthropic avec votre clé : en général bien moins d’un centime US par fichier."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude lee todo el archivo y escribe una tarjeta por cada idea importante. El texto del archivo se envía a Anthropic con tu clave: normalmente mucho menos de un centavo de dólar por archivo."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude liest die ganze Datei und schreibt eine Karte zu jedem wichtigen Gedanken. Der Text der Datei wird mit deinem Schlüssel an Anthropic gesendet: meist deutlich unter einem US-Cent pro Datei."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude 会读完整个文件，为每个重要知识点编写一张卡片。文件文本会使用你的密钥发送给 Anthropic：每个文件通常远低于 1 美分。"
+          }
+        }
+      }
+    },
+    "Claude stopped before the end of the file: %@" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude s’est arrêté avant la fin du fichier : %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude se ha detenido antes del final del archivo: %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude hat vor dem Ende der Datei aufgehört: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Claude 在文件结尾前停止了：%@"
           }
         }
       }
@@ -10070,6 +10326,90 @@
         }
       }
     },
+    "Delete All Data" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Supprimer toutes les données"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Eliminar todos los datos"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Alle Daten löschen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "删除所有数据"
+          }
+        }
+      }
+    },
+    "Delete All Data…" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Supprimer toutes les données…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Eliminar todos los datos…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Alle Daten löschen …"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "删除所有数据…"
+          }
+        }
+      }
+    },
+    "Delete all of Folio's data?" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Supprimer toutes les données de Folio ?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "¿Eliminar todos los datos de Folio?"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Alle Daten von Folio löschen?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "要删除 Folio 的所有数据吗？"
+          }
+        }
+      }
+    },
     "Delete Card" : {
       "localizations" : {
         "de" : {
@@ -10122,6 +10462,62 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "删除待办"
+          }
+        }
+      }
+    },
+    "Deleted" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Supprimé"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Se elimina"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Wird gelöscht"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "将删除"
+          }
+        }
+      }
+    },
+    "Deleting Folio's data…" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Suppression des données de Folio…"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Eliminando los datos de Folio…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Daten von Folio werden gelöscht …"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "正在删除 Folio 的数据…"
           }
         }
       }
@@ -12710,6 +13106,34 @@
         }
       }
     },
+    "Folio couldn't read your Claude key. Check it in Settings › AI & Privacy." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio n’a pas pu lire votre clé Claude. Vérifiez-la dans Réglages › IA."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio no ha podido leer tu clave de Claude. Revísala en Ajustes › IA."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio konnte deinen Claude-Schlüssel nicht lesen. Prüfe ihn unter „Einstellungen“ › „KI“."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio 无法读取你的 Claude 密钥。请在“设置”›“AI 与隐私”中检查。"
+          }
+        }
+      }
+    },
     "Folio couldn't read your key from the keychain: %@" : {
       "localizations" : {
         "de" : {
@@ -12734,6 +13158,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Folio 无法从钥匙串读取你的密钥：%@"
+          }
+        }
+      }
+    },
+    "Folio couldn't stop opening at login. Turn it off in System Settings › General › Login Items." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio n’a pas pu désactiver son ouverture à l’ouverture de session. Désactivez-la dans Réglages Système › Général › Ouverture."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio no ha podido dejar de abrirse al iniciar sesión. Desactívalo en Ajustes del Sistema › General › Ítems de inicio."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio konnte das Öffnen beim Anmelden nicht beenden. Schalte es unter „Systemeinstellungen“ › „Allgemein“ › „Anmeldeobjekte“ aus."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio 无法停止登录时打开。请在“系统设置”›“通用”›“登录项”中关闭。"
           }
         }
       }
@@ -12963,6 +13415,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Folio 会把你的作业归档到这些科目，并在整个应用中用颜色区分。你可以随时更改。"
+          }
+        }
+      }
+    },
+    "Folio forgets everything and quits, as if it had never been installed. This can't be undone." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio oublie tout et quitte, comme s’il n’avait jamais été installé. Cette action est irréversible."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio olvida todo y se cierra, como si nunca se hubiera instalado. No se puede deshacer."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio vergisst alles und beendet sich, als wäre es nie installiert worden. Das lässt sich nicht widerrufen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio 会忘记所有内容并退出，就像从未安装过一样。此操作无法撤销。"
           }
         }
       }
@@ -13663,6 +14143,62 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Folio 会直接在其中为每个科目添加一个文件夹。为了让你的学习资料集中在一起，Folio 可以改为在其中新建一个 Folio 文件夹。"
+          }
+        }
+      }
+    },
+    "Folio's data is deleted" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Les données de Folio sont supprimées"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Se han eliminado los datos de Folio"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Die Daten von Folio sind gelöscht"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio 的数据已删除"
+          }
+        }
+      }
+    },
+    "Folio's notifications, and opening at login" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Les notifications de Folio et son ouverture à l’ouverture de session"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Las notificaciones de Folio y su apertura al iniciar sesión"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mitteilungen von Folio und das Öffnen beim Anmelden"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio 的通知和登录时打开"
           }
         }
       }
@@ -14371,6 +14907,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "开始使用"
+          }
+        }
+      }
+    },
+    "Go through cards that aren't due yet. It doesn't change when they come back." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Parcourez les fiches qui ne sont pas encore à réviser, sans changer leur date de retour."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Repasa tarjetas que aún no tocan, sin cambiar cuándo vuelven."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Geh Karten durch, die noch nicht dran sind. Das ändert nicht, wann sie wiederkommen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "浏览尚未到期的卡片，不会改变它们再次出现的时间。"
           }
         }
       }
@@ -15355,6 +15919,34 @@
         }
       }
     },
+    "It comes round once more at the end (←)" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Elle revient une fois à la fin (←)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Vuelve una vez más al final (←)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Sie kommt am Ende noch einmal (←)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "它会在最后再出现一次（←）"
+          }
+        }
+      }
+    },
     "It isn't a Folio backup, or it's damaged." : {
       "localizations" : {
         "de" : {
@@ -15575,6 +16167,182 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "项目"
+          }
+        }
+      }
+    },
+    "Its %lld reminders and the Folio list are gone from Reminders." : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Its %lld reminder and the Folio list are gone from Reminders."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Its %lld reminders and the Folio list are gone from Reminders."
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld rappel ajouté par Folio et la liste Folio ont été supprimés de Rappels."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld rappels ajoutés par Folio et la liste Folio ont été supprimés de Rappels."
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Se han eliminado de Recordatorios %lld recordatorio de Folio y la lista Folio."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Se han eliminado de Recordatorios %lld recordatorios de Folio y la lista Folio."
+                }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld Erinnerung von Folio und die Liste „Folio“ wurden aus „Erinnerungen“ entfernt."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld Erinnerungen von Folio und die Liste „Folio“ wurden aus „Erinnerungen“ entfernt."
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "已从“提醒事项”中移除 Folio 的 %lld 个提醒和“Folio”列表。"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Its %lld reminders are gone from Reminders." : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Its %lld reminder is gone from Reminders."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Its %lld reminders are gone from Reminders."
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld rappel ajouté par Folio a été supprimé de Rappels."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld rappels ajoutés par Folio ont été supprimés de Rappels."
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Se ha eliminado %lld recordatorio de Folio de Recordatorios."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Se han eliminado %lld recordatorios de Folio de Recordatorios."
+                }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld Erinnerung von Folio wurde aus „Erinnerungen“ entfernt."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "%lld Erinnerungen von Folio wurden aus „Erinnerungen“ entfernt."
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "已从“提醒事项”中移除 Folio 的 %lld 个提醒。"
+                }
+              }
+            }
           }
         }
       }
@@ -15807,6 +16575,34 @@
         }
       }
     },
+    "Keep Practising" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Continuer l’entraînement"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Seguir practicando"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Weiter üben"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "继续练习"
+          }
+        }
+      }
+    },
     "Keep the ones you want, and review a few each day." : {
       "localizations" : {
         "de" : {
@@ -15835,30 +16631,30 @@
         }
       }
     },
-    "Key works. Turn on Claude above to use it." : {
+    "Kept" : {
       "localizations" : {
-        "de" : {
+        "fr" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Der Schlüssel funktioniert. Aktiviere Claude oben, um es zu verwenden."
+            "value" : "Conservé"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "La clave funciona. Activa Claude arriba para usarlo."
+            "value" : "Se conserva"
           }
         },
-        "fr" : {
+        "de" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "La clé fonctionne. Activez Claude ci-dessus pour l’utiliser."
+            "value" : "Bleibt erhalten"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "密钥可用。打开上方的 Claude 即可使用。"
+            "value" : "将保留"
           }
         }
       }
@@ -17518,6 +18314,34 @@
         }
       }
     },
+    "Next card (→)" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Fiche suivante (→)"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Siguiente tarjeta (→)"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Nächste Karte (→)"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "下一张卡片（→）"
+          }
+        }
+      }
+    },
     "Next class" : {
       "localizations" : {
         "de" : {
@@ -19002,6 +19826,34 @@
         }
       }
     },
+    "Nothing new came out of this file: you already have cards for what's in it." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Rien de nouveau dans ce fichier : vous avez déjà des fiches pour son contenu."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No ha salido nada nuevo de este archivo: ya tienes tarjetas de lo que contiene."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Aus dieser Datei kam nichts Neues: Du hast schon Karten zu ihrem Inhalt."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "这个文件没有新内容：你已经有涵盖其内容的卡片。"
+          }
+        }
+      }
+    },
     "Nothing planned" : {
       "localizations" : {
         "de" : {
@@ -19142,6 +19994,34 @@
         }
       }
     },
+    "Nothing to practise" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Rien à travailler"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Nada que practicar"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Nichts zu üben"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "没有要练习的"
+          }
+        }
+      }
+    },
     "Nothing to review" : {
       "localizations" : {
         "de" : {
@@ -19222,6 +20102,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "没有整理任何文件。"
+          }
+        }
+      }
+    },
+    "Nothing yet" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Rien pour l’instant"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Nada todavía"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Noch nichts"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "暂无"
           }
         }
       }
@@ -21248,6 +22156,90 @@
         }
       }
     },
+    "Practice" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Entraînement"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Práctica"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Üben"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "练习"
+          }
+        }
+      }
+    },
+    "Practice done" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Entraînement terminé"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Práctica terminada"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Üben beendet"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "练习完成"
+          }
+        }
+      }
+    },
+    "Practice · %@" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Entraînement · %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Práctica · %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Üben · %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "练习 · %@"
+          }
+        }
+      }
+    },
     "Practise" : {
       "localizations" : {
         "de" : {
@@ -21300,6 +22292,62 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "练习：%@"
+          }
+        }
+      }
+    },
+    "Practise Anyway" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "S’entraîner quand même"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Practicar igualmente"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Trotzdem üben"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "仍然练习"
+          }
+        }
+      }
+    },
+    "Practise More" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "S’entraîner encore"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Practicar más"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mehr üben"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "再练习"
           }
         }
       }
@@ -22564,6 +23612,34 @@
         }
       }
     },
+    "Removes everything Folio keeps on this Mac, then quits, as if it had never been installed." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Supprime tout ce que Folio conserve sur ce Mac, puis quitte, comme s’il n’avait jamais été installé."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Elimina todo lo que Folio guarda en este Mac y después se cierra, como si nunca se hubiera instalado."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Entfernt alles, was Folio auf diesem Mac speichert, und beendet sich dann, als wäre es nie installiert worden."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "移除 Folio 在这台 Mac 上保存的所有内容，然后退出，就像从未安装过一样。"
+          }
+        }
+      }
+    },
     "Repeats" : {
       "localizations" : {
         "de" : {
@@ -22898,6 +23974,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "复习"
+          }
+        }
+      }
+    },
+    "Review %lld More" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Réviser %lld de plus"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Repasar %lld más"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "%lld weitere wiederholen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "再复习 %lld 张"
           }
         }
       }
@@ -23658,34 +24762,6 @@
         }
       }
     },
-    "Sends the file's text to Anthropic with your key. Usually well under a US cent a file." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Sendet den Text der Datei mit deinem Schlüssel an Anthropic. Meist deutlich unter einem US-Cent pro Datei."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Envía el texto del archivo a Anthropic con tu clave. Normalmente mucho menos de un centavo de dólar por archivo."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Envoie le texte du fichier à Anthropic avec votre clé. En général bien moins d’un centime US par fichier."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "使用你的密钥将文件文本发送给 Anthropic。每个文件通常远低于 1 美分。"
-          }
-        }
-      }
-    },
     "Session ended" : {
       "localizations" : {
         "de" : {
@@ -24382,6 +25458,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "跳过设置"
+          }
+        }
+      }
+    },
+    "Some of Folio's records couldn't be deleted: %@" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Une partie de l’historique de Folio n’a pas pu être supprimée : %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No se han podido eliminar algunos registros de Folio: %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Einige Aufzeichnungen von Folio konnten nicht gelöscht werden: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio 的部分记录无法删除：%@"
           }
         }
       }
@@ -25962,6 +27066,34 @@
         }
       }
     },
+    "Study sessions, to-dos, flashcards and past-paper practice" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Séances de révision, tâches, fiches et entraînements sur annales"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Sesiones de estudio, tareas pendientes, tarjetas y prácticas con exámenes anteriores"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Lerneinheiten, To-dos, Karteikarten und Übungen mit alten Prüfungen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "学习时段、待办事项、抽认卡和真题练习"
+          }
+        }
+      }
+    },
     "Study time, last 4 weeks" : {
       "localizations" : {
         "de" : {
@@ -26972,30 +28104,30 @@
         }
       }
     },
-    "The on-device AI writes the cards. Nothing leaves your Mac." : {
+    "The on-device AI writes up to 24 cards. Nothing leaves your Mac." : {
       "localizations" : {
-        "de" : {
+        "fr" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "Die KI auf dem Gerät schreibt die Karten. Nichts verlässt deinen Mac."
+            "value" : "L’IA sur l’appareil rédige jusqu’à 24 fiches. Rien ne quitte votre Mac."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "La IA del dispositivo escribe las tarjetas. Nada sale de tu Mac."
+            "value" : "La IA del dispositivo escribe hasta 24 tarjetas. Nada sale de tu Mac."
           }
         },
-        "fr" : {
+        "de" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "L’IA sur l’appareil rédige les fiches. Rien ne quitte votre Mac."
+            "value" : "Die KI auf dem Gerät schreibt bis zu 24 Karten. Nichts verlässt deinen Mac."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "needs_review",
-            "value" : "由设备端 AI 编写卡片，任何内容都不会离开你的 Mac。"
+            "value" : "设备端 AI 最多编写 24 张卡片，任何内容都不会离开你的 Mac。"
           }
         }
       }
@@ -27052,6 +28184,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "这份试卷限时 %@。可以完整做完，也可以为某一部分设置更短的时间。"
+          }
+        }
+      }
+    },
+    "The permissions you gave Folio, such as for Calendar, stay in System Settings › Privacy & Security until you remove them." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Les autorisations accordées à Folio, par exemple pour Calendrier, restent dans Réglages Système › Confidentialité et sécurité jusqu’à ce que vous les retiriez."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Los permisos que diste a Folio, como el de Calendario, siguen en Ajustes del Sistema › Privacidad y seguridad hasta que los quites."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Die Berechtigungen, die du Folio gegeben hast, etwa für Kalender, bleiben unter „Systemeinstellungen“ › „Datenschutz & Sicherheit“, bis du sie entfernst."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "你授予 Folio 的权限（例如日历）会保留在“系统设置”›“隐私与安全性”中，直到你将其移除。"
           }
         }
       }
@@ -27392,6 +28552,34 @@
         }
       }
     },
+    "Tick All" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tout cocher"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Marcar todas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Alle auswählen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "全选"
+          }
+        }
+      }
+    },
     "Tick the courses you take." : {
       "localizations" : {
         "de" : {
@@ -27672,6 +28860,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "待办"
+          }
+        }
+      }
+    },
+    "To remove Folio itself, delete it from your Applications folder. If you open it again instead, it starts from the beginning." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Pour supprimer Folio lui-même, supprimez-le de votre dossier Applications. Si vous l’ouvrez à nouveau, il repart de zéro."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Para quitar Folio, elimínalo de tu carpeta Aplicaciones. Si vuelves a abrirlo, empieza desde el principio."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Um Folio selbst zu entfernen, lösche es aus deinem Programme-Ordner. Öffnest du es stattdessen wieder, beginnt es von vorn."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "如要移除 Folio 本身，请将它从“应用程序”文件夹中删除。如果再次打开它，它会从头开始。"
           }
         }
       }
@@ -28204,6 +29420,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "取消关联此文件"
+          }
+        }
+      }
+    },
+    "Untick All" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tout décocher"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Desmarcar todas"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Alle abwählen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "全部取消勾选"
           }
         }
       }
@@ -29332,6 +30576,34 @@
         }
       }
     },
+    "What Folio learned, and its record of the files it filed, so they can't be put back" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ce que Folio a appris et l’historique des fichiers classés, qui ne pourront plus être remis en place"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Lo que ha aprendido Folio y su registro de los archivos que ha archivado, que ya no se podrán devolver"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Was Folio gelernt hat und seine Aufzeichnungen der abgelegten Dateien, die sich dann nicht mehr zurücklegen lassen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Folio 学到的内容及其归档文件记录，之后将无法放回原处"
+          }
+        }
+      }
+    },
     "What got in the way? (optional)" : {
       "localizations" : {
         "de" : {
@@ -29580,34 +30852,6 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "你喜欢什么时候学习？"
-          }
-        }
-      }
-    },
-    "When Folio can't decide on a file by itself, it sends Claude Haiku what the on-device AI reads: up to 1,500 characters of the file's text, its title, the website it came from, and its name when there's little text. Photos go only if you include them. This can include files from watched folders such as Downloads." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Wenn Folio eine Datei nicht selbst zuordnen kann, schickt es Claude Haiku, was die KI auf dem Gerät liest: bis zu 1.500 Zeichen Text der Datei, ihren Titel, die Website, von der sie stammt, und ihren Namen, wenn wenig Text da ist. Fotos nur, wenn du sie einbeziehst. Das kann Dateien aus überwachten Ordnern wie Downloads betreffen."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Cuando Folio no puede decidir por sí solo, envía a Claude Haiku lo que lee la IA del dispositivo: hasta 1500 caracteres del texto del archivo, su título, la web de la que procede y su nombre cuando hay poco texto. Las fotos solo se envían si las incluyes. Puede incluir archivos de carpetas vigiladas como Descargas."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Quand Folio ne peut pas trancher seul, il envoie à Claude Haiku ce que lit l’IA sur l’appareil : jusqu’à 1 500 caractères du texte du fichier, son titre, le site d’où il vient, et son nom s’il contient peu de texte. Les photos ne sont envoyées que si vous les incluez. Cela peut concerner des fichiers de dossiers surveillés comme Téléchargements."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "当 Folio 无法自行判断文件时，会把设备端 AI 读取的内容发送给 Claude Haiku：文件中最多 1,500 个字符的文本、标题、来源网站，以及文字很少时的文件名。只有在你选择包括时才会发送照片。这可能包括“下载”等监视文件夹中的文件。"
           }
         }
       }
@@ -30032,6 +31276,62 @@
         }
       }
     },
+    "With a key, Make Flashcards can use Claude as often as you like. Folio sends the whole file's text, and Claude writes a card for each important idea in it, usually for well under a US cent a file." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Avec une clé, Créer des fiches peut utiliser Claude autant que vous le voulez. Folio envoie tout le texte du fichier, et Claude rédige une fiche pour chaque idée importante, en général pour bien moins d’un centime US par fichier."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Con una clave, Crear tarjetas puede usar Claude tanto como quieras. Folio envía todo el texto del archivo y Claude escribe una tarjeta por cada idea importante, normalmente por mucho menos de un centavo de dólar por archivo."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mit einem Schlüssel kann „Karteikarten erstellen“ Claude so oft nutzen, wie du willst. Folio sendet den ganzen Text der Datei, und Claude schreibt zu jedem wichtigen Gedanken eine Karte, meist für deutlich unter einen US-Cent pro Datei."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "有了密钥，“制作抽认卡”就可以随意使用 Claude。Folio 会发送整个文件的文本，Claude 会为其中每个重要知识点编写一张卡片，每个文件通常远低于 1 美分。"
+          }
+        }
+      }
+    },
+    "With the switch above on, Folio also asks Claude about files it can't decide by itself. It sends what the on-device AI reads: up to 1,500 characters of the file's text, its title, the website it came from, and its name when there's little text. Photos go only if you include them. This can include files from watched folders such as Downloads." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Si l’option ci-dessus est activée, Folio demande aussi à Claude pour les fichiers qu’il ne peut pas trancher seul. Il envoie ce que lit l’IA sur l’appareil : jusqu’à 1 500 caractères du texte du fichier, son titre, le site d’où il vient, et son nom s’il contient peu de texte. Les photos ne sont envoyées que si vous les incluez. Cela peut concerner des fichiers de dossiers surveillés comme Téléchargements."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Con el interruptor de arriba activado, Folio también consulta a Claude los archivos que no puede decidir por sí solo. Envía lo que lee la IA del dispositivo: hasta 1500 caracteres del texto del archivo, su título, la web de la que procede y su nombre cuando hay poco texto. Las fotos solo se envían si las incluyes. Puede incluir archivos de carpetas vigiladas como Descargas."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ist der Schalter oben an, fragt Folio Claude auch bei Dateien, die es nicht selbst zuordnen kann. Es schickt, was die KI auf dem Gerät liest: bis zu 1.500 Zeichen Text der Datei, ihren Titel, die Website, von der sie stammt, und ihren Namen, wenn wenig Text da ist. Fotos nur, wenn du sie einbeziehst. Das kann Dateien aus überwachten Ordnern wie Downloads betreffen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "打开上方开关后，Folio 还会就无法自行判断的文件询问 Claude。它会发送设备端 AI 读取的内容：文件中最多 1,500 个字符的文本、标题、来源网站，以及文字很少时的文件名。只有在你选择包括时才会发送照片。这可能包括“下载”等监视文件夹中的文件。"
+          }
+        }
+      }
+    },
     "Words that identify it" : {
       "localizations" : {
         "de" : {
@@ -30340,6 +31640,94 @@
         }
       }
     },
+    "You have %lld cards from this file already. Folio leaves out any repeats." : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "You have %lld card from this file already. Folio leaves out any repeats."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "You have %lld cards from this file already. Folio leaves out any repeats."
+                }
+              }
+            }
+          }
+        },
+        "fr" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Vous avez déjà %lld fiche tirée de ce fichier. Folio écarte les doublons."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Vous avez déjà %lld fiches tirées de ce fichier. Folio écarte les doublons."
+                }
+              }
+            }
+          }
+        },
+        "es" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Ya tienes %lld tarjeta de este archivo. Folio omite las repetidas."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Ya tienes %lld tarjetas de este archivo. Folio omite las repetidas."
+                }
+              }
+            }
+          }
+        },
+        "de" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Du hast schon %lld Karte aus dieser Datei. Folio lässt Wiederholungen weg."
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "Du hast schon %lld Karten aus dieser Datei. Folio lässt Wiederholungen weg."
+                }
+              }
+            }
+          }
+        },
+        "zh-Hans" : {
+          "variations" : {
+            "plural" : {
+              "other" : {
+                "stringUnit" : {
+                  "state" : "needs_review",
+                  "value" : "你已经有 %lld 张来自这个文件的卡片。Folio 会略去重复的卡片。"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "You knew %lld of %lld the first time. Cards you missed come back tomorrow." : {
       "localizations" : {
         "de" : {
@@ -30364,6 +31752,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "第一次就答对了 %lld 张，共 %lld 张。答错的卡片明天会再出现。"
+          }
+        }
+      }
+    },
+    "You knew %lld of %lld the first time. Practice doesn't change when cards come back." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Vous en avez su %lld sur %lld du premier coup. L’entraînement ne change pas la date de retour des fiches."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Sabías %lld de %lld a la primera. Practicar no cambia cuándo vuelven las tarjetas."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Du wusstest beim ersten Mal %lld von %lld. Üben ändert nicht, wann Karten wiederkommen."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "第一次就答对了 %lld 张，共 %lld 张。练习不会改变卡片再次出现的时间。"
           }
         }
       }
@@ -30480,6 +31896,34 @@
         }
       }
     },
+    "Your %@ and every file in it, and any backups you saved" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Votre %@ et tous les fichiers qu’il contient, ainsi que les sauvegardes que vous avez enregistrées"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tu %@ y todos sus archivos, además de las copias de seguridad que hayas guardado"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dein %@ und jede Datei darin, außerdem Sicherungen, die du gespeichert hast"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "你的%@及其中的所有文件，以及你保存的备份"
+          }
+        }
+      }
+    },
     "Your class timetable. Folio suggests subjects from it and notices files downloaded during class." : {
       "localizations" : {
         "de" : {
@@ -30504,6 +31948,62 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "你的课表。Folio 会据此推荐科目，并留意上课期间下载的文件。"
+          }
+        }
+      }
+    },
+    "Your Claude API key, from your keychain" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Votre clé API Claude, dans votre trousseau"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tu clave de API de Claude, del llavero"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dein Claude-API-Schlüssel aus deinem Schlüsselbund"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "钥匙串中的 Claude API 密钥"
+          }
+        }
+      }
+    },
+    "Your Claude key couldn't be removed from the keychain. Delete “%@” in Keychain Access." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Votre clé Claude n’a pas pu être retirée du trousseau. Supprimez « %@ » dans Trousseau d’accès."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "No se ha podido quitar tu clave de Claude del llavero. Elimina «%@» en Acceso a Llaveros."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dein Claude-Schlüssel konnte nicht aus dem Schlüsselbund entfernt werden. Lösche „%@“ in der Schlüsselbundverwaltung."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "无法从钥匙串中移除你的 Claude 密钥。请在“钥匙串访问”中删除“%@”。"
           }
         }
       }
@@ -30648,6 +32148,34 @@
         }
       }
     },
+    "Your School folder and the files in it stay where they are." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Votre dossier scolaire et ses fichiers restent à leur place."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tu carpeta escolar y sus archivos se quedan donde están."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dein Schulordner und die Dateien darin bleiben, wo sie sind."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "你的学校文件夹及其中的文件会保留在原处。"
+          }
+        }
+      }
+    },
     "Your schoolwork, sorted." : {
       "localizations" : {
         "de" : {
@@ -30700,6 +32228,34 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "你的设置由更新版本的 Folio 存储。请更新 Folio 以使用这些设置。"
+          }
+        }
+      }
+    },
+    "Your subjects, timetable and settings" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Vos matières, votre emploi du temps et vos réglages"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tus asignaturas, tu horario y tus ajustes"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Deine Fächer, dein Stundenplan und deine Einstellungen"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "你的科目、课程表和设置"
           }
         }
       }

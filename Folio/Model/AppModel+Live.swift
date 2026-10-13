@@ -43,13 +43,26 @@ final class LiveServices {
     var claudeKey: String?
     let claudeLedger: ClaudeUsageLedger
 
-    init(supportFolder: URL, defaults: UserDefaults, usesKeychain: Bool) throws {
+    // Deleting everything
+    /// The folder with the settings file and the record store.
+    let supportFolder: URL
+    /// The name of the settings domain in `defaults`, so Delete All Data can remove it.
+    let defaultsName: String?
+    /// Whether this is Folio as installed, rather than a test run or a fresh
+    /// start, so Delete All Data may also remove what Folio left elsewhere on
+    /// the Mac: its reminders, notifications, login item and caches.
+    let ownsSystemItems: Bool
+
+    init(supportFolder: URL, defaults: UserDefaults, defaultsName: String?, usesKeychain: Bool, ownsSystemItems: Bool) throws {
         profileStore = ProfileStore(url: supportFolder.appending(path: "profile.json"))
         store = try FolioStore(url: supportFolder.appending(path: "Folio.store"))
         bookmarks = FolderBookmarks(defaults: defaults)
         self.defaults = defaults
         keychain = usesKeychain ? .claudeKey : nil
         claudeLedger = ClaudeUsageLedger(defaults: defaults)
+        self.supportFolder = supportFolder
+        self.defaultsName = defaultsName
+        self.ownsSystemItems = ownsSystemItems
     }
 
     static let usesOnDeviceAIKey = "usesOnDeviceAI"
@@ -112,9 +125,10 @@ extension AppModel {
     /// Folio as it really runs: loads the settings and records, and shows
     /// first-run setup when there's no School folder yet.
     /// - Parameters:
+    ///   - defaultsName: The suite name of `defaults`, when they aren't the standard ones.
     ///   - readsCalendar: Off for test runs, which use made-up events instead.
     ///   - usesKeychain: Off for test runs, so macOS never asks about the keychain.
-    static func live(supportFolder: URL? = nil, defaults: UserDefaults = .standard, readsCalendar: Bool = true, usesKeychain: Bool = true) -> AppModel {
+    static func live(supportFolder: URL? = nil, defaults: UserDefaults = .standard, defaultsName: String? = nil, readsCalendar: Bool = true, usesKeychain: Bool = true) -> AppModel {
         let model = AppModel(
             calendar: makeCalendar(),
             profile: .starter(),
@@ -125,16 +139,23 @@ extension AppModel {
             sessions: [],
             assessments: []
         )
-        model.start(supportFolder: supportFolder, defaults: defaults, readsCalendar: readsCalendar, usesKeychain: usesKeychain)
+        model.start(supportFolder: supportFolder, defaults: defaults, defaultsName: defaultsName, readsCalendar: readsCalendar, usesKeychain: usesKeychain)
         return model
     }
 
-    private func start(supportFolder: URL?, defaults: UserDefaults, readsCalendar: Bool, usesKeychain: Bool) {
+    private func start(supportFolder: URL?, defaults: UserDefaults, defaultsName: String?, readsCalendar: Bool, usesKeychain: Bool) {
         do {
             let support = try supportFolder ?? FileManager.default
                 .url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
                 .appending(path: "Folio", directoryHint: .isDirectory)
-            let live = try LiveServices(supportFolder: support, defaults: defaults, usesKeychain: usesKeychain)
+            let isInstalledFolio = supportFolder == nil && defaults === UserDefaults.standard
+            let live = try LiveServices(
+                supportFolder: support,
+                defaults: defaults,
+                defaultsName: defaultsName ?? (defaults === UserDefaults.standard ? Bundle.main.bundleIdentifier : nil),
+                usesKeychain: usesKeychain,
+                ownsSystemItems: isInstalledFolio
+            )
             self.live = live
             live.notifier.register()
             live.notifier.onUndo = { [weak self] ids in self?.undoFiled(ids) }

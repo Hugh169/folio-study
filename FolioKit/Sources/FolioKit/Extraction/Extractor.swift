@@ -43,6 +43,18 @@ public struct Extractor: Sendable {
         return extractor
     }
 
+    /// Reads all of a file, or near enough: for Claude writing flashcards,
+    /// which reads every part of it with the student's own key.
+    public static var whole: Extractor {
+        var extractor = Extractor()
+        extractor.maxPages = 2000
+        extractor.maxCharacters = 3_000_000
+        extractor.maxScannedPages = 200
+        extractor.listeningSeconds = 4 * 60 * 60
+        extractor.timeLimit = .seconds(1800)
+        return extractor
+    }
+
     /// Reads `url`. `progress` hears short updates such as "Reading 3 pages…".
     /// Throws `AIDeadline.Exceeded` when reading takes longer than `timeLimit`.
     public func extract(from url: URL, progress: (@Sendable (String) -> Void)? = nil) async throws -> Evidence {

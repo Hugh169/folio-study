@@ -5,7 +5,7 @@ import Foundation
 
 /// Drives the real app, sandbox and all, without showing a window:
 ///
-///     Folio.app/Contents/MacOS/Folio -FolioSelfTest <folder> [-FolioSelfTestPhase restart]
+///     Folio.app/Contents/MacOS/Folio -FolioSelfTest <folder> [-FolioSelfTestPhase restart|delete]
 ///
 /// `<folder>` must be inside Folio's container, which is all the sandbox lets
 /// it reach without the student choosing files. The first run sets Folio up
@@ -15,8 +15,10 @@ import Foundation
 /// `<folder>/Shortcut` as a Shortcut would, plans next week around made-up
 /// calendar events, tries the study tools (search, flashcards, a summary, the
 /// timer and a past paper), and writes `report.json`. The restart run reopens
-/// the same records and writes `report-restart.json`. It never touches Calendar,
-/// Reminders or the keychain, so macOS never asks for permission.
+/// the same records and writes `report-restart.json`. The delete run reopens
+/// them, deletes everything as Settings › Delete All Data does, and writes
+/// `report-delete.json` with what's left. It never touches Calendar, Reminders,
+/// notifications or the keychain, so macOS never asks for permission.
 /// Debug builds only.
 enum SelfTest {
     static var folder: URL? {
@@ -29,15 +31,19 @@ enum SelfTest {
         UserDefaults.standard.string(forKey: "FolioSelfTestPhase") == "restart"
     }
 
+    private static var isDelete: Bool {
+        UserDefaults.standard.string(forKey: "FolioSelfTestPhase") == "delete"
+    }
+
     private static let defaultsSuite = "FolioSelfTest"
 
     static func makeModel(in folder: URL) -> AppModel {
         let support = folder.appending(path: "Support", directoryHint: .isDirectory)
-        if !isRestart {
+        if !isRestart && !isDelete {
             UserDefaults(suiteName: defaultsSuite)?.removePersistentDomain(forName: defaultsSuite)
             try? FileManager.default.removeItem(at: support)
         }
-        let model = AppModel.live(supportFolder: support, defaults: UserDefaults(suiteName: defaultsSuite) ?? .standard, readsCalendar: false, usesKeychain: false)
+        let model = AppModel.live(supportFolder: support, defaults: UserDefaults(suiteName: defaultsSuite) ?? .standard, defaultsName: defaultsSuite, readsCalendar: false, usesKeychain: false)
         // Never ask for notification permission from a test run: the prompt would
         // appear on screen, and macOS would remember the answer for the real app.
         model.live?.askedForNotifications = true
@@ -47,6 +53,10 @@ enum SelfTest {
     static func run(_ model: AppModel, in folder: URL) async {
         NSApplication.shared.setActivationPolicy(.prohibited)
         var report: [String: Any] = ["phaseAtLaunch": name(of: model.phase), "screenAtLaunch": String(describing: model.destination)]
+
+        if isDelete {
+            await checkDeleteAll(model, in: folder, report: report)
+        }
 
         if isRestart {
             await model.refreshLibrary()
@@ -144,6 +154,45 @@ enum SelfTest {
         report["filesInSchool"] = relativePaths(in: library)
         report["filesInDrop"] = relativePaths(in: drop)
         finish(report, at: folder.appending(path: "report.json"))
+    }
+
+    /// Deletes everything, as Settings › Delete All Data does, and reports
+    /// what's left: no records or settings, but every file in the School folder.
+    private static func checkDeleteAll(_ model: AppModel, in folder: URL, report: [String: Any]) async -> Never {
+        var report = report
+        await model.refreshLibrary()
+        let support = folder.appending(path: "Support", directoryHint: .isDirectory)
+        let library = folder.appending(path: "School", directoryHint: .isDirectory)
+        let settings = UserDefaults(suiteName: defaultsSuite)
+        report["before"] = [
+            "subjects": model.subjects.count,
+            "assessments": model.assessments.count,
+            "sessions": model.sessions.count,
+            "flashcards": model.flashcards.count,
+            "timetable": model.profile.timetable != nil,
+            "supportFiles": relativePaths(in: support),
+            "settings": settings?.persistentDomain(forName: defaultsSuite)?.count ?? 0,
+            "filesInSchool": relativePaths(in: library).count,
+        ]
+        let deletion = await model.deleteAllData(removingReminders: true)
+        report["after"] = [
+            "problems": deletion.problems,
+            "supportFolderExists": FileManager.default.fileExists(atPath: support.path(percentEncoded: false)),
+            "settings": settings?.persistentDomain(forName: defaultsSuite)?.count ?? 0,
+            "filesInSchool": relativePaths(in: library).count,
+            "recordsOpen": model.live != nil,
+            "hasDeletedEverything": model.hasDeletedEverything,
+            "flashcards": model.flashcards.count,
+        ]
+        // A fresh start on the same folders, as when Folio is opened again.
+        let reopened = AppModel.live(supportFolder: support, defaults: settings ?? .standard, defaultsName: defaultsSuite, readsCalendar: false, usesKeychain: false)
+        report["reopened"] = [
+            "phase": name(of: reopened.phase),
+            "subjects": reopened.profile.subjects.map(\.name),
+            "assessments": reopened.assessments.count,
+            "flashcards": reopened.flashcards.count,
+        ]
+        finish(report, at: folder.appending(path: "report-delete.json"))
     }
 
     /// Builds settings the way the setup screens do, without showing them:

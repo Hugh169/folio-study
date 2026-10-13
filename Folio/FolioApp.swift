@@ -57,7 +57,7 @@ struct FolioApp: App {
         .defaultLaunchBehavior(.suppressed)
         .restorationBehavior(.disabled)
 
-        MenuBarExtra(isInserted: .constant(!isSelfTest)) {
+        MenuBarExtra(isInserted: .constant(!isSelfTest && !model.hasDeletedEverything)) {
             MenuBarView()
                 .environment(model)
                 .preferredColorScheme(.dark)
@@ -118,6 +118,10 @@ private struct MenuBarLabel: View {
 final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         false
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        DeletedEverything.cleanUpAtQuit?()
     }
 }
 

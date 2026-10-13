@@ -4,14 +4,19 @@ import FolioKit
 /// Goes through the cards that are due: the question, then the answer and the
 /// line of the notes it came from, then "Knew It" or "Didn't Know". A missed
 /// card comes round once more at the end, without changing its schedule again.
+/// Practice goes through cards that aren't due, as often as the student
+/// likes, and never changes when they come back.
 struct ReviewSheet: View {
     @Environment(AppModel.self) private var model
     @Environment(\.dismiss) private var dismiss
 
     let subjectID: Subject.ID?
     @State private var queue: [Flashcard]
+    @State private var isPractice: Bool
     /// Cards already answered once in this sitting, so a second go doesn't reschedule them.
     @State private var answered: [Flashcard.ID: Bool] = [:]
+    /// Cards practised since the sheet opened, so practising more brings new ones first.
+    @State private var practised: Set<Flashcard.ID> = []
     @State private var position = 0
     @State private var showsAnswer = false
     @State private var editing: Flashcard?
@@ -19,10 +24,15 @@ struct ReviewSheet: View {
     /// At most this many new answers in one sitting, so a review stays short.
     static let sittingSize = 30
 
-    /// - Parameter showsAnswer: Start with the first answer showing, for screenshots.
-    init(cards: [Flashcard], subjectID: Subject.ID? = nil, showsAnswer: Bool = false) {
+    /// - Parameters:
+    ///   - isPractice: Go through cards that aren't due, without changing when they come back.
+    ///   - showsAnswer: Start with the first answer showing, for screenshots.
+    init(cards: [Flashcard], subjectID: Subject.ID? = nil, isPractice: Bool = false, showsAnswer: Bool = false) {
         self.subjectID = subjectID
-        _queue = State(initialValue: Array(cards.prefix(Self.sittingSize)))
+        let sitting = Array(cards.prefix(Self.sittingSize))
+        _queue = State(initialValue: sitting)
+        _isPractice = State(initialValue: isPractice)
+        _practised = State(initialValue: isPractice ? Set(sitting.map(\.id)) : [])
         _showsAnswer = State(initialValue: showsAnswer)
     }
 
@@ -52,7 +62,7 @@ struct ReviewSheet: View {
 
     private var header: some View {
         HStack {
-            Text(subjectID.flatMap { model.subject($0)?.name }.map { String(localized: "Review · \($0)") } ?? String(localized: "Review"))
+            Text(title)
                 .font(.system(size: 14, weight: .semibold))
             Spacer()
             if position < queue.count {
@@ -145,7 +155,7 @@ struct ReviewSheet: View {
                 }
                 .buttonStyle(FilledButtonStyle(kind: .ghost, height: 38, fullWidth: true))
                 .keyboardShortcut(.leftArrow, modifiers: [])
-                .help("Back to the first box: it comes round again tomorrow (←)")
+                .help(isPractice ? "It comes round once more at the end (←)" : "Back to the first box: it comes round again tomorrow (←)")
                 Button {
                     answer(card, knewIt: true)
                 } label: {
@@ -153,7 +163,7 @@ struct ReviewSheet: View {
                 }
                 .buttonStyle(FilledButtonStyle(kind: .primary, height: 38, fullWidth: true))
                 .keyboardShortcut(.rightArrow, modifiers: [])
-                .help("Up a box: it comes back later (→)")
+                .help(isPractice ? "Next card (→)" : "Up a box: it comes back later (→)")
             }
         } else {
             Button("Show Answer") { showsAnswer = true }
@@ -162,24 +172,46 @@ struct ReviewSheet: View {
         }
     }
 
+    private var title: String {
+        let subject = subjectID.flatMap { model.subject($0)?.name }
+        if isPractice {
+            return subject.map { String(localized: "Practice · \($0)") } ?? String(localized: "Practice")
+        }
+        return subject.map { String(localized: "Review · \($0)") } ?? String(localized: "Review")
+    }
+
     private var finished: some View {
         let firsts = answered.values
         let knew = firsts.filter { $0 }.count
+        let due = model.dueCards(in: subjectID)
+        let canPractise = !model.practiceCards(in: subjectID).isEmpty
         return VStack(spacing: 14) {
             Spacer()
             IconTile(systemName: "checkmark", foreground: Theme.success, background: Theme.success.opacity(0.16), size: 52, cornerRadius: 14, symbolSize: 22)
-            Text(queue.isEmpty ? "Nothing to review" : "Done for now")
+            Text(queue.isEmpty ? (isPractice ? "Nothing to practise" : "Nothing to review") : (isPractice ? "Practice done" : "Done for now"))
                 .font(.system(size: 20, weight: .semibold))
             if !firsts.isEmpty {
-                Text("You knew \(knew) of \(firsts.count) the first time. Cards you missed come back tomorrow.")
+                Text(isPractice
+                     ? String(localized: "You knew \(knew) of \(firsts.count) the first time. Practice doesn't change when cards come back.")
+                     : String(localized: "You knew \(knew) of \(firsts.count) the first time. Cards you missed come back tomorrow."))
                     .font(.system(size: 13))
                     .foregroundStyle(Theme.secondaryText)
                     .multilineTextAlignment(.center)
             }
-            Button("Done") { dismiss() }
-                .buttonStyle(.folioPrimary)
-                .keyboardShortcut(.defaultAction)
-                .padding(.top, 6)
+            HStack(spacing: 10) {
+                if !due.isEmpty {
+                    Button("Review \(due.count) More") { start(due, practice: false) }
+                        .buttonStyle(.folioGhost)
+                } else if canPractise {
+                    Button(isPractice ? "Practise More" : "Keep Practising") { practiseMore() }
+                        .buttonStyle(.folioGhost)
+                        .shotTarget("keep-practising")
+                }
+                Button("Done") { dismiss() }
+                    .buttonStyle(.folioPrimary)
+                    .keyboardShortcut(.defaultAction)
+            }
+            .padding(.top, 6)
             Spacer()
         }
         .frame(maxWidth: .infinity)
@@ -189,13 +221,31 @@ struct ReviewSheet: View {
     private func answer(_ card: Flashcard, knewIt: Bool) {
         if answered[card.id] == nil {
             answered[card.id] = knewIt
-            let updated = model.answer(card, knewIt: knewIt)
+            // Practice never moves a card between boxes.
+            let updated = isPractice ? card : model.answer(card, knewIt: knewIt)
             queue[position] = updated
             // One more go at the end of this sitting.
             if !knewIt { queue.append(updated) }
         }
         showsAnswer = false
         position += 1
+    }
+
+    /// Starts again with new cards, in the same sheet.
+    private func start(_ cards: [Flashcard], practice: Bool) {
+        queue = Array(cards.prefix(Self.sittingSize))
+        if practice { practised.formUnion(queue.map(\.id)) }
+        isPractice = practice
+        answered = [:]
+        position = 0
+        showsAnswer = false
+    }
+
+    /// The next cards to practise: ones not practised yet, then round again.
+    private func practiseMore() {
+        let fresh = model.practiceCards(in: subjectID, excluding: practised)
+        if fresh.isEmpty { practised = [] }
+        start(fresh.isEmpty ? model.practiceCards(in: subjectID) : fresh, practice: true)
     }
 
     private func delete(_ card: Flashcard) {

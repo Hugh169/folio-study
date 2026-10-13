@@ -185,6 +185,9 @@ struct SubjectCardsCard: View {
                 if !due.isEmpty {
                     Button("Review") { reviewing = ReviewRequest(cards: due, subjectID: subject.id) }
                         .buttonStyle(.folioLink)
+                } else if !cards.isEmpty {
+                    Button("Practise") { reviewing = ReviewRequest(cards: model.practiceCards(in: subject.id), subjectID: subject.id, isPractice: true) }
+                        .buttonStyle(.folioLink)
                 }
                 Button("Make Cards…") { isMaking = true }
                     .buttonStyle(.folioLink)
@@ -195,7 +198,7 @@ struct SubjectCardsCard: View {
         .frame(maxWidth: .infinity, minHeight: 96, maxHeight: .infinity, alignment: .topLeading)
         .background(RoundedRectangle(cornerRadius: Theme.Radius.card).fill(subject.color.opacity(0.12)))
         .sheet(item: $reviewing) { request in
-            ReviewSheet(cards: request.cards, subjectID: request.subjectID)
+            ReviewSheet(cards: request.cards, subjectID: request.subjectID, isPractice: request.isPractice)
         }
         .sheet(isPresented: $isMaking) {
             MakeCardsSheet(subjectID: subject.id)

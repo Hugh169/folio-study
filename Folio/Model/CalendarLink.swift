@@ -140,6 +140,25 @@ final class CalendarLink {
         ids.filter { (store.calendarItem(withIdentifier: $0) as? EKReminder)?.isCompleted == true }
     }
 
+    /// Removes the reminders Folio added, then its "Folio" list if nothing the
+    /// student added is left in it. Returns how many reminders went, and
+    /// whether the list did.
+    func removeFolioReminders(ids: [String]) async -> (reminders: Int, list: Bool) {
+        var removed = 0
+        for id in ids {
+            guard let reminder = store.calendarItem(withIdentifier: id) as? EKReminder else { continue }
+            if (try? store.remove(reminder, commit: false)) != nil { removed += 1 }
+        }
+        try? store.commit()
+        guard let list = store.calendars(for: .reminder).first(where: { $0.title == Self.remindersListName }) else { return (removed, false) }
+        let predicate = store.predicateForReminders(in: [list])
+        let left = await withCheckedContinuation { continuation in
+            store.fetchReminders(matching: predicate) { continuation.resume(returning: $0?.count ?? 1) }
+        }
+        guard left == 0 else { return (removed, false) }
+        return (removed, (try? store.removeCalendar(list, commit: true)) != nil)
+    }
+
     /// The day before at 9 am, and two hours before, leaving out any that have passed.
     static func alarms(before due: Date, now: Date = .now, calendar: Calendar = .current) -> [Date] {
         var dates: [Date] = []

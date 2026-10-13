@@ -17,7 +17,7 @@ struct StudyView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 28) {
                         HStack(alignment: .top, spacing: 16) {
-                            ReviewCard(now: now, review: { reviewing = ReviewRequest(cards: model.dueCards(at: now)) }, make: { making = MakeCardsRequest() })
+                            ReviewCard(now: now, review: { reviewing = ReviewRequest(cards: model.dueCards(at: now)) }, practise: { reviewing = ReviewRequest(cards: model.practiceCards(at: now), isPractice: true) }, make: { making = MakeCardsRequest() })
                             StudyNowCard()
                             WeekCard(now: now)
                         }
@@ -41,6 +41,8 @@ struct StudyView: View {
                                 ForEach(model.subjects) { subject in
                                     DeckTile(subject: subject, now: now) {
                                         reviewing = ReviewRequest(cards: model.dueCards(at: now, in: subject.id), subjectID: subject.id)
+                                    } practise: {
+                                        reviewing = ReviewRequest(cards: model.practiceCards(at: now, in: subject.id), subjectID: subject.id, isPractice: true)
                                     } make: {
                                         making = MakeCardsRequest(subjectID: subject.id)
                                     }
@@ -65,7 +67,7 @@ struct StudyView: View {
             }
         }
         .sheet(item: $reviewing) { request in
-            ReviewSheet(cards: request.cards, subjectID: request.subjectID)
+            ReviewSheet(cards: request.cards, subjectID: request.subjectID, isPractice: request.isPractice)
         }
         .sheet(item: $making) { request in
             MakeCardsSheet(subjectID: request.subjectID, file: request.file)
@@ -95,11 +97,12 @@ struct StudyView: View {
     }
 }
 
-/// Cards to review in one sitting.
+/// Cards to review in one sitting, or to practise.
 struct ReviewRequest: Identifiable {
     let id = UUID()
     var cards: [Flashcard]
     var subjectID: Subject.ID?
+    var isPractice = false
 }
 
 /// What to make cards from, if the student already chose.
@@ -118,11 +121,13 @@ enum StudyFormat {
     }
 }
 
-/// The cards waiting today, with Start Review.
+/// The cards waiting today, with Start Review, or Practise Anyway once
+/// they're all reviewed.
 private struct ReviewCard: View {
     @Environment(AppModel.self) private var model
     let now: Date
     let review: () -> Void
+    let practise: () -> Void
     let make: () -> Void
 
     var body: some View {
@@ -173,9 +178,15 @@ private struct ReviewCard: View {
                     .background(RoundedRectangle(cornerRadius: Theme.Radius.tile).fill(Color.white.opacity(0.06)))
                 }
                 Spacer(minLength: 0)
-                Button("Start Review", action: review)
-                    .buttonStyle(.folioPrimary)
-                    .disabled(due.isEmpty)
+                if due.isEmpty {
+                    Button("Practise Anyway", action: practise)
+                        .buttonStyle(.folioPrimary)
+                        .help("Go through cards that aren't due yet. It doesn't change when they come back.")
+                        .shotTarget("practise-anyway")
+                } else {
+                    Button("Start Review", action: review)
+                        .buttonStyle(.folioPrimary)
+                }
             }
         }
         .padding(20)
@@ -304,6 +315,7 @@ private struct DeckTile: View {
     let subject: Subject
     let now: Date
     let review: () -> Void
+    let practise: () -> Void
     let make: () -> Void
 
     var body: some View {
@@ -349,6 +361,9 @@ private struct DeckTile: View {
             HStack(spacing: 4) {
                 if due > 0 {
                     Button("Review", action: review)
+                        .buttonStyle(.folioLink)
+                } else if !cards.isEmpty {
+                    Button("Practise", action: practise)
                         .buttonStyle(.folioLink)
                 }
                 Button("Make Cards…", action: make)

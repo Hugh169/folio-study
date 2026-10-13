@@ -127,6 +127,10 @@ final class AppModel {
     var learningProgress: (done: Int, total: Int)?
     var learnedExampleCount = 0
     var alert: AlertMessage?
+    /// Settings › AI & Privacy is asking whether to delete everything.
+    var isShowingDeleteAll = false
+    /// Everything Folio kept is gone, and it's about to quit.
+    var hasDeletedEverything = false
 
     let calendar: Calendar
     @ObservationIgnored var live: LiveServices?

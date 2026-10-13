@@ -355,6 +355,155 @@ struct ClaudeCardWriterTests {
         let offline = CannedClaude.session(key: "cards-offline", responses: [])
         #expect(await ClaudeCardWriter(key: "cards-offline", session: offline).cards(from: notes, subject: "Physics").problem == .offline)
     }
+
+    /// Notes with a line for each of `count` concepts, about 420 characters a line.
+    static func longNotes(_ count: Int) -> String {
+        (0..<count).map { number in
+            "Concept q\(number) is defined as the measured quantity number \(number) in this unit, and "
+                + String(repeating: "students revise it with worked examples and labelled diagrams. ", count: 5)
+        }
+        .joined(separator: "\n")
+    }
+
+    @Test func aWholeFileIsReadInPartsWithNoLimitOnCards() async {
+        let text = Self.longNotes(80)
+        let parts = CardCheck.parts(of: text, length: ClaudeCardWriter.partLength, maxParts: 0).count
+        #expect(parts >= 3)
+        let ledger = ClaudeUsageLedger(defaults: UserDefaults(suiteName: "ClaudeCardWriterTests-\(UUID())")!)
+        let heard = HeardParts()
+        let result = await ClaudeCardWriter(key: "echo-whole", ledger: ledger, session: EchoClaude.session()).cards(from: text, subject: "Physics") { done, total in
+            heard.add(done, total)
+        }
+
+        #expect(result.problem == nil)
+        #expect(result.drafts.count == 80)
+        #expect(result.partsRead == parts)
+        #expect(EchoClaude.requestCount(for: "echo-whole") == parts)
+        #expect(ledger.usage().requests == parts)
+        // Cards come in the order of the notes, whichever part Claude answered first.
+        #expect(result.drafts.first?.question == "How is concept q0 defined?")
+        #expect(result.drafts.last?.question == "How is concept q79 defined?")
+        #expect(heard.all.last.map { $0 == (parts, parts) } == true)
+    }
+
+    @Test func cardsTheStudentHasArentWrittenAgain() async throws {
+        let text = Self.longNotes(40)
+        let existing = (0..<25).map { CardDraft(question: "How is concept q\($0) defined?", answer: "The measured quantity number \($0) in this unit.") }
+        let result = await ClaudeCardWriter(key: "echo-again", session: EchoClaude.session()).cards(from: text, subject: "Physics", avoiding: existing)
+
+        #expect(result.drafts.count == 15)
+        #expect(result.drafts.first?.question == "How is concept q25 defined?")
+        #expect(result.repeats == 25)
+        // Claude is told what the student has, so it can write different cards.
+        let body = try ClaudeCardWriter.requestBody(for: "Notes", subject: "Physics", avoiding: ClaudeCardWriter.questions(toAvoid: existing))
+        let message = String(decoding: body, as: UTF8.self)
+        #expect(message.contains("already has cards asking these questions"))
+        #expect(message.contains("How is concept q24 defined?"))
+    }
+
+    @Test func anAnswerCutShortIsAskedForInHalves() async {
+        // The stand-in cuts short its answer for more than 20 concepts at once.
+        let text = Self.longNotes(26)
+        #expect(CardCheck.parts(of: text, length: ClaudeCardWriter.partLength, maxParts: 0).count == 1)
+        let result = await ClaudeCardWriter(key: "echo-cut", session: EchoClaude.session()).cards(from: text, subject: "Physics")
+
+        #expect(result.problem == nil)
+        #expect(result.drafts.count == 26)
+        #expect(EchoClaude.requestCount(for: "echo-cut") == 3)
+    }
+
+    @Test func aWrongKeyStopsTheRestOfTheFile() async {
+        let text = Self.longNotes(150)
+        let parts = CardCheck.parts(of: text, length: ClaudeCardWriter.partLength, maxParts: 0).count
+        #expect(parts > 3)
+        let result = await ClaudeCardWriter(key: "echo-bad", session: EchoClaude.session()).cards(from: text, subject: "Physics")
+
+        #expect(result.problem == .badKey)
+        #expect(result.drafts.isEmpty)
+        // Only the parts already asked about when the first answer came back.
+        #expect(EchoClaude.requestCount(for: "echo-bad") == 3)
+    }
+}
+
+/// What a card writer reported as it went.
+final class HeardParts: @unchecked Sendable {
+    private let lock = NSLock()
+    private var items: [(Int, Int)] = []
+
+    func add(_ done: Int, _ total: Int) { lock.withLock { items.append((done, total)) } }
+    var all: [(Int, Int)] { lock.withLock { items } }
+}
+
+/// Stands in for Claude writing cards: answers each request with a card for
+/// every "Concept qN is defined as…" line in the notes it was sent, so parts
+/// can arrive in any order. The API key picks how it behaves: "echo-cut" cuts
+/// short its answer for more than 20 concepts, and "echo-bad" turns the key down.
+final class EchoClaude: URLProtocol {
+    private static let lock = NSLock()
+    nonisolated(unsafe) private static var counts: [String: Int] = [:]
+
+    static func session() -> URLSession {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [EchoClaude.self]
+        return URLSession(configuration: configuration)
+    }
+
+    static func requestCount(for key: String) -> Int {
+        lock.withLock { counts[key] ?? 0 }
+    }
+
+    override class func canInit(with request: URLRequest) -> Bool { true }
+    override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
+
+    override func startLoading() {
+        let key = request.value(forHTTPHeaderField: "x-api-key") ?? ""
+        Self.lock.withLock { Self.counts[key, default: 0] += 1 }
+        let json = (try? JSONSerialization.jsonObject(with: Self.body(of: request))) as? [String: Any]
+        let content = ((json?["messages"] as? [[String: Any]])?.first?["content"] as? [[String: Any]])?.first?["text"] as? String ?? ""
+        // The notes, without the list of questions the student already has.
+        let notes = content.components(separatedBy: "\n\nThe student already has cards").first ?? content
+        let numbers = notes.matches(of: /Concept q(\d+) is defined/).map { String($0.1) }
+
+        let status: Int
+        let body: String
+        if key == "echo-bad" {
+            (status, body) = (401, CannedClaude.error("authentication_error", "invalid x-api-key"))
+        } else if key == "echo-cut", numbers.count > 20 {
+            (status, body) = (200, CannedClaude.message(#"{"cards": [{"question": "How is con"#, stopReason: "max_tokens"))
+        } else {
+            let cards = numbers.map { number in
+                [
+                    "question": "How is concept q\(number) defined?",
+                    "answer": "The measured quantity number \(number) in this unit.",
+                    "quote": "Concept q\(number) is defined as the measured quantity number \(number) in this unit",
+                ]
+            }
+            let answer = String(decoding: try! JSONSerialization.data(withJSONObject: ["cards": cards]), as: UTF8.self)
+            (status, body) = (200, CannedClaude.message(answer))
+        }
+        guard let url = request.url, let response = HTTPURLResponse(url: url, statusCode: status, httpVersion: "HTTP/1.1", headerFields: [:]) else { return }
+        client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+        client?.urlProtocol(self, didLoad: Data(body.utf8))
+        client?.urlProtocolDidFinishLoading(self)
+    }
+
+    override func stopLoading() {}
+
+    /// A request's body, which URLSession hands to protocols as a stream.
+    private static func body(of request: URLRequest) -> Data {
+        if let body = request.httpBody { return body }
+        guard let stream = request.httpBodyStream else { return Data() }
+        stream.open()
+        defer { stream.close() }
+        var data = Data()
+        var buffer = [UInt8](repeating: 0, count: 16_384)
+        while stream.hasBytesAvailable {
+            let read = stream.read(&buffer, maxLength: buffer.count)
+            guard read > 0 else { break }
+            data.append(buffer, count: read)
+        }
+        return data
+    }
 }
 
 struct PaperTimesTests {

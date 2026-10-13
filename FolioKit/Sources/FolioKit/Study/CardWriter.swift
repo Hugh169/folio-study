@@ -55,9 +55,10 @@ public actor CardWriter {
         Write the questions and answers in the same language as the notes.
         """
 
-    /// Writes cards from `text`, the whole of a file's text. `progress`
-    /// hears how many parts are done out of how many.
-    public func cards(from text: String, subject: String, progress: (@Sendable (Int, Int) -> Void)? = nil) async -> Result {
+    /// Writes cards from `text`, the whole of a file's text. Cards that repeat
+    /// one in `avoiding`, which the student already has, are dropped.
+    /// `progress` hears how many parts are done out of how many.
+    public func cards(from text: String, subject: String, avoiding: [CardDraft] = [], progress: (@Sendable (Int, Int) -> Void)? = nil) async -> Result {
         var result = Result()
         if let reason = unavailableReason {
             result.problem = .unavailable(reason)
@@ -74,7 +75,7 @@ public actor CardWriter {
             do {
                 let drafts = try await write(from: part, subject: subject, splitsLeft: 1, waitedForBudget: false)
                 result.partsRead += 1
-                let sorted = CardCheck.sort(drafts, notes: part, existing: result.drafts)
+                let sorted = CardCheck.sort(drafts, notes: part, existing: avoiding + result.drafts)
                 result.drafts += sorted.kept.prefix(options.maxCards - result.drafts.count)
                 result.notInNotes += sorted.notInNotes
                 result.repeats += sorted.repeats

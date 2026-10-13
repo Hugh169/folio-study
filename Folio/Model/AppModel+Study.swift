@@ -58,6 +58,10 @@ struct CardWriting {
     var message: String?
     /// Cards dropped because their answers weren't in the file.
     var dropped = 0
+    /// Cards dropped because they repeated another, or one the student already has.
+    var repeats = 0
+    /// Something to know about the cards there are, such as Claude stopping partway.
+    var note: String?
     /// The file looked like questions, such as an exam paper, so Folio stopped before writing.
     var isMostlyQuestions = false
 }
@@ -285,6 +289,23 @@ extension AppModel {
         Flashcard.dueCards(subjectID.map(cards(of:)) ?? flashcards, at: now)
     }
 
+    /// Cards to practise when none are due: the ones the student knows least
+    /// first. Practising doesn't change when they come back. `excluding` are
+    /// cards already practised in this sitting.
+    func practiceCards(at now: Date = .now, in subjectID: Subject.ID? = nil, excluding practised: Set<Flashcard.ID> = []) -> [Flashcard] {
+        (subjectID.map(cards(of:)) ?? flashcards)
+            .filter { !$0.isDue(at: now) && !practised.contains($0.id) }
+            .sorted { ($0.box, -$0.missCount, $0.due) < ($1.box, -$1.missCount, $1.due) }
+    }
+
+    /// The cards already made from a file, so writing again gives new ones.
+    func cards(madeFrom url: URL, sourceID: UUID?) -> [Flashcard] {
+        flashcards.filter { card in
+            if let sourceID, card.sourceID == sourceID { return true }
+            return card.sourceName == url.lastPathComponent
+        }
+    }
+
     /// Adds new cards and saves changes to others.
     func saveCards(_ cards: [Flashcard]) {
         for card in cards {
@@ -340,7 +361,10 @@ extension AppModel {
     }
 
     /// Reads a file thoroughly and writes cards from it, on this Mac or with
-    /// Claude. `progress` hears what's happening, such as "Writing cards… 3 of 8".
+    /// Claude. With Claude, Folio reads all of the file and Claude writes as
+    /// many cards as it holds, with the student's own key, so there's no limit.
+    /// Cards the student already has from the file aren't written again.
+    /// `progress` hears what's happening, such as "Writing cards… 3 of 8".
     func writeCards(from url: URL, subjectID: Subject.ID, withClaude: Bool, anyway: Bool = false, progress: @escaping @MainActor @Sendable (String) -> Void) async -> CardWriting {
         var writing = CardWriting(origin: withClaude ? .claude : .onDevice, sourceID: live?.librarian?.filedItemID(at: url), sourceName: url.lastPathComponent)
         if let refusal = cardRefusal(for: url) {
@@ -351,10 +375,15 @@ extension AppModel {
             writing.message = String(localized: "Folio needs your School folder to read files.")
             return writing
         }
+        let claudeKey = withClaude ? readClaudeKey() : nil
+        if withClaude, claudeKey == nil {
+            writing.message = String(localized: "Folio couldn't read your Claude key. Check it in Settings › AI & Privacy.")
+            return writing
+        }
         progress(String(localized: "Reading “\(url.lastPathComponent)”…"))
         let evidence: Evidence
         do {
-            evidence = try await librarian.readThoroughly(url) { message in
+            evidence = try await librarian.readThoroughly(url, whole: withClaude) { message in
                 Task { @MainActor in progress(message) }
             }
         } catch {
@@ -371,25 +400,44 @@ extension AppModel {
             return writing
         }
         let subjectName = subject(subjectID)?.name ?? ""
-        if withClaude, let key = live?.claudeKey {
+        let existing = cards(madeFrom: url, sourceID: writing.sourceID).map { CardDraft(question: $0.question, answer: $0.answer) }
+        if let claudeKey {
             progress(String(localized: "Claude is writing cards…"))
-            let result = await ClaudeCardWriter(key: key, ledger: live?.claudeLedger).cards(from: evidence.text, subject: subjectName)
+            let result = await ClaudeCardWriter(key: claudeKey, ledger: live?.claudeLedger).cards(from: evidence.text, subject: subjectName, avoiding: existing) { done, total in
+                guard total > 1 else { return }
+                Task { @MainActor in
+                    progress(String(localized: "Claude is writing cards… \(done) of \(total) parts read"))
+                }
+            }
             refreshClaudeUsage()
             writing.drafts = result.drafts
             writing.dropped = result.notInNotes
-            writing.message = result.problem?.message
+            writing.repeats = result.repeats
+            if let problem = result.problem {
+                if writing.drafts.isEmpty {
+                    writing.message = problem.message
+                } else {
+                    writing.note = String(localized: "Claude stopped before the end of the file: \(problem.message)")
+                }
+                if !problem.isAboutOneFile { claudeStatus = .problem(problem.message) }
+            } else {
+                claudeStatus = .ready
+            }
         } else {
-            let result = await CardWriter().cards(from: evidence.text, subject: subjectName) { done, total in
+            let result = await CardWriter().cards(from: evidence.text, subject: subjectName, avoiding: existing) { done, total in
                 Task { @MainActor in
                     progress(String(localized: "Writing cards… part \(min(done + 1, total)) of \(total)"))
                 }
             }
             writing.drafts = result.drafts
             writing.dropped = result.notInNotes
+            writing.repeats = result.repeats
             writing.message = result.problem?.message
         }
         if writing.drafts.isEmpty && writing.message == nil {
-            writing.message = String(localized: "No cards came out of this file. Cards work best from notes that explain things.")
+            writing.message = writing.repeats > 0 && !existing.isEmpty
+                ? String(localized: "Nothing new came out of this file: you already have cards for what's in it.")
+                : String(localized: "No cards came out of this file. Cards work best from notes that explain things.")
         }
         return writing
     }
